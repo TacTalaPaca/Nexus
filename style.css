@@ -1,0 +1,201 @@
+/*This file is part of TacTalaPaca.github.io.
+
+TacTalaPaca.github.io is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+TacTalaPaca.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
+/* ---------------------------------------------------- */
+body {
+   background-color: #eeeeee;
+   /* background by SVGBackgrounds.com */
+   margin: 0;
+   padding: 0;
+   font-family: "Paytone One", sans-serif;
+   transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+.dark-mode body {
+   background-color: #2e2e2e;
+   /* background by SVGBackgrounds.com */
+}
+/* -------------------------- */
+.sidebar {
+   background-color: white;
+   border-radius: 10px;
+   box-sizing: border-box;
+   margin: 20px;
+   width: 90px;
+   min-height: 450px;
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   top: 0;
+   bottom: 0;
+   box-shadow: 0 0 15px #666666;
+   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.dark-mode .sidebar {
+   background-color: #333333;
+   box-shadow: 0 0 20px #121212;
+   color: #fff;
+}
+/* -------------------------- */
+.sidebar a {
+   display: block;
+   margin-bottom: 0;
+   padding: 10px;
+   height: 70px;
+   color: #333333;
+   text-decoration: none;
+   text-align: center;
+   line-height: 130px;
+   border-radius: 10px;
+   transition: background-color 0.1s ease;
+}
+.dark-mode .sidebar a {
+   color: white;
+}
+/* -------------------------- */
+.sidebar .theme-switch {
+   margin-top: auto;
+}
+.sidebar a:hover {
+   background-color: #e6e6e6;
+}
+.sidebar a:active {
+   background-color: #99ff66;
+   background-size: 50%;
+   font-size: 20px;
+   transition: background-size 0.1s ease, font-size 0.1s ease;
+}
+.dark-mode .sidebar a:hover {
+   background-color: #404040;
+}
+.dark-mode .sidebar a:active {
+   background-color: #006a5a;
+   color: #fff;
+}
+/* -------------------------- */
+.btn1 {
+   background-image: url("assets/home_l.svg");
+   background-repeat: no-repeat;
+   background-position: center 12px;
+   background-size: 45%;
+}
+.btn2 {
+   background-image: url("assets/labs_l.svg");
+   background-repeat: no-repeat;
+   background-position: center 12px;
+   background-size: 45%;
+}
+/*.btn3 {
+   background-image: url("");
+   background-repeat: no-repeat;
+   background-position: center 12px;
+   background-size: 45%;
+}
+.btn4 {
+   background-image: url("");
+   background-repeat: no-repeat;
+   background-position: center 12px;
+   background-size: 50%;
+} */
+.theme-switch {
+   background-image: url("assets/dark-mode.png");
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 60%;
+}
+.dark-mode .btn1 {
+   background-image: url("assets/home_d.svg");
+}
+.dark-mode .btn2 {
+   background-image: url("assets/labs_d.svg");
+}
+.dark-mode .btn3 {
+   background-image: url("assets/labs_d.svg");
+}
+.dark-mode .btn4 {
+   background-image: url("assets/findup_d.png");
+}
+.dark-mode .theme-switch {
+   background-image: url("assets/light-mode.png");
+}
+/* -------------------------- */
+.content {
+   margin-left: 110px;
+   padding: 20px;
+   color: #333333;
+}
+.banner {
+   background-image: url("assets/3693187.jpg");
+   background-color: white;
+   background-size: cover;
+   background-position: center;
+   border-radius: 10px;
+   height: 350px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: #fff;
+   box-shadow: 0 5px 15px #404040;
+   transition: background-color 0.5s ease, background-image 0.5s ease, box-shadow 0.5s ease;
+}
+.banner h1 {
+   font-size: clamp(40px, 6vw, 80px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-left: 40px;
+   margin-right: 40px;
+}
+.dark-mode .content {
+   color: white;
+}
+.dark-mode .banner {
+   background-image: url("assets/4002676.jpg");
+   box-shadow: 0 5px 20px #121212;
+   background-color: #333333;
+}
+/* ---------------------------------------------------- */
+body {
+   -webkit-user-select: none;
+   /* Safari */
+   -moz-user-select: none;
+   /* Firefox */
+   -ms-user-select: none;
+   /* IE10+/Edge */
+   user-select: none;
+}
+/* Webkit based browsers (Chrome, Safari, Edge...) */
+::-webkit-scrollbar {
+   width: 10px;
+}
+::-webkit-scrollbar-track {
+   background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+   background-color: #b4b4b4;
+}
+/* -------------------------- */
+/* Dark mode for Webkit browsers */
+.dark-mode ::-webkit-scrollbar-track {
+   background-color: #333333;
+}
+.dark-mode ::-webkit-scrollbar-thumb {
+   background-color: #4d4d4d;
+}
+/* -------------------------- */
+/* Firefox */
+* {
+   scrollbar-width: thin;
+   scrollbar-color: #b4b4b4 #f1f1f1;
+}
+/* Dark mode for Firefox */
+.dark-mode * {
+   scrollbar-color: #333333 #4d4d4d;
+}

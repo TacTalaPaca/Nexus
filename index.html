@@ -1,0 +1,76 @@
+<!-- This file is part of TacTalaPaca.github.io.
+
+TacTalaPaca.github.io is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+TacTalaPaca.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+See the GNUGeneral Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/> -->
+<!-- -------------------------------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- FAVICON ------->
+   <link rel="shortcut icon" href="assets/LogoR.png" type="image/x-icon">
+   <!-- TITLE --------->
+   <title>TacTalaPaca</title>
+   <!-- CSS link ------>
+   <link rel="stylesheet" href="style.css">
+   <!-- JS links ------>
+   <script src="scripts/theme.js"></script>
+   <script src="scripts/pages.js"></script>
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+</head>
+<!-- -------------------------------------------------- -->
+<body>
+   <!-- SIDEBAR TABS -->
+   <div class="sidebar">
+      <a class="btn1" href="#" onclick="showPage('pg1')">HOME</a>
+
+      <a class="btn2" href="#" onclick="showPage('pg2')">LABS</a>
+
+      <!-- <a class="btn3" href="#" onclick="showPage('pg3')">PG3</a>
+
+      <a class="btn4" href="#" onclick="showPage('pg4')">PG4</a> -->
+
+      <a href="#" id="theme-toggle" class="theme-switch" onclick="toggleTheme() "></a>
+   </div>
+   <!-- ----------------------------------------------- -->
+   <main>
+      <!-- PAGES CONTENT -->
+      <div class="content">
+         <!-- ---------- PG1 ---------- -->
+         <div id="pg1" style="display: none;">
+            <section class="banner">
+               <h1>TacTalaPaca</h1>
+            </section>
+            <!-- CONTENT -->
+            <div class="Element"></div>
+         </div>
+         <!-- ---------- PG2 ---------- -->
+         <div id="pg2" style="display: none;">
+            <section class="banner">
+               <h1>LABS</h1>
+            </section>
+            <!-- CONTENT -->
+         </div>
+         <!-- ---------- PG3 ---------- -->
+         <div id="pg3" style="display: none;">
+            <section class="banner">
+               <h1>Our Software</h1>
+            </section>
+            <!-- CONTENT -->
+         </div>
+         <!-- ---------- PG4 ---------- -->
+         <div id="pg4" style="display: none;">
+            <section class="banner">
+               <h1>Contact Us</h1>
+            </section>
+            <!-- CONTENT -->
+         </div>
+      </div>
+   </main>
+</body>
+</html>
