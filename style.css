@@ -5,56 +5,65 @@ TacTalaPaca.github.io is free software: you can redistribute it and/or modify it
 TacTalaPaca.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
-/* ---------------------------------------------------- */
+/* ----------------------------------------------- */
 body {
-   background-color: #eeeeee;
-   /* background by SVGBackgrounds.com */
+   background-color: #F9F9F9;
+   background-image: url(assets/SprinkleW.svg);
+   background-attachment: fixed;
    margin: 0;
    padding: 0;
-   font-family: "Paytone One", sans-serif;
+   font-family: "Gugi", sans-serif;
+   font-weight: bolder;
    transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 .dark-mode body {
-   background-color: #2e2e2e;
-   /* background by SVGBackgrounds.com */
+   background-color: #212121;
+   background-image: url("assets/SprinkleD.svg");
 }
 /* -------------------------- */
 .sidebar {
    background-color: white;
+   border: 2px solid #cbcbcb;
    border-radius: 10px;
    box-sizing: border-box;
-   margin: 20px;
-   width: 90px;
-   min-height: 450px;
+   margin: 10px;
+   width: 80px;
+   min-height: 250px;
    position: fixed;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
    top: 0;
    bottom: 0;
-   box-shadow: 0 0 15px #666666;
-   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+   transition: background-color 0.3s ease, border 0.3s ease;
 }
 .dark-mode .sidebar {
-   background-color: #333333;
-   box-shadow: 0 0 20px #121212;
+   background-color: #262626;
    color: #fff;
+   border: 2px solid #383838;
 }
 /* -------------------------- */
 .sidebar a {
    display: block;
-   margin-bottom: 0;
-   padding: 10px;
-   height: 70px;
+   margin-bottom: 5px;
+   height: 60px;
+   font-size: 15px;
    color: #333333;
    text-decoration: none;
    text-align: center;
-   line-height: 130px;
-   border-radius: 10px;
-   transition: background-color 0.1s ease;
+   line-height: 1px;
+   border-radius: 6px;
+   transition: background-color 0.2s ease;
+}
+.sidebar a p {
+   margin-top: 49px;
+   font-size: 15px;
+   color: #333333;
 }
 .dark-mode .sidebar a {
-   color: white;
+   color: #ffffff;
+}
+.dark-mode .sidebar a p {
+   color: #ffffff;
 }
 /* -------------------------- */
 .sidebar .theme-switch {
@@ -66,8 +75,15 @@ body {
 .sidebar a:active {
    background-color: #99ff66;
    background-size: 50%;
-   font-size: 20px;
-   transition: background-size 0.1s ease, font-size 0.1s ease;
+   font-size: 13px;
+   transition: background-size 0.1s ease, background-color 0.1s ease;
+}
+.sidebar a:active p {
+   font-size: 13px;
+   transition: font-size 0.1s ease;
+}
+.sidebar a:active.theme-switch {
+   background-size: 20%;
 }
 .dark-mode .sidebar a:hover {
    background-color: #404040;
@@ -80,16 +96,18 @@ body {
 .btn1 {
    background-image: url("assets/home_l.svg");
    background-repeat: no-repeat;
-   background-position: center 12px;
-   background-size: 45%;
+   background-position: center 5px;
+   background-size: 43%;
+   margin: 5px;
 }
 .btn2 {
    background-image: url("assets/labs_l.svg");
    background-repeat: no-repeat;
-   background-position: center 12px;
-   background-size: 45%;
+   background-position: center 5px;
+   background-size: 43%;
+   margin: 5px;
 }
-/*.btn3 {
+/* .btn3 {
    background-image: url("");
    background-repeat: no-repeat;
    background-position: center 12px;
@@ -106,6 +124,7 @@ body {
    background-repeat: no-repeat;
    background-position: center center;
    background-size: 60%;
+   margin: 5px;
 }
 .dark-mode .btn1 {
    background-image: url("assets/home_d.svg");
@@ -113,19 +132,19 @@ body {
 .dark-mode .btn2 {
    background-image: url("assets/labs_d.svg");
 }
-.dark-mode .btn3 {
+/*  .dark-mode .btn3 {
    background-image: url("assets/labs_d.svg");
 }
 .dark-mode .btn4 {
    background-image: url("assets/findup_d.png");
-}
+} */
 .dark-mode .theme-switch {
    background-image: url("assets/light-mode.png");
 }
 /* -------------------------- */
 .content {
-   margin-left: 110px;
-   padding: 20px;
+   margin-left: 90px;
+   padding: 10px;
    color: #333333;
 }
 .banner {
@@ -134,15 +153,15 @@ body {
    background-size: cover;
    background-position: center;
    border-radius: 10px;
-   height: 350px;
+   height: 30vh;
+   min-height: 150px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    text-align: center;
    color: #fff;
-   box-shadow: 0 5px 15px #404040;
-   transition: background-color 0.5s ease, background-image 0.5s ease, box-shadow 0.5s ease;
+   transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 .banner h1 {
    font-size: clamp(40px, 6vw, 80px);
@@ -158,10 +177,9 @@ body {
 }
 .dark-mode .banner {
    background-image: url("assets/4002676.jpg");
-   box-shadow: 0 5px 20px #121212;
    background-color: #333333;
 }
-/* ---------------------------------------------------- */
+/* ----------------------------------------------- */
 body {
    -webkit-user-select: none;
    /* Safari */

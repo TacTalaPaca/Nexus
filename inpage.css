@@ -1,0 +1,33 @@
+.elm {
+    background-color: white;
+    border: 2px solid #cbcbcb;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    display: inline-block;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+.elm:hover {
+    background-color: #ececec;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+ }
+.elm:active {
+    background-color: #99ff66;
+    transform: scale(0.95);
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+.dark-mode .elm:hover {
+    background-color: #2f2f2f;
+}
+.dark-mode .elm {
+    background-color: #262626;
+    color: #fff;
+    border: 2px solid #383838;
+}
+.dark-mode .elm:active {
+    background-color: #006a5a;
+}
