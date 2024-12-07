@@ -1,0 +1,68 @@
+/*This file is part of TacTalaPaca.github.io.
+
+TacTalaPaca.github.io is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+TacTalaPaca.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
+
+/* ----------------------------------------------- */
+@media (max-width: 768px) {
+   .sidebar {
+      background-color: white;
+      border: 2px solid #cbcbcb;
+      border-radius: 50px;
+      box-sizing: border-box;
+      position: fixed; /* Ensure the sidebar is fixed */
+      bottom: 0;       /* Position it at the bottom */
+      left: 0;         /* Align it to the left edge */
+      top: auto;       /* Explicitly unset top */
+      width: calc(100% - 20px);
+      height: 70px;
+      margin: 10px;
+      min-height: auto;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: row; /* Align children horizontally */
+      justify-content: space-around;
+      align-items: center;
+      transition: all 0.3s ease;
+      z-index: 1000; /* Ensure visibility above content */
+   }
+
+   .sidebar a {
+      width: 55px;
+      height: 55px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .content {
+      margin: 10px;
+      margin-bottom: 80px;
+      margin-left: 10px;
+      text-align: center;
+      height: fit-content;
+   }
+   .btn {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50%;
+   }
+   .sidebar a {
+      border-radius: 50px;
+   }
+   .sidebar .theme-switch {
+      margin-top: 0;
+   }
+   .theme-switch {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50%;
+   }
+   .sidebar a:active.theme-switch {
+      background-size: 50%;
+   }
+}

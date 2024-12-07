@@ -1,0 +1,79 @@
+/*This file is part of TacTalaPaca.github.io.
+
+TacTalaPaca.github.io is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+TacTalaPaca.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
+
+/* ----------------------------------------------- */
+.content {
+    margin: 10px;
+    margin-left: 90px;
+    text-align: center;
+    height: fit-content;
+ }
+ .banner {
+    background-color: white;
+    border: 2px solid #cbcbcb;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    height: 25vh;
+    min-height: 150px;
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #212121;
+    transition: all 0.3s ease;
+ }
+ .banner h1 {
+    font-size: clamp(20px, 8vw, 80px);
+    animation: pop2 0.6s ease-out;
+ }
+ .dark-mode .content {
+    color: white;
+ }
+ .dark-mode .banner {
+    background-color: #262626;
+    border: 2px solid #383838;
+    color: #fff;
+ }
+ /* -------------------------- */
+.elm {
+    background-color: white;
+    border: 2px solid #cbcbcb;
+    border-radius: 10px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+    width: 50%;
+    max-width: 400px;
+    animation: pop2 0.6s ease-out;
+    transition: all 0.3s ease;
+}
+.elm:hover {
+    background-color: #ececec;
+    transform: scale(1);
+    transition: all 0.2s ease;
+ }
+.elm:active {
+    background-color: #99ff66;
+    transform: scale(0.98);
+    transition: all 0.1s ease;
+}
+.dark-mode .elm:hover {
+    background-color: #2f2f2f;
+}
+.dark-mode .elm {
+    background-color: #262626;
+    color: #fff;
+    border: 2px solid #383838;
+}
+.dark-mode .elm:active {
+    background-color: #006a5a;
+}
+/* ----------------------------------------------- */
