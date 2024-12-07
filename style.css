@@ -178,10 +178,13 @@ body {
    -ms-user-select: none;
    /* IE10+/Edge */
    user-select: none;
+   
+   -webkit-tap-highlight-color: transparent;
 }
 ::-webkit-scrollbar {
    display: none;
 }
+
 /* ----------------------------------------------- */
 @media (max-width: 768px) {
    .sidebar {
