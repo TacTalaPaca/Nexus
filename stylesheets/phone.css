@@ -74,4 +74,14 @@ See the GNU General Public License for more details. You should have received a 
       margin: 10px;
       width: 90%;
   }
+  /* -------------------------- */
+  .form1 {
+      padding: 15px;
+  }
+  .form1 input[type="text"] {
+      padding: 10px;
+  }
+  .form1 .form-btn {
+      padding: 10px;
+  }
 }
