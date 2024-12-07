@@ -61,7 +61,7 @@ See the GNU General Public License for more details. You should have received a 
     transition: all 0.2s ease;
  }
 .elm:active {
-    background-color: #99ff66;
+    background-color: #00e385;
     transform: scale(0.98);
     transition: all 0.1s ease;
 }
@@ -74,6 +74,6 @@ See the GNU General Public License for more details. You should have received a 
     border: 2px solid #383838;
 }
 .dark-mode .elm:active {
-    background-color: #006a5a;
+    background-color: #00e385;
 }
 /* ----------------------------------------------- */
