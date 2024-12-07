@@ -27,7 +27,7 @@ body {
    border-radius: 10px;
    box-sizing: border-box;
    margin: 10px;
-   width: 80px;
+   width: 70px;
    min-height: 250px;
    position: fixed;
    display: flex;
@@ -43,9 +43,10 @@ body {
 }
 /* -------------------------- */
 .sidebar a {
+   background-color: #f6f6f6;
    display: block;
    margin-bottom: 5px;
-   height: 60px;
+   height: 50px;
    font-size: 15px;
    color: #333333;
    text-decoration: none;
@@ -54,32 +55,9 @@ body {
    border-radius: 6px;
    transition: background-color 0.2s ease;
 }
-.sidebar a p {
-   margin-top: 49px;
-   font-size: 15px;
-   color: #333333;
-}
-
-.logo {
-   background-image: url(assets/Logo.png);
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: 75%;
-   height: 80px;
-   transition: background-size 0.2s ease;
-}
-
-.logo:hover {
-   animation: pop 0.6s ease-out;
-   transition: background-size 0.2s ease;
-}
-.logo:active {
-   animation: pulse 0.75s ease-in-out infinite;
-   transition: background-size 0.2s ease;
-}
-
 .dark-mode .sidebar a {
    color: #ffffff;
+   background-color: #303030;
 }
 .dark-mode .sidebar a p {
    color: #ffffff;
@@ -94,12 +72,9 @@ body {
 }
 .sidebar a:active {
    background-color: #99ff66;
-   background-size: 50%;
-   font-size: 13px;
    transition: background-size 0.1s ease, background-color 0.1s ease;
 }
 .sidebar a:active p {
-   font-size: 13px;
    transition: font-size 0.1s ease;
 }
 .sidebar a:active.theme-switch {
@@ -113,89 +88,86 @@ body {
    color: #fff;
 }
 /* -------------------------- */
-.btn1 {
-   background-image: url("assets/home_l.svg");
+.btn {
    background-repeat: no-repeat;
-   background-position: center 5px;
-   background-size: 43%;
+   background-position: center center;
+   background-size: 50%;
    margin: 5px;
+}
+.btn1 {
+   background-image: url("assets/dashboard_l.svg");
 }
 .btn2 {
    background-image: url("assets/labs_l.svg");
-   background-repeat: no-repeat;
-   background-position: center 5px;
-   background-size: 43%;
-   margin: 5px;
 }
-/* .btn3 {
-   background-image: url("");
-   background-repeat: no-repeat;
-   background-position: center 12px;
-   background-size: 45%;
+.btn3 {
+   background-image: url("assets/send_l.svg");
 }
-.btn4 {
+/*.btn4 {
    background-image: url("");
    background-repeat: no-repeat;
    background-position: center 12px;
    background-size: 50%;
 } */
 .theme-switch {
-   background-image: url("assets/dark-mode.png");
+   background-image: url("assets/dark_mode.svg");
    background-repeat: no-repeat;
    background-position: center center;
    background-size: 60%;
    margin: 5px;
 }
 .dark-mode .btn1 {
-   background-image: url("assets/home_d.svg");
+   background-image: url("assets/dashboard_d.svg");
 }
 .dark-mode .btn2 {
    background-image: url("assets/labs_d.svg");
 }
-/*  .dark-mode .btn3 {
-   background-image: url("assets/labs_d.svg");
+.dark-mode .btn3 {
+   background-image: url("assets/send_d.svg");
 }
-.dark-mode .btn4 {
+/*.dark-mode .btn4 {
    background-image: url("assets/findup_d.png");
 } */
 .dark-mode .theme-switch {
-   background-image: url("assets/light-mode.png");
+   background-image: url("assets/light_mode.svg");
 }
 /* -------------------------- */
 .content {
    margin: 10px;
-   margin-left: 100px;
+   margin-left: 90px;
    text-align: center;
+   height: fit-content;
 }
 .banner {
-   background-image: url(https://raw.githubusercontent.com/TacTalaPaca/TacTalaPaca.github.io/refs/heads/main/assets/7841013.jpg);
+   background-image:;
    background-color: white;
    border: 2px solid #cbcbcb;
    background-size: cover;
    background-position: center;
    border-radius: 10px;
-   height: 35vh;
+   height: 25vh;
    min-height: 150px;
    display: flex;
-   margin-bottom: 50px;
+   margin-bottom: 10px;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    text-align: center;
-   color: #fff;
+   color: #212121;
    transition: all 0.3s ease;
 }
 .banner h1 {
    font-size: clamp(20px, 8vw, 80px);
-   animation: pop 0.6s ease-out;
+   animation: pop2 0.6s ease-out;
 }
 .dark-mode .content {
    color: white;
 }
 .dark-mode .banner {
-   background-image: url("https://raw.githubusercontent.com/TacTalaPaca/TacTalaPaca.github.io/refs/heads/main/assets/6667637.jpg");
-   background-color: #333333;
+   background-image:;
+   background-color: #262626;
    border: 2px solid #383838;
+   color: #fff;
 }
 /* ----------------------------------------------- */
 body {
@@ -207,33 +179,68 @@ body {
    /* IE10+/Edge */
    user-select: none;
 }
-/* Webkit based browsers (Chrome, Safari, Edge...) */
 ::-webkit-scrollbar {
-   width: 10px;
+   display: none;
 }
-::-webkit-scrollbar-track {
-   background-color: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-   background-color: #b4b4b4;
-}
-/* -------------------------- */
-/* Dark mode for Webkit browsers */
-.dark-mode ::-webkit-scrollbar-track {
-   background-color: #333333;
-}
-.dark-mode ::-webkit-scrollbar-thumb {
-   background-color: #4d4d4d;
-}
-/* -------------------------- */
-/* Firefox */
-* {
-   scrollbar-width: thin;
-   scrollbar-color: #b4b4b4 #f1f1f1;
-}
-/* Dark mode for Firefox */
-.dark-mode * {
-   scrollbar-color: #333333 #4d4d4d;
+/* ----------------------------------------------- */
+@media (max-width: 768px) {
+   .sidebar {
+      background-color: white;
+      border: 2px solid #cbcbcb;
+      border-radius: 10px;
+      box-sizing: border-box;
+      position: fixed; /* Ensure the sidebar is fixed */
+      bottom: 0;       /* Position it at the bottom */
+      left: 0;         /* Align it to the left edge */
+      top: auto;       /* Explicitly unset top */
+      width: calc(100% - 20px);
+      height: 60px;
+      margin: 10px;
+      min-height: auto;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: row; /* Align children horizontally */
+      justify-content: space-around;
+      align-items: center;
+      transition: all 0.3s ease;
+      z-index: 1000; /* Ensure visibility above content */
+   }
+
+   .sidebar a {
+      width: 50px;
+      height: 50px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .content {
+      margin: 10px;
+      margin-bottom: 80px;
+      margin-left: 10px;
+      text-align: center;
+      height: fit-content;
+   }
+   .btn {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50%;
+   }
+   /*.btn4 {
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-position: center 12px;
+      background-size: 50%;
+   } */
+   .sidebar .theme-switch {
+      margin-top: 0;
+   }
+   .theme-switch {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50%;
+   }
 }
 /* -------------------------- */
 /* Keyframes */
@@ -321,6 +328,27 @@ body {
 /*
 {
    animation: pop 0.6s ease-out infinite;
+}
+*/
+
+/* Pop2 Effect */
+@keyframes pop2 {
+   0% {
+       transform: scale(1);
+   }
+   40% {
+       transform: scale(1.01);
+   }
+   60% {
+       transform: scale(0.99);
+   }
+   100% {
+       transform: scale(1);
+   }
+}
+/*
+{
+   animation: pop2 0.6s ease-out infinite;
 }
 */
 
