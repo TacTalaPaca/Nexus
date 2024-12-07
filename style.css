@@ -1,0 +1,128 @@
+/*This file is part of TacTalaPaca.github.io.
+
+TacTalaPaca.github.io is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+TacTalaPaca.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
+
+/* ----------------------------------------------- */
+body {
+   background-color: #F9F9F9;
+   background-image: url(assets/SprinkleW.svg);
+   user-select: none;
+   background-attachment: fixed;
+   margin: 0;
+   padding: 0;
+   font-family: "Space Grotesk", sans-serif;
+   -webkit-tap-highlight-color: transparent;
+   transition: all 0.3s ease;
+}
+.dark-mode body {
+   background-color: #212121;
+   background-image: url("assets/SprinkleD.svg");
+}
+/* -------------------------- */
+.sidebar {
+   background-color: white;
+   border: 2px solid #cbcbcb;
+   border-radius: 10px;
+   box-sizing: border-box;
+   margin: 10px;
+   width: 70px;
+   min-height: 250px;
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   top: 0;
+   bottom: 0;
+   transition: background-color 0.2s ease, border-radius 0.2s ease, border-color 0.2s ease;
+}
+.dark-mode .sidebar {
+   background-color: #262626;
+   color: #fff;
+   border: 2px solid #383838;
+}
+/* -------------------------- */
+.sidebar a {
+   background-color: #f6f6f6;
+   display: block;
+   margin-bottom: 5px;
+   height: 55px;
+   font-size: 15px;
+   color: #333333;
+   text-decoration: none;
+   text-align: center;
+   line-height: 0;
+   border-radius: 6px;
+   transition: all 0.2s ease;
+}
+.dark-mode .sidebar a {
+   background-color: #303030;
+}
+/* -------------------------- */
+.sidebar .theme-switch {
+   margin-top: auto;
+}
+.sidebar a:hover {
+   background-color: #e6e6e6;
+   animation: pop 0.6s ease-out;
+}
+.sidebar a:active {
+   background-color: #00e385;
+   transition: all 0.1s ease;
+}
+.sidebar a:active.theme-switch {
+   background-size: 20%;
+}
+.dark-mode .sidebar a:hover {
+   background-color: #404040;
+}
+.dark-mode .sidebar a:active {
+   background-color: #00e385;
+}
+/* -------------------------- */
+.btn {
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 50%;
+   margin: 5px;
+}
+.btn1 {
+   background-image: url("assets/dashboard_l.svg");
+}
+.btn2 {
+   background-image: url("assets/labs_l.svg");
+}
+.btn3 {
+   background-image: url("assets/send_l.svg");
+}
+.btn4 {
+   background-image: url("assets/send_l.svg");
+}
+.theme-switch {
+   background-image: url("assets/dark_mode.svg");
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 60%;
+   margin: 5px;
+}
+.dark-mode .btn1 {
+   background-image: url("assets/dashboard_d.svg");
+}
+.dark-mode .btn2 {
+   background-image: url("assets/labs_d.svg");
+}
+.dark-mode .btn3 {
+   background-image: url("assets/send_d.svg");
+}
+.dark-mode .btn4 {
+   background-image: url("assets/send_d.svg");
+}
+.dark-mode .theme-switch {
+   background-image: url("assets/light_mode.svg");
+}
+/* -------------------------- */
+::-webkit-scrollbar {
+   display: none;
+}
