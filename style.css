@@ -247,6 +247,9 @@ body {
       background-position: center center;
       background-size: 50%;
    }
+   .sidebar a:active.theme-switch {
+      background-size: 50%;
+   }
 }
 /* -------------------------- */
 /* Keyframes */
