@@ -65,4 +65,13 @@ See the GNU General Public License for more details. You should have received a 
    .sidebar a:active.theme-switch {
       background-size: 50%;
    }
+   .elm {
+      background-color: white;
+      border: 2px solid #cbcbcb;
+      border-radius: 10px;
+      height: 200px;
+      display: inline-block;
+      margin: 10px;
+      width: 90%;
+  }
 }
