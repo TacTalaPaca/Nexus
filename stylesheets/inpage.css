@@ -33,13 +33,15 @@ See the GNU General Public License for more details. You should have received a 
  .banner h1 {
     font-size: clamp(10px, 8vw, 80px);
     animation: pop2 0.6s ease-out;
-    margin-bottom: 0;
-    margin-top: 20px;
     transition: all 0.2s ease;
+    margin-bottom: 0;
+    margin-top: auto;
  }
  .banner p {
   font-size: clamp(10px, 5vw, 30px);
   animation: pop2 0.6s ease-out;
+  transition: all 0.2s ease;
+  margin-bottom: auto;
   margin-top: 0;
 }
  .dark-mode .content {
