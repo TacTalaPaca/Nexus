@@ -38,7 +38,7 @@ See the GNU General Public License for more details. You should have received a 
     transition: all 0.2s ease;
  }
  .banner p {
-  font-size: clamp(10px, 5vw, 20px);
+  font-size: clamp(10px, 5vw, 30px);
   animation: pop2 0.6s ease-out;
   margin-top: 0;
 }
