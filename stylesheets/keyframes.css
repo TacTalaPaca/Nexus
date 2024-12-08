@@ -41,15 +41,27 @@ See the GNU General Public License for more details. You should have received a 
 /* -------------------------- */
 /* Glow Effect */
 @keyframes glow {
-   0% {
-       box-shadow: 0 0 0 0 #99ff66
-   }
-   50% {
-       box-shadow: 0 0 20px 10px #99ff66
-   }
-   100% {
-       box-shadow: 0 0 0 0 #99ff66
-   }
+    0% {
+        box-shadow: 
+            0 0 5px 2px rgba(0, 227, 133, 0.4),
+            0 0 10px 4px rgba(0, 227, 133, 0.3),
+            0 0 15px 6px rgba(0, 227, 133, 0.2);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 20px 8px rgba(0, 227, 133, 0.6),
+            0 0 30px 12px rgba(0, 227, 133, 0.4),
+            0 0 40px 16px rgba(0, 227, 133, 0.3);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 
+            0 0 5px 2px rgba(0, 227, 133, 0.4),
+            0 0 10px 4px rgba(0, 227, 133, 0.3),
+            0 0 15px 6px rgba(0, 227, 133, 0.2);
+        transform: scale(1);
+    }
 }
 /*
 {
