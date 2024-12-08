@@ -31,9 +31,17 @@ See the GNU General Public License for more details. You should have received a 
     transition: all 0.3s ease;
  }
  .banner h1 {
-    font-size: clamp(20px, 8vw, 80px);
+    font-size: clamp(10px, 8vw, 80px);
     animation: pop2 0.6s ease-out;
+    margin-bottom: 0;
+    margin-top: 20px;
+    transition: all 0.2s ease;
  }
+ .banner p {
+  font-size: clamp(10px, 5vw, 20px);
+  animation: pop2 0.6s ease-out;
+  margin-top: 0;
+}
  .dark-mode .content {
     color: white;
  }
@@ -90,7 +98,6 @@ See the GNU General Public License for more details. You should have received a 
     transition: all 0.3s ease;
     animation: pop2 0.6s ease-out;
   }
-
 .dark-mode .form1 {
     background-color: #262626;
     border: 2px solid #383838;
@@ -149,6 +156,9 @@ See the GNU General Public License for more details. You should have received a 
 .dark-mode .form1 .form-btn:hover {
     background-color: #262626;
     color: #fff;
+  }
+.dark-mode .form1 .form-btn:active {
+    background-color: #00e385;
   }
 /* -------------------------- */
   .form1 textarea {
