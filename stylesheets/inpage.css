@@ -16,6 +16,7 @@ See the GNU General Public License for more details. You should have received a 
 .banner {
   background-color: white;
   border: 2px solid #cbcbcb;
+  background-image: url(/stylesheets/assets/banner_l.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -50,6 +51,7 @@ See the GNU General Public License for more details. You should have received a 
 .dark-mode .banner {
   background-color: #262626;
   border: 2px solid #383838;
+  background-image: url(/stylesheets/assets/banner_d.jpg);
   color: white;
 }
  /* -------------------------- */
