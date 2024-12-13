@@ -240,6 +240,7 @@ See the GNU General Public License for more details. You should have received a 
   padding: 20px;
   background-color: white;
   color: #212121;
+  user-select: text;
   transition: all 0.3s ease;
 }
 .dark-mode .dropdown-inner {
