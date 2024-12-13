@@ -1,4 +1,4 @@
-// Function to enable dark moHOMde
+// Function to enable dark mode
 function enableDarkMode() {
     document.documentElement.classList.add('dark-mode');
     document.getElementById('theme-toggle').textContent = ''; // Clear the text

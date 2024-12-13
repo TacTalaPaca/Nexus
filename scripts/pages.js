@@ -1,3 +1,4 @@
+// Switching pages Functionality
 function showPage(pageId) {
     const content = document.getElementsByClassName("content")[0];
     const pages = content.children;
