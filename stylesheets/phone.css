@@ -29,7 +29,6 @@ See the GNU General Public License for more details. You should have received a 
       transition: all 0.3s ease;
       z-index: 1000; /* Ensure visibility above content */
    }
-
    .sidebar a {
       width: 55px;
       height: 55px;
@@ -38,7 +37,6 @@ See the GNU General Public License for more details. You should have received a 
       justify-content: center;
       align-items: center;
    }
-
    .content {
       margin: 10px;
       margin-bottom: 80px;
@@ -73,24 +71,24 @@ See the GNU General Public License for more details. You should have received a 
       display: inline-block;
       margin: 10px;
       width: 90%;
-  }
+   }
   /* -------------------------- */
    .banner h1 {
     font-size: clamp(10px, 10vw, 80px);
-  }
-  .banner p {
+   }
+   .banner p {
    font-size: clamp(10px, 7vw, 30px);
    animation: pop2 0.6s ease-out;
    margin-top: 0;
-  }
+   }
   /* -------------------------- */
-  .form1 {
+   .form1 {
       padding: 15px;
-  }
-  .form1 input[type="text"] {
+   }
+   .form1 input[type="text"] {
       padding: 10px;
-  }
-  .form1 .form-btn {
+   }
+   .form1 .form-btn {
       padding: 10px;
-  }
+   }
 }

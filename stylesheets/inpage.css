@@ -87,7 +87,6 @@ See the GNU General Public License for more details. You should have received a 
     background-color: #00e385;
 }
 /* ----------------------------------------------- */
-/* General Form Styling */
 .form1 {
     max-width: 500px;
     margin-left: auto;
@@ -186,4 +185,75 @@ See the GNU General Public License for more details. You should have received a 
 .form1 textarea:focus {
     border-color: #00e385;
     outline: none;
+}
+/* ----------------------------------------------- */
+.dropdowns {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  animation: pop2 0.6s ease-out;
+}
+.dropdown {
+  margin-bottom: 10px;
+  border: 2px solid #cbcbcb;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.dark-mode .dropdown {
+  border-color: #383838;
+  background-color: #262626;
+}
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.dark-mode .dropdown-header {
+  background-color: #262626;
+  color: white;
+}
+.dropdown-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+.dropdown.active .dropdown-icon {
+  transform: rotate(180deg);
+}
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.dropdown.active .dropdown-content {
+  max-height: 500px; /* Adjust based on content */
+}
+.dropdown-inner {
+  padding: 20px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.dark-mode .dropdown-inner {
+  background-color: #262626;
+  color: white;
+}
+/* Hover and active states */
+.dropdown-header:hover {
+  background-color: #ececec;
+}
+.dark-mode .dropdown-header:hover {
+  background-color: #2f2f2f;
+}
+.dropdown-header:active {
+  background-color: #00e385;
+}
+.dark-mode .dropdown-header:active {
+  background-color: #00e385;
 }
