@@ -1,4 +1,4 @@
-# 🦙 TacTalaPaca
+# **TacTalaPaca**
 
 ## Welcome to the Official TacTalaPaca Website 
 
