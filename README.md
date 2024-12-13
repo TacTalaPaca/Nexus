@@ -9,6 +9,4 @@
 
 ---
 
-**© TacTalaPaca** | All rights reserved
-
-*Powered by passion, driven by innovation*
+**© TacTalaPaca 2024** | All rights reserved
