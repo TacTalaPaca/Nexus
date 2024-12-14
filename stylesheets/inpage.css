@@ -71,7 +71,7 @@ See the GNU General Public License for more details. You should have received a 
   height: 200px;
   display: inline-block;
   margin: 10px;
-  width: 50%;
+  width: 45%;
   max-width: 400px;
   animation: pop2 0.6s ease-out;
   animation: fade-out ease-in-out;
