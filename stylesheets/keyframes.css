@@ -145,7 +145,7 @@ See the GNU General Public License for more details. You should have received a 
 */
 /* -------------------------- */
 /* Fade Pulse */
-@keyframes fadePulse {
+@keyframes fade-pulse {
    0% {
        opacity: 1;
    }
@@ -158,6 +158,23 @@ See the GNU General Public License for more details. You should have received a 
 }
 /*
 {
-   animation: fadePulse 1s ease-in-out infinite;
+   animation: fade-pulse 1s ease-in-out infinite;
 }
+*/
+/* -------------------------- */
+/* Fade Out */
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+    100% {
+        opacity: 0;
+        scale: 0.8;
+    }
+}
+/*
+  animation: fade-out ease-in-out;
+  animation-timeline: view();
+  animation-range: exit 0% exit 100%;
 */
