@@ -277,6 +277,9 @@ See the GNU General Public License for more details. You should have received a 
   border: 2px solid #cbcbcb;
   border-radius: 10px;
   overflow: hidden;
+  animation: fade-out ease-in-out;
+  animation-timeline: view();
+  animation-range: exit 0% exit 100%;
   transition: all 0.3s ease;
 }
 .dark-mode .dropdown {

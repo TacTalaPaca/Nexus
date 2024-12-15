@@ -44,12 +44,17 @@ See the GNU General Public License for more details. You should have received a 
    }
   /* -------------------------- */
    .sidebar a {
+      background-color: rgba(246, 246, 246, 0.7);
       width: 55px;
       height: 55px;
+      border-radius: 50px;
       margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
+   }
+   .dark-mode .sidebar a {
+      background-color: rgba(48, 48, 48, 0.7);
    }
    .content {
       margin: 10px;
@@ -62,9 +67,6 @@ See the GNU General Public License for more details. You should have received a 
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50%;
-   }
-   .sidebar a {
-      border-radius: 50px;
    }
    .sidebar .theme-switch {
       margin-top: 0;
