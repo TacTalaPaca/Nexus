@@ -1,18 +1,31 @@
-// Switching pages Functionality
 function showPage(pageId) {
-    const content = document.getElementsByClassName("content")[0];
+    const content = document.querySelector(".content");
     const pages = content.children;
-    for (let i = 0; i < pages.length; i++) {
-        pages[i].style.display = "none";
-    }
-    document.getElementById(pageId).style.display = "block";
+    const activePage = content.querySelector(".active");
 
-    localStorage.setItem('selectedPage', pageId);
+    if (activePage) {
+        // Add fade-out class to current active page
+        activePage.classList.add("fade-out");
+        activePage.addEventListener("animationend", () => {
+            activePage.style.display = "none";
+            activePage.classList.remove("active", "fade-out");
+
+            // Show the new page
+            const newPage = document.getElementById(pageId);
+            newPage.style.display = "block";
+            newPage.classList.add("active", "fade-in");
+        }, { once: true });
+    } else {
+        // No active page, show directly
+        const newPage = document.getElementById(pageId);
+        newPage.style.display = "block";
+        newPage.classList.add("active", "fade-in");
+    }
+
+    localStorage.setItem("selectedPage", pageId);
 }
-// Check for user preference and apply it
-window.onload = function() {
-    const selectedPage = localStorage.getItem('selectedPage');
-    const defaultPage = 'pg1';
-    
-    showPage(selectedPage || defaultPage);
+
+window.onload = function () {
+    const selectedPage = localStorage.getItem("selectedPage") || "pg1";
+    showPage(selectedPage);
 };
