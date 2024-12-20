@@ -5,44 +5,44 @@ TacTalaPaca.github.io is free software: you can redistribute it and/or modify it
 TacTalaPaca.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
-
 /* ----------------------------------------------- */
 body {
    background-color: #F9F9F9;
-   background-image: url(assets/SprinkleW.svg);
-   user-select: none;
+   background-image: url(/stylesheets/assets/SprinkleW.svg);
    background-attachment: fixed;
    margin: 0;
    padding: 0;
    font-family: "Bungee", sans-serif;
    font-weight: bolder;
+   user-select: none;
    -webkit-tap-highlight-color: transparent;
    transition: all 0.3s ease;
 }
 .dark-mode body {
-   background-color: #212121;
-   background-image: url("assets/SprinkleD.svg");
+   background-color: #121212;
+   background-image: url(/stylesheets/assets/SprinkleD.svg);
 }
 /* -------------------------- */
 .sidebar {
    background-color: white;
    border: 2px solid #cbcbcb;
-   border-radius: 10px;
-   box-sizing: border-box;
-   margin: 10px;
-   width: 70px;
-   min-height: 250px;
    position: fixed;
    display: flex;
    flex-direction: column;
+   margin: 10px;
+   box-sizing: border-box;
    top: 0;
    bottom: 0;
-   transition: background-color 0.2s ease, border-radius 0.2s ease, border-color 0.2s ease;
+   width: 70px;
+   min-height: 250px;
+   border-radius: 10px;
+   animation: pop2 0.6s ease-out;
+   transition: background-color 0.3s ease, border-radius 0.3s ease, border-color 0.3s ease;
 }
 .dark-mode .sidebar {
-   background-color: #262626;
+   background-color: #171717;
+   border: 2px solid #1f1f1f;
    color: #fff;
-   border: 2px solid #383838;
 }
 /* -------------------------- */
 .sidebar a {
@@ -50,15 +50,12 @@ body {
    display: block;
    margin-bottom: 5px;
    height: 55px;
-   font-size: 15px;
-   text-decoration: none;
-   text-align: center;
-   line-height: 0;
    border-radius: 6px;
-   transition: all 0.2s ease;
+   animation: pop 0.6s ease-out;
+   transition: all 0.3s ease;
 }
 .dark-mode .sidebar a {
-   background-color: #303030;
+   background-color: #1f1f1f;
 }
 /* -------------------------- */
 .sidebar .theme-switch {
@@ -66,20 +63,19 @@ body {
 }
 .sidebar a:hover {
    background-color: #e6e6e6;
-   animation: pop 0.6s ease-out;
 }
 .sidebar a:active {
-   background-color: #00e385;
+   background-color: #e6e6e6;
    transition: all 0.1s ease;
 }
 .sidebar a:active.theme-switch {
    background-size: 20%;
 }
 .dark-mode .sidebar a:hover {
-   background-color: #404040;
+   background-color: #292929;
 }
 .dark-mode .sidebar a:active {
-   background-color: #00e385;
+   background-color: #292929;
 }
 /* -------------------------- */
 .btn {
@@ -134,32 +130,28 @@ body {
 .fade-out {
    animation: fadeOut 0.3s ease-in-out forwards;
 }
-
 @keyframes fadeIn {
    from {
-       opacity: 0;
+      opacity: 0;
    }
    to {
-       opacity: 1;
+      opacity: 1;
    }
 }
-
 @keyframes fadeOut {
    from {
-       opacity: 1;
+      opacity: 1;
    }
    to {
-       opacity: 0;
+      opacity: 0;
    }
 }
-
 /* Ensure pages are properly hidden initially */
 .content > div {
    display: none;
    opacity: 0;
    transition: opacity 0.3s ease-in-out;
 }
-
 .content > div.active {
    display: block;
    opacity: 1;

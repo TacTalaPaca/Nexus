@@ -12,55 +12,43 @@ See the GNUGeneral Public License for more details. You should have received a c
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- FAVICON ------->
-   <link rel="shortcut icon" href="/stylesheets/assets/Logo.svg" type="image/x-icon">
+   <link rel="shortcut icon" href="../stylesheets/assets/Logo.svg" type="image/x-icon">
    <!-- TITLE --------->
    <title>TacTalaPaca</title>
    <!-- Google Fonts ------>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee">
    <!-- CSS links ------>
-   <link rel="stylesheet" href="stylesheets/style.css">
-   <link rel="stylesheet" href="stylesheets/inpage.css">
-   <link rel="stylesheet" href="stylesheets/phone.css">
-   <link rel="stylesheet" href="stylesheets/keyframes.css">
+   <link rel="stylesheet" href="../stylesheets/style.css">
+   <link rel="stylesheet" href="../stylesheets/inpage.css">
+   <link rel="stylesheet" href="../stylesheets/phone.css">
+   <link rel="stylesheet" href="../stylesheets/keyframes.css">
    <!-- JS links ------>
-   <script src="scripts/theme.js"></script>
-   <script src="scripts/pages.js" defer></script>
-   <script src="scripts/dropdowns.js" defer></script>
-   <script src="scripts/elm_expand.js" defer></script>
+   <script src="../scripts/theme.js"></script>
+   <script src="../scripts/pages.js" defer></script>
+   <script src="../scripts/dropdowns.js" defer></script>
+   <script src="../scripts/elm_expand.js" defer></script>
 </head>
 <!-- --------------------------------------------- -->
 <body>
    <!-- SIDEBAR TABS -->
    <div class="sidebar">
-      <a class="btn1 btn" href="pg1.html" onclick="showPage('pg1')"></a>
-
-      <a class="btn2 btn" href="pg2.html" onclick="showPage('pg2')"></a>
-
-      <a class="btn3 btn" href="pg3.html" onclick="showPage('pg3')"></a>
-
-      <a class="btn4 btn" href="pg4.html" onclick="showPage('pg4')"></a>
-
+      <a class="btn1 btn" href="/home" onclick="showPage('pg1')"></a>
+      <a class="btn2 btn" href="/explore" onclick="showPage('pg2')"></a>
+      <a class="btn3 btn" href="/download" onclick="showPage('pg3')"></a>
+      <a class="btn4 btn" href="/contact" onclick="showPage('pg4')"></a>
       <a href="#" id="theme-toggle" class="theme-switch" onclick="toggleTheme() "></a>
    </div>
    <!-- ------------------------------------------ -->
    <main>
       <!-- PAGES CONTENT -->
       <div class="content">
-         <!-- ---------- PG4 ---------- -->
-         <div id="pg4" style="display: none;">
+         <!-- ---------- PG2 ---------- -->
+         <div id="pg2" style="display: none;">
             <section class="banner">
-               <h1>CONTACT US</h1>
-               <p>securely</p>
+               <h1>EXPLORE</h1>
+               <p>our projects</p>
             </section>
             <!-- CONTENT -->
-            <div class="form1">
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdNRfBYThOs9BC9ZcMT7NZgmJETTiSkMrR4elTPz-SpcMY_-g/formResponse">
-               <input type="text" name="entry.2005620554" placeholder="Name*"><br>
-               <input type="text" name="entry.1045781291" placeholder="Email*"><br>
-               <textarea name="entry.839337160" placeholder="Your Message*" rows="5"></textarea><br>
-               <button class="form-btn" type="submit">SEND</button>
-            </form>
-            </div>
          </div>
       </div>
    </main>
