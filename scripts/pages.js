@@ -24,7 +24,6 @@ function showPage(pageId) {
 
     localStorage.setItem("selectedPage", pageId);
 }
-
 window.onload = function () {
     const selectedPage = localStorage.getItem("selectedPage") || "pg1";
     showPage(selectedPage);
