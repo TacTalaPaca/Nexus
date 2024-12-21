@@ -11,15 +11,15 @@
 "orientation": "any",
 "icons": [
           {
-                    "src": "/stylesheets/assets/Logo.svg",
+                    "src": "/stylesheets/assets/Logo_512.png",
                     "sizes": "512x512",
-                    "type": "image/svg",
+                    "type": "image/png",
                     "purpose": "maskable"
           },
           {
-                    "src": "/stylesheets/assets/Logo.svg",
+                    "src": "/stylesheets/assets/Logo_192.png",
                     "sizes": "192x192",
-                    "type": "image/svg",
+                    "type": "image/png",
                     "purpose": "any"
           }
 ],
