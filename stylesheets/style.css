@@ -122,6 +122,21 @@ body {
 ::-webkit-scrollbar {
    display: none;
 }
+::selection {
+   background-color:#00e385;
+   color: #101010;
+   -webkit-text-fill-color: #101010;
+}
+::-moz-selection {
+   background-color:#00e385;
+   color: #101010;
+   -webkit-text-fill-color: #101010;
+}
+::-webkit-selection {
+   background-color:#00e385;
+   color: #101010;
+   -webkit-text-fill-color: #101010;
+}
 /* Page transition animations */
 .fade-in {
    animation: fadeIn 0.3s ease-in-out forwards;
