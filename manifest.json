@@ -15,6 +15,12 @@
                     "sizes": "512x512",
                     "type": "image/png",
                     "purpose": "any"
+          },
+          {
+                    "src": "/stylesheets/assets/Logo_512m.png",
+                    "sizes": "512x512",
+                    "type": "image/png",
+                    "purpose": "maskable"
           }
 ],
 "screenshots": [
