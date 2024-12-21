@@ -85,38 +85,38 @@ body {
    margin: 5px;
 }
 .btn1 {
-   background-image: url("assets/dashboard_l.svg");
+   background-image: url("../assets/dashboard_l.svg");
 }
 .btn2 {
-   background-image: url("assets/explore_l.svg");
+   background-image: url("../assets/explore_l.svg");
 }
 .btn3 {
-   background-image: url("assets/download_l.svg");
+   background-image: url("../assets/download_l.svg");
 }
 .btn4 {
-   background-image: url("assets/contacts_l.svg");
+   background-image: url("../assets/contacts_l.svg");
 }
 .theme-switch {
-   background-image: url("assets/dark_mode.svg");
+   background-image: url("../assets/dark_mode.svg");
    background-repeat: no-repeat;
    background-position: center center;
    background-size: 60%;
    margin: 5px;
 }
 .dark-mode .btn1 {
-   background-image: url("assets/dashboard_d.svg");
+   background-image: url("../assets/dashboard_d.svg");
 }
 .dark-mode .btn2 {
-   background-image: url("assets/explore_d.svg");
+   background-image: url("../assets/explore_d.svg");
 }
 .dark-mode .btn3 {
-   background-image: url("assets/download_d.svg");
+   background-image: url("../assets/download_d.svg");
 }
 .dark-mode .btn4 {
-   background-image: url("assets/contacts_d.svg");
+   background-image: url("../assets/contacts_d.svg");
 }
 .dark-mode .theme-switch {
-   background-image: url("assets/light_mode.svg");
+   background-image: url("../assets/light_mode.svg");
 }
 /* -------------------------- */
 ::-webkit-scrollbar {
