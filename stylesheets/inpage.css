@@ -6,24 +6,6 @@ TacTalaPaca.github.io is distributed in the hope that it will be useful, but WIT
 
 See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
 /* ----------------------------------------------- */
-/* Color Palette
-Light Mode Colors:
-- Primary White: #FFFFFF (RGB: 255, 255, 255)
-- Background White: #F9F9F9 (RGB: 249, 249, 249)
-- Light Gray: #ECECEC (RGB: 236, 236, 236)
-- Border Gray: #CBCBCB (RGB: 203, 203, 203)
-- Text Dark: #212121 (RGB: 33, 33, 33)
-- Accent Green: #00E385 (RGB: 0, 227, 133)
-
-Dark Mode Colors:
-- Background Dark: #1A1A1A (RGB: 26, 26, 26) [Updated]
-- Element Dark: #212121 (RGB: 33, 33, 33) [Updated]
-- Hover Dark: #2A2A2A (RGB: 42, 42, 42) [Updated]
-- Border Dark: #303030 (RGB: 48, 48, 48) [Updated]
-- Text Light: #FFFFFF (RGB: 255, 255, 255)
-- Accent Green: #00E385 (RGB: 0, 227, 133)
-*/
-/* ----------------------------------------------- */
 .content {
   margin: 10px;
   margin-left: 90px;
@@ -34,7 +16,7 @@ Dark Mode Colors:
 .banner {
   background-color: white;
   border: 2px solid #cbcbcb;
-  background-image: url(/stylesheets/assets/banner_l.jpg);
+  background-image: url(../assets/banner_l.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -72,7 +54,7 @@ Dark Mode Colors:
 .dark-mode .banner {
   background-color: #171717;
   border: 2px solid #1f1f1f;
-  background-image: url(/stylesheets/assets/banner_d.jpg);
+  background-image: url(../assets/banner_d.jpg);
   color: white;
 }
  /* -------------------------- */
