@@ -1,35 +1,36 @@
 {
-"name": "TacTalaPaca",
-"short_name": "TacTalaPaca",
-"start_url": "https://tactalapaca.github.io",
-"display": "standalone",
-"description": "TacTalaPaca official PWA",
-"lang": "en",
-"dir": "auto",
-"theme_color": "#121212",
-"background_color": "#121212",
-"orientation": "any",
-"icons": [
-          {
-                    "src": "/stylesheets/assets/Logo_512.png",
-                    "sizes": "512x512",
-                    "type": "image/png",
-                    "purpose": "any"
-          },
-          {
-                    "src": "/stylesheets/assets/Logo_512m.png",
-                    "sizes": "512x512",
-                    "type": "image/png",
-                    "purpose": "maskable"
-          }
-],
-"screenshots": [
-          {
-                    "src": "/stylesheets/assets/screenshot.png",
-                    "sizes": "1920x1080",
-                    "type": "image/png",
-                    "description": "A screenshot of the home page"
-          }
-],
-"prefer_related_applications": false
+  "name": "TacTalaPaca",
+  "short_name": "TacTalaPaca",
+  "start_url": "https://tactalapaca.github.io",
+  "display": "standalone",
+  "description": "TacTalaPaca official PWA",
+  "lang": "en",
+  "dir": "auto",
+  "theme_color": "#121212",
+  "background_color": "#121212",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/stylesheets/assets/Logo_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/stylesheets/assets/Logo_512m.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/stylesheets/assets/screenshot.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "A screenshot of the home page"
+    }
+  ],
+  "prefer_related_applications": false,
+  "id": "TacTalaPaca"
 }
