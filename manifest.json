@@ -11,13 +11,13 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "/stylesheets/assets/Logo_512.png",
+      "src": "/assets/Logo_512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/stylesheets/assets/Logo_512m.png",
+      "src": "/assets/Logo_512m.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -25,7 +25,7 @@
   ],
   "screenshots": [
     {
-      "src": "https://raw.githubusercontent.com/TacTalaPaca/TacTalaPaca.github.io/refs/heads/main/stylesheets/assets/Screenshot.png",
+      "src": "https://raw.githubusercontent.com/TacTalaPaca/TacTalaPaca.github.io/refs/heads/main/assets/Screenshot.png",
       "sizes": "1920x1080",
       "type": "image/png",
       "description": "A screenshot of the home page"
