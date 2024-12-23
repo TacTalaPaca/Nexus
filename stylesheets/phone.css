@@ -7,7 +7,7 @@ TacTalaPaca.github.io is distributed in the hope that it will be useful, but WIT
 See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
 /* ----------------------------------------------- */
 @media (max-width: 768px) {
-   .sidebar {
+   .nav {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -30,17 +30,17 @@ See the GNU General Public License for more details. You should have received a 
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
    }
-   .sidebar > *:first-child {
+   .nav > *:first-child {
       margin-left: 7px;
    }
-   .sidebar > *:last-child {
+   .nav > *:last-child {
       margin-right: 7px;
    }
-   .dark-mode .sidebar {
+   .dark-mode .nav {
       background-color: rgba(23, 23, 23, 0.8);
    }
    /* -------------------------- */
-   .sidebar a {
+   .nav a {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,13 +50,12 @@ See the GNU General Public License for more details. You should have received a 
       border-radius: 50px;
       background-color: rgba(246, 246, 246, 0.7);
    }
-   .dark-mode .sidebar a {
+   .dark-mode .nav a {
       background-color: rgba(31, 31, 31, 0.7);
    }
    /* -------------------------- */
    .content {
-      margin: 10px;
-      margin-bottom: 80px;
+      margin-bottom: 90px;
       margin-left: 10px;
       text-align: center;
       height: fit-content;
@@ -66,7 +65,7 @@ See the GNU General Public License for more details. You should have received a 
       background-position: center center;
       background-size: 50%;
    }
-   .sidebar .theme-switch {
+   .nav .theme-switch {
       margin-top: 0;
    }
    .theme-switch {
@@ -74,7 +73,7 @@ See the GNU General Public License for more details. You should have received a 
       background-position: center center;
       background-size: 50%;
    }
-   .sidebar a:active.theme-switch {
+   .nav a:active.theme-switch {
       background-size: 50%;
    }
    /* -------------------------- */

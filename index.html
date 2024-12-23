@@ -6,6 +6,7 @@ TacTalaPaca.github.io is distributed in the hope that it will be useful, but WIT
 
 See the GNUGeneral Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/> -->
 <!-- --------------------------------------------- -->
+<!-- MAIN PAGE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,29 +22,29 @@ See the GNUGeneral Public License for more details. You should have received a c
    <!-- Google Fonts ------>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee">
    <!-- CSS links ------>
-   <link rel="stylesheet" href="stylesheets/style.css">
-   <link rel="stylesheet" href="stylesheets/inpage.css">
-   <link rel="stylesheet" href="stylesheets/phone.css">
-   <link rel="stylesheet" href="stylesheets/keyframes.css">
+   <link rel="stylesheet" href="/stylesheets/style.css">
+   <link rel="stylesheet" href="/stylesheets/inpage.css">
+   <link rel="stylesheet" href="/stylesheets/phone.css">
+   <link rel="stylesheet" href="/stylesheets/keyframes.css">
    <!-- JS links ------>
-   <script src="scripts/theme.js"></script>
-   <script src="scripts/dropdowns.js" defer></script>
-   <script src="scripts/elm_expand.js" defer></script>
+   <script src="/scripts/theme.js"></script>
+   <script src="/scripts/dropdowns.js" defer></script>
+   <script src="/scripts/elm_expand.js" defer></script>
    <script>navigator.serviceWorker.register("scripts/service-worker.js")</script> 
    <!-- Manifest FIle ------>
    <link rel="manifest" href="manifest.json" />
 </head>
 <!-- --------------------------------------------- -->
 <body>
-   <!-- SIDEBAR TABS -->
-   <div class="sidebar">
+   <!-- NAVIGATION TABS -->
+   <nav class="nav">
       <a class="btn1 btn" href="/"></a>
-      <a class="btn2 btn" href="/explore/"></a>
-      <a class="btn3 btn" href="/download/"></a>
-      <a class="btn4 btn" href="/contact/"></a>
-      <a href="#" id="theme-toggle" class="theme-switch" onclick="toggleTheme()"></a>
-   </div>
-   <!-- ------------------------------------------ -->
+      <a class="btn2 btn" href="/explore"></a>
+      <a class="btn3 btn" href="/download"></a>
+      <a class="btn4 btn" href="/contact"></a>
+      <a id="theme-toggle" class="theme-switch" onclick="toggleTheme()"></a>
+   </nav>
+<!-- ------------------------------------------ -->
    <main>
       <!-- PAGES CONTENT -->
       <div class="content">
@@ -77,6 +78,9 @@ See the GNUGeneral Public License for more details. You should have received a c
                <div class="elm"></div>
             </section>
       </div>
+      <hr class="divider">
+      <footer class="footer">
+      </footer>
    </main>
 </body>
 </html>
