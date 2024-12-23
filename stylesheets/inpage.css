@@ -6,29 +6,52 @@ TacTalaPaca.github.io is distributed in the hope that it will be useful, but WIT
 
 See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
 /* ----------------------------------------------- */
+/* COLOR PALETE 
+light-mode:
+background >---------< white
+second background >--< #f6f6f6
+hover >--------------< #e6e6e6
+border >-------------< #cbcbcb
+text >---------------< #212121
+
+dark-mode:
+background >---------< #121212
+second background >--< #171717
+hover >--------------< #1f1f1f
+border >-------------< #1f1f1f
+text >---------------< white
+*/
+/* ----------------------------------------------- */
+/* content + banner ------------------------------ */
 .content {
   margin: 10px;
   margin-left: 90px;
   text-align: center;
   height: fit-content;
+  /* animations ------- */
   animation: bounce 0.8s ease-in-out;
+  transition: all 0.3s ease;
 }
+/* -------------------------- */
 .banner {
+  /* bg + border ------ */
   background-color: white;
   border: 2px solid #cbcbcb;
+  border-radius: 10px;
   background-image: url(../assets/banner_l.jpg);
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
-  height: 25vh;
-  min-height: 150px;
+  /* ------------------ */
   display: flex;
-  margin-bottom: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 25vh;
+  min-height: 150px;
+  margin-bottom: 20px;
   text-align: center;
   color: #212121;
+  /* animations ------- */
   animation: fade-out ease-in-out;
   animation-timeline: view();
   animation-range: exit 0% exit 100%;
@@ -36,18 +59,22 @@ See the GNU General Public License for more details. You should have received a 
 }
 .banner h1 {
   font-size: clamp(10px, 8vw, 80px);
-  transition: all 0.1s ease;
   margin-bottom: 0;
   margin-top: auto;
+  /* animations ------- */
+  transition: all 0.1s ease;
   animation: pop2 0.6s ease-out;
 }
 .banner p {
   font-size: clamp(10px, 5vw, 30px);
-  transition: all 0.1s ease;
   margin-bottom: auto;
   margin-top: 0;
+  /* animations ------- */
+  transition: all 0.1s ease;
   animation: pop2 0.6s ease-out;
 }
+/* -------------------------- */
+/* dark-mode ---------------- */
 .dark-mode .content {
   color: white;
 }
@@ -57,19 +84,24 @@ See the GNU General Public License for more details. You should have received a 
   background-image: url(../assets/banner_d.jpg);
   color: white;
 }
- /* -------------------------- */
+/* ----------------------------------------------- */
+/* elements  ------------------------------------- */
 .elms {
+  /* animations ------- */
   animation: bounce 0.8s ease-in-out;
 }
 .elm {
+  /* bg + border ------ */
   background-color: white;
   border: 2px solid #cbcbcb;
   border-radius: 10px;
-  height: 200px;
+  /* ------------------ */
   display: inline-block;
   margin: 10px;
+  height: 200px;
   width: 45%;
   max-width: 400px;
+  /* animations ------- */
   animation: fade-out ease-in-out;
   animation-timeline: view();
   animation-range: exit 0% exit 100%;
@@ -85,6 +117,8 @@ See the GNU General Public License for more details. You should have received a 
   transform: scale(0.98);
   transition: all 0.1s ease;
 }
+/* -------------------------- */
+/* dark-mode ---------------- */
 .dark-mode .elm {
   background-color: #171717;
   border: 2px solid #1f1f1f;
@@ -97,122 +131,20 @@ See the GNU General Public License for more details. You should have received a 
   background-color: #00e385;
 }
 /* ----------------------------------------------- */
-.form1 input[type="text"],
-.form1 textarea {
-  box-sizing: border-box;
-}
-/* -------------------------- */
-.form1 {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  background-color: white;
-  border: 2px solid #cbcbcb;
-  padding: 20px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  animation: bounce 0.5s ease-in-out;
-}
-.dark-mode .form1 {
-  background-color: #171717;
-  border: 2px solid #1f1f1f;
-}
-/* -------------------------- */
-.form1 input[type="text"] {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  background-color: white;
-  border: 2px solid #cbcbcb;
-  border-radius: 7px;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: bolder;
-  font-size: 16px;
-  color: #212121;
-  transition: all 0.3s ease;
-}
-.form1 input[type="text"]:focus {
-  border-color: #00e385;
-  outline: none;
-}
-.dark-mode .form1 input[type="text"] {
-  background-color: #1a1a1a;
-  border: 2px solid #1f1f1f;
-  color: white;
-}
-.dark-mode .form1 input[type="text"]:focus {
-  border-color: #00e385;
-}
-/* -------------------------- */
-.form1 .form-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #00e385;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: bolder;
-  color: #ffffff;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.form1 .form-btn:hover {
-  background-color: white;
-  border-radius: 60px;
-  color: #212121;
-  transition: all 1s ease, background-color 0.5s ease;
-  animation: glow 1.5s ease-in-out infinite;
-}
-.form1 .form-btn:active {
-  transition: all 0.3s ease;
-  background-color: #00e385;
-}
-.dark-mode .form1 .form-btn:hover {
-  background-color: #262626;
-  color: #fff;
-}
-.dark-mode .form1 .form-btn:active {
-  background-color: #00e385;
-}
-/* -------------------------- */
-.form1 textarea {
-  width: 100%;
-  height: 100px;
-  padding: 12px;
-  margin-bottom: 20px;
-  background-color: white;
-  border: 2px solid #cbcbcb;
-  border-radius: 7px;
-  resize:none;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: bolder;
-  font-size: 16px;
-  color: #212121;
-  transition: all 0.3s ease;
-}
-.dark-mode .form1 textarea {
-  background-color: #1a1a1a;
-  border: 2px solid #1f1f1f;
-  color: white;
-}
-.form1 textarea:focus {
-  border-color: #00e385;
-  outline: none;
-}
-/* ----------------------------------------------- */
+/* dropdowns ------------------------------------- */
 .dropdowns {
   width: 100%;
   max-width: 1000px;
   margin: auto;
+  /* animations ------- */
   animation: bounce 0.5s ease-in-out;
 }
 .dropdown {
-  margin-bottom: 10px;
   border: 2px solid #cbcbcb;
   border-radius: 10px;
+  margin-bottom: 10px;
   overflow: hidden;
+  /* animations ------- */
   animation: fade-out ease-in-out;
   animation-timeline: view();
   animation-range: exit 0% exit 100%;
@@ -222,13 +154,15 @@ See the GNU General Public License for more details. You should have received a 
   border-color: #1f1f1f;
 }
 .dropdown-header {
+  background-color: white;
+  /* ------------------ */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: white;
-  color: #212121;
   cursor: pointer;
+  color: #212121;
+  /* animations ------- */
   transition: all 0.3s ease;
 }
 .dark-mode .dropdown-header {
@@ -240,6 +174,7 @@ See the GNU General Public License for more details. You should have received a 
   font-size: 1.2em;
 }
 .dropdown-icon {
+  /* animations ------- */
   transition: transform 0.3s ease;
 }
 .dropdown.active .dropdown-icon {
@@ -248,18 +183,21 @@ See the GNU General Public License for more details. You should have received a 
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
+  /* animations ------- */
   transition: max-height 0.3s ease;
 }
 .dropdown.active .dropdown-content {
-  max-height: 500px; /* Adjust based on content */
+  max-height: 500px;
 }
 .dropdown-inner {
-  padding: 20px;
   background-color: white;
+  padding: 20px;
+  user-select: text;
+  /* ------------------ */
   font-family: "Space Grotesk", sans-serif;
   font-weight: bolder;
   color: #212121;
-  user-select: text;
+  /* animations ------- */
   transition: all 0.3s ease;
 }
 .dark-mode .dropdown-inner {
@@ -268,7 +206,7 @@ See the GNU General Public License for more details. You should have received a 
 }
 /* Hover and active states */
 .dropdown-header:hover {
-  background-color: #ececec;
+  background-color: #e6e6e6;
 }
 .dark-mode .dropdown-header:hover {
   background-color: #1f1f1f;
@@ -279,3 +217,135 @@ See the GNU General Public License for more details. You should have received a 
 .dark-mode .dropdown-header:active {
   background-color: #171717;
 }
+/* ----------------------------------------------- */
+/* forms ----------------------------------------- */
+.form1 input[type="text"],
+.form1 textarea {
+  box-sizing: border-box;
+}
+/* -------------------------- */
+.form1 {
+  /* bg + border ------ */
+  background-color: white;
+  border: 2px solid #cbcbcb;
+  border-radius: 10px;
+  /* ------------------ */
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 20px;
+  /* animations ------- */
+  transition: all 0.3s ease;
+  animation: bounce 0.5s ease-in-out;
+}
+.dark-mode .form1 {
+  background-color: #171717;
+  border: 2px solid #1f1f1f;
+}
+/* text --------------------- */
+.form1 input[type="text"] {
+  /* bg + border ------ */
+  background-color: white;
+  border: 2px solid #cbcbcb;
+  border-radius: 7px;
+  /* ------------------ */
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  /* ------------------ */
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  color: #212121;
+  /* animations ------- */
+  transition: all 0.3s ease;
+}
+.form1 input[type="text"]:focus {
+  border-color: #00e385;
+  outline: none;
+}
+/* -------------------------- */
+/* dark-mode ---------------- */
+.dark-mode .form1 input[type="text"] {
+  background-color: #1a1a1a;
+  border: 2px solid #1f1f1f;
+  color: white;
+}
+.dark-mode .form1 input[type="text"]:focus {
+  border-color: #00e385;
+}
+/* -------------------------- */
+/* dark-mode ---------------- */
+.dark-mode .form1 .form-btn:hover {
+  background-color: #262626;
+  color: white;
+}
+.dark-mode .form1 .form-btn:active {
+  background-color: #00e385;
+}
+/* textarea --------------------- */
+.form1 textarea {
+  /* bg + border ------ */
+  background-color: white;
+  border: 2px solid #cbcbcb;
+  border-radius: 7px;
+  /* ------------------ */
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  margin-bottom: 20px;
+  resize:none;
+  /* ------------------ */
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  color: #212121;
+  /* animations ------- */
+  transition: all 0.3s ease;
+}
+.form1 textarea:focus {
+  border-color: #00e385;
+  outline: none;
+}
+/* -------------------------- */
+/* dark-mode ---------------- */
+.dark-mode .form1 textarea {
+  background-color: #1a1a1a;
+  border: 2px solid #1f1f1f;
+  color: white;
+}
+.dark-mode .form1 textarea:focus {
+  border-color: #00e385;
+}
+/* -------------------------- */
+.form1 .form-btn {
+  border-radius: 10px;
+  background-color: #00e385;
+  /* ------------------ */
+  width: 100%;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  /* ------------------ */
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  color: white;
+  /* animations ------- */
+  transition: all 0.3s ease;
+}
+.form1 .form-btn:hover {
+  background-color: white;
+  border-radius: 60px;
+  color: #212121;
+  /* animations ------- */
+  transition: all 1s ease, background-color 0.5s ease;
+  animation: glow 1s ease-in-out infinite;
+}
+.form1 .form-btn:active {
+  background-color: #00e385;
+  /* animations ------- */
+  transition: all 0.3s ease;
+}
+/* ----------------------------------------------- */

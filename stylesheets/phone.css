@@ -6,6 +6,22 @@ TacTalaPaca.github.io is distributed in the hope that it will be useful, but WIT
 
 See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/>*/
 /* ----------------------------------------------- */
+/* COLOR PALETE 
+light-mode:
+background >---------< white
+second background >--< #f6f6f6
+hover >--------------< #e6e6e6
+border >-------------< #cbcbcb
+text >---------------< #212121
+
+dark-mode:
+background >---------< #121212
+second background >--< #171717
+hover >--------------< #1f1f1f
+border >-------------< #1f1f1f
+text >---------------< white
+*/
+/* ----------------------------------------------- */
 @media (max-width: 768px) {
    .nav {
       position: fixed;
@@ -41,9 +57,6 @@ See the GNU General Public License for more details. You should have received a 
    }
    /* -------------------------- */
    .nav a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 55px;
       height: 55px;
       margin: 0;
@@ -55,22 +68,12 @@ See the GNU General Public License for more details. You should have received a 
    }
    /* -------------------------- */
    .content {
-      margin-bottom: 90px;
-      margin-left: 10px;
-      text-align: center;
-      height: fit-content;
-   }
-   .btn {
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 50%;
+      margin: 10px;
    }
    .nav .theme-switch {
       margin-top: 0;
    }
    .theme-switch {
-      background-repeat: no-repeat;
-      background-position: center center;
       background-size: 50%;
    }
    .nav a:active.theme-switch {
@@ -78,13 +81,7 @@ See the GNU General Public License for more details. You should have received a 
    }
    /* -------------------------- */
    .elm {
-      display: inline-block;
       width: 90%;
-      height: 200px;
-      margin: 10px;
-      border: 2px solid #cbcbcb;
-      border-radius: 10px;
-      background-color: white;
    }
    /* -------------------------- */
    .banner h1 {
@@ -92,8 +89,6 @@ See the GNU General Public License for more details. You should have received a 
    }
    .banner p {
       font-size: clamp(10px, 7vw, 30px);
-      margin-top: 0;
-      animation: pop2 0.6s ease-out;
    }
    /* -------------------------- */
    .form1 {
@@ -105,4 +100,14 @@ See the GNU General Public License for more details. You should have received a 
    .form1 .form-btn {
       padding: 10px;
    }
+   /* -------------------------- */
+   .divider {
+      margin-right: 60px;
+      margin-left: 60px;
+   }
+   /* -------------------------- */
+   .footer {
+      margin: 10px;
+      margin-bottom: 90px;
+    }
 }
