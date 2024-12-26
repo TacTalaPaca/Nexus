@@ -1,0 +1,161 @@
+import React, { useState, useEffect } from 'react';
+import { Switch } from '@/components/ui/switch';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import _ from 'lodash';
+
+const IntegerGenerator = () => {
+  const [mode, setMode] = useState('numbers'); // 'numbers' or 'letters'
+  const [min, setMin] = useState(1);
+  const [max, setMax] = useState(10);
+  const [minLetter, setMinLetter] = useState('A');
+  const [maxLetter, setMaxLetter] = useState('Z');
+  const [sequence, setSequence] = useState(false);
+  const [result, setResult] = useState('');
+  const [error, setError] = useState('');
+  const [shake, setShake] = useState(false);
+
+  const generateNumber = () => {
+    if (mode === 'numbers') {
+      if (max < min) {
+        setError('Maximum value cannot be less than minimum value');
+        setShake(true);
+        return;
+      }
+      
+      if (sequence) {
+        const numbers = _.range(min, max + 1);
+        setResult(_.shuffle(numbers).join(', '));
+      } else {
+        setResult(_.random(min, max).toString());
+      }
+    } else {
+      const minCode = minLetter.toUpperCase().charCodeAt(0);
+      const maxCode = maxLetter.toUpperCase().charCodeAt(0);
+      
+      if (maxCode < minCode) {
+        setError('Maximum letter cannot come before minimum letter');
+        setShake(true);
+        return;
+      }
+
+      if (sequence) {
+        const letters = _.range(minCode, maxCode + 1).map(code => 
+          String.fromCharCode(code)
+        );
+        setResult(_.shuffle(letters).join(', '));
+      } else {
+        const randomCode = _.random(minCode, maxCode);
+        setResult(String.fromCharCode(randomCode));
+      }
+    }
+    setError('');
+  };
+
+  useEffect(() => {
+    if (shake) {
+      setTimeout(() => setShake(false), 500);
+    }
+  }, [shake]);
+
+  return (
+    <div className={`p-6 max-w-md mx-auto bg-white rounded-xl shadow-md ${shake ? 'animate-shake bg-red-50' : ''}`}>
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <label className="text-sm font-medium">Mode:</label>
+          <select 
+            value={mode}
+            onChange={(e) => setMode(e.target.value)}
+            className="p-2 border rounded"
+          >
+            <option value="numbers">Numbers</option>
+            <option value="letters">Letters</option>
+          </select>
+        </div>
+
+        {mode === 'numbers' ? (
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium">Minimum:</label>
+              <input
+                type="number"
+                value={min}
+                onChange={(e) => setMin(parseInt(e.target.value))}
+                className="mt-1 w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Maximum:</label>
+              <input
+                type="number"
+                value={max}
+                onChange={(e) => setMax(parseInt(e.target.value))}
+                className="mt-1 w-full p-2 border rounded"
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium">Minimum Letter:</label>
+              <input
+                type="text"
+                value={minLetter}
+                onChange={(e) => setMinLetter(e.target.value.slice(0, 1))}
+                className="mt-1 w-full p-2 border rounded"
+                maxLength={1}
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Maximum Letter:</label>
+              <input
+                type="text"
+                value={maxLetter}
+                onChange={(e) => setMaxLetter(e.target.value.slice(0, 1))}
+                className="mt-1 w-full p-2 border rounded"
+                maxLength={1}
+              />
+            </div>
+          </div>
+        )}
+
+        <div className="flex items-center justify-between">
+          <label className="text-sm font-medium">Generate Sequence:</label>
+          <Switch
+            checked={sequence}
+            onCheckedChange={setSequence}
+          />
+        </div>
+
+        <button
+          onClick={generateNumber}
+          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition-colors"
+        >
+          Generate
+        </button>
+
+        {error && (
+          <Alert variant="destructive">
+            <AlertDescription>{error}</AlertDescription>
+          </Alert>
+        )}
+
+        <div className="mt-4 p-4 bg-gray-50 rounded">
+          <p className="text-lg font-medium break-all">{result}</p>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-8px); }
+          75% { transform: translateX(8px); }
+        }
+        .animate-shake {
+          animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default IntegerGenerator;
