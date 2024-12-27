@@ -168,9 +168,32 @@ body {
 /* footer ---------------------------------------- */
 /* -------------------------- */
 .ico {
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 100%;
+   border-radius: 50%;
+   width: 40px;
    height: 40px;
    margin: 5px;
-   transition: all 0.2s ease;
+   transition: all 0.3s ease;
+}
+.ico1 {
+   background-image: url("../assets/instagram_ico_l.webp");
+}
+.ico2 {
+   background-image: url("../assets/youtube_ico_l.webp");
+}
+.ico3 {
+   background-image: url("../assets/tiktok_ico_l.webp");
+}
+.dark-mode .ico1 {
+   background-image: url("../assets/instagram_ico_d.webp");
+}
+.dark-mode .ico2 {
+   background-image: url("../assets/youtube_ico_d.webp");
+}
+.dark-mode .ico3 {
+   background-image: url("../assets/tiktok_ico_d.webp");
 }
 /* -------------------------- */
 .footer {
