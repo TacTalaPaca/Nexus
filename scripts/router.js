@@ -1,16 +1,14 @@
 const router = {
-    // State management
     pageStates: new Map(),
     isInitialLoad: true,
 
     init: function() {
         this.setupEventListeners();
-        // Don't load content on initial page load
+        this.initializeDropdowns();
         this.isInitialLoad = false;
     },
 
     setupEventListeners: function() {
-        // Handle navigation
         document.addEventListener('click', (e) => {
             const link = e.target.closest('a');
             if (link && !link.classList.contains('theme-switch') && !link.hasAttribute('target')) {
@@ -24,19 +22,16 @@ const router = {
             }
         });
 
-        // Handle browser back/forward
         window.addEventListener('popstate', () => {
             this.loadContent(window.location.pathname);
         });
 
-        // Handle page visibility changes
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'hidden') {
                 this.savePageState();
             }
         });
 
-        // Handle service worker messages
         navigator.serviceWorker.addEventListener('message', (event) => {
             if (event.data.type === 'OFFLINE') {
                 this.handleOffline();
@@ -67,10 +62,6 @@ const router = {
     restorePageState: function(path) {
         const state = this.pageStates.get(path);
         if (state) {
-            // Restore scroll position
-            window.scrollTo(0, state.scroll);
-            
-            // Restore form data
             if (state.forms) {
                 Object.entries(state.forms).forEach(([formIndex, formData]) => {
                     const form = document.querySelectorAll('form')[formIndex];
@@ -83,10 +74,10 @@ const router = {
                 });
             }
         }
+        window.scrollTo(0, 0);
     },
 
     loadContent: async function(url) {
-        // Skip content loading on initial page load
         if (this.isInitialLoad) return;
 
         const content = document.querySelector('.content');
@@ -107,6 +98,7 @@ const router = {
                 content.classList.remove('fade-out');
                 content.classList.add('fade-in');
                 this.restorePageState(url);
+                this.initializeDropdowns();
             }, 300);
             
         } catch (error) {
@@ -123,5 +115,25 @@ const router = {
                 <p>Please check your internet connection</p>
             </section>
         `;
+    },
+
+    initializeDropdowns: function() {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            const header = dropdown.querySelector('.dropdown-header');
+            if (header) {
+                const newHeader = header.cloneNode(true);
+                header.parentNode.replaceChild(newHeader, header);
+                
+                newHeader.addEventListener('click', () => {
+                    dropdown.classList.toggle('active');
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                });
+            }
+        });
     }
 };
