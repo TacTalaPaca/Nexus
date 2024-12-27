@@ -59,6 +59,9 @@ text >---------------< white
       border-radius: 50px;
       background-color: rgba(246, 246, 246, 0.7);
    }
+   .nav a:hover {
+      box-shadow: none;
+   }
    .dark-mode .nav a {
       background-color: rgba(31, 31, 31, 0.7);
    }

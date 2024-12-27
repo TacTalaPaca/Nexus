@@ -88,6 +88,7 @@ body {
 }
 .nav a:hover {
    background-color: #e6e6e6;
+   box-shadow: inset 0 0 0 2px #00e385;
 }
 .nav a:active {
    background-color: #e6e6e6;

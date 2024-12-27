@@ -33,26 +33,15 @@ See the GNUGeneral Public License for more details. You should have received a c
    <script src="../scripts/dropdowns.js" defer></script>
    <script src="../scripts/elm_expand.js" defer></script>
    <script src="../scripts/bfcache.js" defer></script>
-   <script>navigator.serviceWorker.register("../scripts/service-worker.js")</script> 
-   <!-- Manifest FIle ------- -->
-   <link rel="manifest" href="../manifest.json" />
+   <script src="../scripts/router.js"></script>
+   <script>navigator.serviceWorker.register("../scripts/service-worker.js")</script>
    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-         const links = document.querySelectorAll("a");
-         const content = document.querySelector(".content");
-         links.forEach(link => {
-            link.addEventListener("click", (e) => {
-               e.preventDefault();
-               if (!link.classList.contains("theme-switch")) {
-                  content.classList.add("fade-out");
-                  setTimeout(() => {
-                     window.location.href = link.href;
-                  }, 300);
-               }
-            });
-         });
+      document.addEventListener('DOMContentLoaded', () => {
+         router.init();
       });
    </script>
+   <!-- Manifest FIle ------- -->
+   <link rel="manifest" href="../manifest.json" />
 </head>
 <!-- --------------------------------------------- -->
 <body>
