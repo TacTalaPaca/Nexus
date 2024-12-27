@@ -1,11 +1,12 @@
 const router = {
     // State management
     pageStates: new Map(),
+    isInitialLoad: true,
 
     init: function() {
-        // Initial page load
-        this.loadContent(window.location.pathname);
         this.setupEventListeners();
+        // Don't load content on initial page load
+        this.isInitialLoad = false;
     },
 
     setupEventListeners: function() {
@@ -85,7 +86,11 @@ const router = {
     },
 
     loadContent: async function(url) {
+        // Skip content loading on initial page load
+        if (this.isInitialLoad) return;
+
         const content = document.querySelector('.content');
+        content.classList.remove('fade-in');
         content.classList.add('fade-out');
         
         try {
