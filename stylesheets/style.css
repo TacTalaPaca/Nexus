@@ -110,6 +110,10 @@ body {
    background-size: 50%;
    margin: 5px;
 }
+.logo {
+   background-image: url("../assets/LogoSQ.svg");
+   background-size: 100%;
+}
 .btn1 {
    background-image: url("../assets/dashboard_l.svg");
 }
