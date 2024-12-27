@@ -33,6 +33,23 @@ See the GNUGeneral Public License for more details. You should have received a c
    <script>navigator.serviceWorker.register("../scripts/service-worker.js")</script> 
    <!-- Manifest FIle ------- -->
    <link rel="manifest" href="../manifest.json" />
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+         const links = document.querySelectorAll("a");
+         const content = document.querySelector(".content");
+         links.forEach(link => {
+            link.addEventListener("click", (e) => {
+               e.preventDefault();
+               if (!link.classList.contains("theme-switch")) {
+                  content.classList.add("fade-out");
+                  setTimeout(() => {
+                     window.location.href = link.href;
+                  }, 300);
+               }
+            });
+         });
+      });
+   </script>
 </head>
 <!-- --------------------------------------------- -->
 <body>
@@ -47,7 +64,7 @@ See the GNUGeneral Public License for more details. You should have received a c
 <!-- ------------------------------------------ -->
    <main>
       <!-- PAGES CONTENT -->
-      <div class="content">
+      <div class="content fade-in">
          <!-- ---------- PG2 ---------- -->
             <!-- BANNER -->
             <section class="banner">
@@ -55,7 +72,6 @@ See the GNUGeneral Public License for more details. You should have received a c
                <p>our projects</p>
             </section>
             <!-- CONTENT -->
-      </div>
       <hr class="divider">
       <footer class="footer">
          <a href="https://www.instagram.com/tactalapaca" target="_blank" class="footer-btn">
@@ -67,6 +83,7 @@ See the GNUGeneral Public License for more details. You should have received a c
             <p>YouTube</p>
          </a>
       </footer>
+      </div>
    </main>
 </body>
 </html>

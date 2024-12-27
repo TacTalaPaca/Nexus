@@ -33,6 +33,23 @@ See the GNUGeneral Public License for more details. You should have received a c
    <script>navigator.serviceWorker.register("../scripts/service-worker.js")</script> 
    <!-- Manifest FIle ------- -->
    <link rel="manifest" href="../manifest.json" />
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+         const links = document.querySelectorAll("a");
+         const content = document.querySelector(".content");
+         links.forEach(link => {
+            link.addEventListener("click", (e) => {
+               e.preventDefault();
+               if (!link.classList.contains("theme-switch")) {
+                  content.classList.add("fade-out");
+                  setTimeout(() => {
+                     window.location.href = link.href;
+                  }, 300);
+               }
+            });
+         });
+      });
+   </script>
 </head>
 <!-- --------------------------------------------- -->
 <body>
@@ -47,7 +64,7 @@ See the GNUGeneral Public License for more details. You should have received a c
 <!-- ------------------------------------------ -->
    <main>
       <!-- PAGES CONTENT -->
-      <div class="content">
+      <div class="content fade-in">
          <!-- ---------- PG3 ---------- -->
            <!-- BANNER -->
             <section class="banner">
@@ -317,6 +334,17 @@ See the GNUGeneral Public License for more details. You should have received a c
                   </div>
                </div>
             </section>
+      <hr class="divider">
+      <footer class="footer">
+         <a href="https://www.instagram.com/tactalapaca" target="_blank" class="footer-btn">
+            <img class="ico" src="../assets/instagram_ico.png" alt="Instagram Icon">
+            <p>Instagram</p>
+         </a>
+         <a href="https://youtube.com/@tactalapaca" target="_blank" class="footer-btn">
+            <img class="ico" src="../assets/youtube_ico.png" alt="YouTube Icon">
+            <p>YouTube</p>
+         </a>
+      </footer>
       </div>
    </main>
 </body>
