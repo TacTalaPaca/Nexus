@@ -178,3 +178,19 @@ See the GNU General Public License for more details. You should have received a 
   animation-timeline: view();
   animation-range: exit 0% exit 100%;
 */
+@keyframes right_fade {
+   0% {
+     opacity: 0;
+     transform: translateX(-10px) scale(0); /* Start small and off-screen */
+   }
+   50% {
+       opacity: 0.5;
+   }
+   100% {
+     opacity: 1;
+     transform: translateX(70px) scale(1); /* End fully visible and larger */
+   }
+ }
+ /*
+  animation: right_fade 0.2s forwards;
+*/

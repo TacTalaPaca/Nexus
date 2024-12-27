@@ -47,6 +47,7 @@ body {
    border: 2px solid #cbcbcb;
    border-radius: 10px;
    /* ------------------ */
+   z-index: 1000;
    position: fixed;
    display: flex;
    flex-direction: column;
@@ -109,6 +110,8 @@ body {
    background-position: center center;
    background-size: 50%;
    margin: 5px;
+   text-decoration: none;
+   color: #212121;
 }
 .logo {
    background-image: url("../assets/LogoSQ.svg");
@@ -136,6 +139,9 @@ body {
 }
 /* -------------------------- */
 /* dark-mode ---------------- */
+.dark-mode .btn {
+   color: white;
+}
 .dark-mode .btn1 {
    background-image: url("../assets/dashboard_d.svg");
 }
@@ -150,6 +156,28 @@ body {
 }
 .dark-mode .theme-switch {
    background-image: url("../assets/light_mode.svg");
+}
+/* ----------------------------------------------- */
+/* pop-ups --------------------------------------- */
+.btn .pop-up {
+   display: none;
+}
+.btn:hover .pop-up {
+   display: flex;
+   background-color: white;
+   border: 2px solid #cbcbcb;
+   border-radius: 10px;
+   width: fit-content;
+   padding: 10px;
+   margin-top: 5px;
+   animation: right_fade 0.2s forwards;
+   transition: all 0.3s ease;
+}
+/* -------------------------- */
+/* dark-mode ---------------- */
+.dark-mode .btn:hover .pop-up {
+   background-color: #171717;
+   border: 2px solid #1f1f1f;
 }
 /* ----------------------------------------------- */
 /* divider --------------------------------------- */
