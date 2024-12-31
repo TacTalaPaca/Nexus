@@ -28,9 +28,13 @@ See the GNUGeneral Public License for more details. You should have received a c
    <link rel="stylesheet" href="../stylesheets/inpage.css">
    <link rel="stylesheet" href="../stylesheets/phone.css">
    <link rel="stylesheet" href="../stylesheets/keyframes.css">
+   <!-- PDF.js -------------- -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+   <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';</script>
    <!-- JS links ------------ -->
    <script src="../scripts/theme.js"></script>
    <script src="../scripts/elm_expand.js" defer></script>
+   <script src="../scripts/carousel.js" defer></script>
    <script src="../scripts/router.js"></script>
    <script>navigator.serviceWorker.register("../scripts/service-worker.js")</script>
    <script>
@@ -72,6 +76,38 @@ See the GNUGeneral Public License for more details. You should have received a c
                <p>our projects</p>
             </section>
             <!-- CONTENT -->
+      <!-- E-BOOKS SECTION -->
+      <h2 class="ebooks-title">E-BOOKS</h2>
+      <div class="ebooks-carousel">
+        <button class="carousel-button prev"></button>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="book-cover bkc1" 
+            data-pdf="../assets/books/test.pdf"></div>
+            <div class="book-cover bkc2" 
+            data-pdf="../assets/books/book2.pdf"></div>
+            <div class="book-cover bkc3" 
+            data-pdf="../assets/books/book3.pdf"></div>
+            <div class="book-cover bkc4" 
+            data-pdf="../assets/books/book4.pdf"></div>
+            <div class="book-cover bkc5" 
+            data-pdf="../assets/books/book5.pdf"></div>
+            <div class="book-cover bkc6" 
+            data-pdf="../assets/books/book6.pdf"></div>
+          </div>
+        </div>
+        <button class="carousel-button next"></button>
+      </div>
+      <div class="reader-overlay"></div>
+      <div class="reader-container">
+        <button class="reader-close">×</button>
+        <div class="reader-controls">
+          <button class="page-nav prev-page">◄</button>
+          <span class="page-counter">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="page-nav next-page">►</button>
+        </div>
+        <canvas id="pdf-viewer"></canvas>
+      </div>
       <hr class="divider">
       <footer class="footer">
          <a href="https://www.instagram.com/tactalapaca" target="_blank" class="footer-btn">
