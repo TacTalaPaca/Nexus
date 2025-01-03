@@ -269,6 +269,19 @@ body {
    height: 50px;
    transition: all 0.3s ease;
 }
+.buap-btn {
+   background-color: #00e385;
+   text-decoration: none;
+   font-size: clamp(10px, 6.5vw, 25px);
+   color: white;
+   align-items: center;
+   justify-content: center;
+   padding: 0 15px 0 10px;
+   display: flex;
+   border-radius: 50px;
+   height: 50px;
+   margin: auto;
+}
 /* -------------------------- */
 /* dark-mode ---------------- */
 .dark-mode .footer{
@@ -284,6 +297,9 @@ body {
    background-color: #e6e6e6;
    transform: scale(1.15);
    transition: all 0.2s ease;
+}
+.buap-btn:hover{
+   animation: glow 1s ease-in-out infinite;
 }
 .footer-btn:active{
    background-color: white;

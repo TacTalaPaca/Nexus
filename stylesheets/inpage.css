@@ -363,7 +363,7 @@ text >---------------< white
   box-shadow: 0 0 20px rgba(31, 31, 31, 0.3);
   cursor: pointer;
   /* animations ------- */
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, width 0.1s ease;
   animation: pop 0.6s ease-in-out;
 }
 .dark-mode .ttp-labs-logo {
