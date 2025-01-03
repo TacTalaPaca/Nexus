@@ -1,0 +1,93 @@
+<!-- This file is part of TacTalaPaca.github.io.
+
+TacTalaPaca.github.io is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+TacTalaPaca.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+See the GNUGeneral Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/> -->
+<!-- --------------------------------------------- -->
+ <!-- EXPLORE PAGE -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON ------------- -->
+    <link rel="shortcut icon" href="/assets/Logo_512.png" type="image/x-icon">
+    <!-- TITLE --------------- -->
+    <title>TacTalaPaca</title>
+    <!-- DESCRIPTION --------- -->
+    <meta name="description" content="TacTalaPaca official website">
+    <!-- Google AdSense ------ -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6755549542042427"
+    crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-6755549542042427">
+    <!-- Google Fonts -------- -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap">
+    <!-- CSS links ----------- -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/inpage.css">
+    <link rel="stylesheet" href="/stylesheets/phone.css">
+    <link rel="stylesheet" href="/stylesheets/keyframes.css">
+    <!-- JS links ------------ -->
+    <script src="/scripts/theme.js"></script>
+    <script src="/scripts/elm_expand.js" defer></script>
+    <script src="/scripts/router.js"></script>
+    <script>navigator.serviceWorker.register("/scripts/service-worker.js")</script>
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+          router.init();
+       });
+    </script>
+    <!-- Manifest FIle ------- -->
+    <link rel="manifest" href="manifest.json" />
+ </head>
+ <!-- --------------------------------------------- -->
+ <body class="labs-page">
+    <!-- SIDEBAR TABS -->
+    <nav class="nav">
+      <a class="logo btn"></a>
+      <a class="btn1 btn" href="/">
+         <div class="pop-up">DASHBOARD</div>
+      </a>
+      <a class="btn2 btn" href="/explore">
+         <div class="pop-up">EXPLORE</div>
+      </a>
+      <a class="btn3 btn" href="/download">
+         <div class="pop-up">DOWNLOAD</div>
+      </a>
+      <a class="btn4 btn" href="/contact">
+         <div class="pop-up">CONTACT</div>
+      </a>
+      <a id="theme-toggle" class="theme-switch" onclick="toggleTheme()">
+      </a>
+   </nav>
+ <!-- ------------------------------------------ -->
+    <main>
+       <!-- PAGES CONTENT -->
+       <div class="content fade-in">
+          <div>
+             <div class="labs-wave"></div>
+             <div class="labs-wave"></div>
+             <div class="labs-wave"></div>
+             <div class="labs-content">
+                <a class="ttp-labs-logo" href="/labs"></a>
+                <h1 class="labs-title">Welcome to TTP Labs</h1>
+             </div>
+          </div>
+       <br>
+       <footer class="footer">
+          <a href="https://www.instagram.com/tactalapaca" target="_blank" class="footer-btn">
+             <div class="ico ico1" alt="Instagram Icon"></div>
+          </a>
+          <a href="https://youtube.com/@tactalapaca" target="_blank" class="footer-btn">
+             <div class="ico ico2" alt="YouTube Icon"></div>
+          </a>
+          <a href="https://www.tiktok.com/@tactalapaca" target="_blank" class="footer-btn">
+             <div class="ico ico3" alt="TikTok Icon"></div>
+          </a>
+       </footer>
+       </div>
+    </main>
+ </body>
+ </html>

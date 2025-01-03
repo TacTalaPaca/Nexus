@@ -104,6 +104,10 @@ text >---------------< white
       padding: 10px;
    }
    /* -------------------------- */
+   .ttp-labs-logo {
+      width: clamp(100px, 70vw, 400px);
+    }
+   /* -------------------------- */
    .divider {
       margin-right: 60px;
       margin-left: 60px;

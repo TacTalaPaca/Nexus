@@ -13,7 +13,7 @@ See the GNUGeneral Public License for more details. You should have received a c
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- FAVICON ------------- -->
-   <link rel="shortcut icon" href="../assets/Logo_512.png" type="image/x-icon">
+   <link rel="shortcut icon" href="/assets/Logo_512.png" type="image/x-icon">
    <!-- TITLE --------------- -->
    <title>TacTalaPaca</title>
    <!-- DESCRIPTION --------- -->
@@ -25,18 +25,15 @@ See the GNUGeneral Public License for more details. You should have received a c
    <!-- Google Fonts -------- -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap">
    <!-- CSS links ----------- -->
-   <link rel="stylesheet" href="../stylesheets/style.css">
-   <link rel="stylesheet" href="../stylesheets/inpage.css">
-   <link rel="stylesheet" href="../stylesheets/phone.css">
-   <link rel="stylesheet" href="../stylesheets/keyframes.css">
-   <!-- PDF.js -------------- -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-   <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';</script>
+   <link rel="stylesheet" href="/stylesheets/style.css">
+   <link rel="stylesheet" href="/stylesheets/inpage.css">
+   <link rel="stylesheet" href="/stylesheets/phone.css">
+   <link rel="stylesheet" href="/stylesheets/keyframes.css">
    <!-- JS links ------------ -->
-   <script src="../scripts/theme.js"></script>
-   <script src="../scripts/elm_expand.js" defer></script>
-   <script src="../scripts/carousel.js" defer></script>
-   <script src="../scripts/router.js"></script>
+   <script src="/scripts/theme.js"></script>
+   <script src="/scripts/elm_expand.js" defer></script>
+   <script src="/scripts/carousel.js" defer></script>
+   <script src="/scripts/router.js"></script>
    <script>navigator.serviceWorker.register("../scripts/service-worker.js")</script>
    <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -44,23 +41,23 @@ See the GNUGeneral Public License for more details. You should have received a c
       });
    </script>
    <!-- Manifest FIle ------- -->
-   <link rel="manifest" href="../manifest.json" />
+   <link rel="manifest" href="manifest.json" />
 </head>
 <!-- --------------------------------------------- -->
 <body>
    <!-- SIDEBAR TABS -->
    <nav class="nav">
       <a class="logo btn"></a>
-      <a class="btn1 btn" href="../">
+      <a class="btn1 btn" href="/">
          <div class="pop-up">DASHBOARD</div>
       </a>
-      <a class="btn2 btn" href="../explore">
+      <a class="btn2 btn" href="/explore">
          <div class="pop-up">EXPLORE</div>
       </a>
-      <a class="btn3 btn" href="../download">
+      <a class="btn3 btn" href="/download">
          <div class="pop-up">DOWNLOAD</div>
       </a>
-      <a class="btn4 btn" href="../contact">
+      <a class="btn4 btn" href="/contact">
          <div class="pop-up">CONTACT</div>
       </a>
       <a id="theme-toggle" class="theme-switch" onclick="toggleTheme()">
@@ -78,15 +75,15 @@ See the GNUGeneral Public License for more details. You should have received a c
             </section>
             <!-- CONTENT -->
       <!-- E-BOOKS SECTION -->
-      <h2 class="ebooks-title">E-BOOKS</h2>
-      <div class="ebooks-carousel">
+      <h2 class="title">E-BOOKS</h2>
+      <section class="ebooks-carousel">
         <button class="carousel-button prev"></button>
         <div class="carousel-container">
           <div class="carousel-track">
             <div class="book-cover bkc1" 
-            data-pdf="../assets/books/test.pdf"></div>
+            data-pdf="/assets/books/test.pdf"></div>
             <div class="book-cover bkc2" 
-            data-pdf="../assets/books/book2.pdf"></div>
+            data-pdf="/assets/books/test.pdf"></div>
             <div class="book-cover bkc3" 
             data-pdf="../assets/books/book3.pdf"></div>
             <div class="book-cover bkc4" 
@@ -98,7 +95,7 @@ See the GNUGeneral Public License for more details. You should have received a c
           </div>
         </div>
         <button class="carousel-button next"></button>
-      </div>
+      </section>
       <div class="reader-overlay"></div>
       <div class="reader-container">
         <button class="reader-close">×</button>
@@ -109,6 +106,8 @@ See the GNUGeneral Public License for more details. You should have received a c
         </div>
         <canvas id="pdf-viewer"></canvas>
       </div>
+      <!-- TTP LABS SECTION -->
+      <a class="ttp-labs-logo" href="/labs"></a>
       <hr class="divider">
       <footer class="footer">
          <a href="https://www.instagram.com/tactalapaca" target="_blank" class="footer-btn">

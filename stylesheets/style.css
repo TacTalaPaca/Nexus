@@ -116,23 +116,23 @@ body {
    color: #212121;
 }
 .logo {
-   background-image: url("../assets/LogoSQ.svg");
+   background-image: url("/assets/LogoSQ.svg");
    background-size: 100%;
 }
 .btn1 {
-   background-image: url("../assets/dashboard_l.svg");
+   background-image: url("/assets/dashboard_l.svg");
 }
 .btn2 {
-   background-image: url("../assets/explore_l.svg");
+   background-image: url("/assets/explore_l.svg");
 }
 .btn3 {
-   background-image: url("../assets/download_l.svg");
+   background-image: url("/assets/download_l.svg");
 }
 .btn4 {
-   background-image: url("../assets/contacts_l.svg");
+   background-image: url("/assets/contacts_l.svg");
 }
 .theme-switch {
-   background-image: url("../assets/dark_mode.svg");
+   background-image: url("/assets/dark_mode.svg");
    background-repeat: no-repeat;
    background-position: center center;
    background-size: 60%;
@@ -145,19 +145,19 @@ body {
    color: white;
 }
 .dark-mode .btn1 {
-   background-image: url("../assets/dashboard_d.svg");
+   background-image: url("/assets/dashboard_d.svg");
 }
 .dark-mode .btn2 {
-   background-image: url("../assets/explore_d.svg");
+   background-image: url("/assets/explore_d.svg");
 }
 .dark-mode .btn3 {
-   background-image: url("../assets/download_d.svg");
+   background-image: url("/assets/download_d.svg");
 }
 .dark-mode .btn4 {
-   background-image: url("../assets/contacts_d.svg");
+   background-image: url("/assets/contacts_d.svg");
 }
 .dark-mode .theme-switch {
-   background-image: url("../assets/light_mode.svg");
+   background-image: url("/assets/light_mode.svg");
 }
 /* ----------------------------------------------- */
 /* pop-ups --------------------------------------- */
@@ -213,22 +213,22 @@ body {
    transition: all 0.3s ease;
 }
 .ico1 {
-   background-image: url("../assets/instagram_ico_l.webp");
+   background-image: url("/assets/instagram_ico_l.webp");
 }
 .ico2 {
-   background-image: url("../assets/youtube_ico_l.webp");
+   background-image: url("/assets/youtube_ico_l.webp");
 }
 .ico3 {
-   background-image: url("../assets/tiktok_ico_l.webp");
+   background-image: url("/assets/tiktok_ico_l.webp");
 }
 .dark-mode .ico1 {
-   background-image: url("../assets/instagram_ico_d.webp");
+   background-image: url("/assets/instagram_ico_d.webp");
 }
 .dark-mode .ico2 {
-   background-image: url("../assets/youtube_ico_d.webp");
+   background-image: url("/assets/youtube_ico_d.webp");
 }
 .dark-mode .ico3 {
-   background-image: url("../assets/tiktok_ico_d.webp");
+   background-image: url("/assets/tiktok_ico_d.webp");
 }
 /* -------------------------- */
 .footer {
@@ -309,6 +309,199 @@ body {
 .content.fade-out {
    animation: fadeOut 0.2s ease-in-out forwards;
 }
+/* ----------------------------------------------- */
+/* ketframes  ------------------------------------ */
+
+/* Gentle Pulse */
+@keyframes pulse {
+   0% {
+       transform: scale(1);
+   }
+   50% {
+       transform: scale(1.15);
+   }
+   100% {
+       transform: scale(1);
+   }
+}
+/*
+{
+   animation: pulse 0.75s ease-in-out infinite;
+}
+*/
+/* -------------------------- */
+/* Spin Effect */
+@keyframes spin {
+   from {
+       transform: rotate(0deg);
+   }
+   to {
+       transform: rotate(360deg);
+   }
+}
+/*
+{
+   animation: spin 2s linear infinite;
+}
+*/
+/* -------------------------- */
+/* Glow Effect */
+@keyframes glow {
+    0% {
+        box-shadow: 
+            0 0 5px 2px rgba(0, 227, 133, 0.4),
+            0 0 10px 4px rgba(0, 227, 133, 0.3),
+            0 0 15px 6px rgba(0, 227, 133, 0.2);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 20px 8px rgba(0, 227, 133, 0.6),
+            0 0 30px 12px rgba(0, 227, 133, 0.4),
+            0 0 40px 16px rgba(0, 227, 133, 0.3);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 
+            0 0 5px 2px rgba(0, 227, 133, 0.4),
+            0 0 10px 4px rgba(0, 227, 133, 0.3),
+            0 0 15px 6px rgba(0, 227, 133, 0.2);
+        transform: scale(1);
+    }
+}
+/*
+{
+   animation: glow 1s ease-in-out infinite;
+}
+*/
+/* -------------------------- */
+/* Bounce */
+@keyframes bounce {
+   0%, 100% {
+       transform: translateY(0);
+   }
+   50% {
+       transform: translateY(-10px);
+   }
+}
+/*
+{
+   animation: bounce 0.8s ease-in-out infinite;
+}
+*/
+/* -------------------------- */
+/* Pop Effect */
+@keyframes pop {
+   0% {
+       transform: scale(1);
+   }
+   40% {
+       transform: scale(1.05);
+   }
+   60% {
+       transform: scale(0.95);
+   }
+   100% {
+       transform: scale(1);
+   }
+}
+/*
+{
+   animation: pop 0.6s ease-out infinite;
+}
+*/
+/* -------------------------- */
+/* Pop2 Effect */
+@keyframes pop2 {
+   0% {
+       transform: scale(1);
+   }
+   40% {
+       transform: scale(1.01);
+   }
+   60% {
+       transform: scale(0.99);
+   }
+   100% {
+       transform: scale(1);
+   }
+}
+/*
+{
+   animation: pop2 0.6s ease-out infinite;
+}
+*/
+/* -------------------------- */
+/* Shake Effect */
+@keyframes shake {
+   0%, 100% {
+       transform: translateX(0);
+   }
+   25% {
+       transform: translateX(-5px);
+   }
+   75% {
+       transform: translateX(5px);
+   }
+}
+/*
+{
+   animation: shake 0.4s ease-in-out infinite;
+}
+*/
+/* -------------------------- */
+/* Fade Pulse */
+@keyframes fade-pulse {
+   0% {
+       opacity: 1;
+   }
+   50% {
+       opacity: 0.6;
+   }
+   100% {
+       opacity: 1;
+   }
+}
+/*
+{
+   animation: fade-pulse 1s ease-in-out infinite;
+}
+*/
+/* -------------------------- */
+/* Fade Out */
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+    100% {
+        opacity: 0;
+        scale: 0.8;
+    }
+}
+/*
+  animation: fade-out ease-in-out;
+  animation-timeline: view();
+  animation-range: exit 0% exit 100%;
+*/
+@keyframes right_fade {
+   0% {
+     opacity: 0;
+     transform: translateX(-10px) scale(0); /* Start small and off-screen */
+   }
+   50% {
+       opacity: 0.5;
+   }
+   100% {
+     opacity: 1;
+     transform: translateX(70px) scale(1); /* End fully visible and larger */
+   }
+ }
+ /*
+  animation: right_fade 0.2s forwards;
+*/
+/* -------------------------- */
+/* Page Fade */
 @keyframes fadeIn {
    from {
       transform: translateY(20px);
@@ -329,4 +522,10 @@ body {
       transform: translateY(-20px);
       opacity: 0;
    }
+}
+/* -------------------------- */
+/* Labs Wave */
+@keyframes wave {
+   0% { background-position-x: 0; }
+   100% { background-position-x: 1000px; }
 }
