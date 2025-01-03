@@ -78,6 +78,16 @@ body {
    animation: pop 0.6s ease-out;
    transition: all 0.3s ease;
 }
+.nav div {
+   background-color: #f6f6f6;
+   border-radius: 50px;
+   display: block;
+   height: 55px;
+   margin-bottom: 5px;
+   /* animations ------- */
+   animation: pop 0.6s ease-out;
+   transition: all 0.3s ease;
+}
 /* -------------------------- */
 /* dark-mode ---------------- */
 .dark-mode .nav a {
@@ -90,6 +100,9 @@ body {
 .nav a:hover {
    background-color: #e6e6e6;
    box-shadow: inset 0 0 0 2px #00e385;
+   transform: scale(1.1);
+}
+.nav div:hover {
    transform: scale(1.1);
 }
 .nav a:active {
