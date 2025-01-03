@@ -6,7 +6,7 @@ TacTalaPaca.github.io is distributed in the hope that it will be useful, but WIT
 
 See the GNUGeneral Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/> -->
 <!-- --------------------------------------------- -->
- <!-- EXPLORE PAGE -->
+<!-- EXPLORE PAGE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +32,8 @@ See the GNUGeneral Public License for more details. You should have received a c
    <!-- JS links ------------ -->
    <script src="/scripts/theme.js"></script>
    <script src="/scripts/elm_expand.js" defer></script>
-   <script src="/scripts/carousel.js" defer></script>
    <script src="/scripts/router.js"></script>
-   <script>navigator.serviceWorker.register("../scripts/service-worker.js")</script>
+   <script>navigator.serviceWorker.register("/scripts/service-worker.js")</script>
    <script>
       document.addEventListener('DOMContentLoaded', () => {
          router.init();
@@ -45,7 +44,7 @@ See the GNUGeneral Public License for more details. You should have received a c
 </head>
 <!-- --------------------------------------------- -->
 <body>
-   <!-- SIDEBAR TABS -->
+   <!-- NAVIGATION TABS -->
    <nav class="nav">
       <a class="logo btn"></a>
       <a class="btn1 btn" href="/">
@@ -64,48 +63,16 @@ See the GNUGeneral Public License for more details. You should have received a c
       </a>
    </nav>
 <!-- ------------------------------------------ -->
-   <main>
-      <!-- PAGES CONTENT -->
-      <div class="content fade-in">
-         <!-- ---------- PG2 ---------- -->
-            <!-- BANNER -->
-            <section class="banner">
-               <h1>EXPLORE</h1>
-               <p>our projects</p>
-            </section>
-            <!-- CONTENT -->
-      <!-- E-BOOKS SECTION -->
-      <h2 class="title">E-BOOKS</h2>
-      <section class="ebooks-carousel">
-        <button class="carousel-button prev"></button>
-        <div class="carousel-container">
-          <div class="carousel-track">
-            <div class="book-cover bkc1" 
-            data-pdf="/assets/books/test.pdf"></div>
-            <div class="book-cover bkc2" 
-            data-pdf="/assets/books/test.pdf"></div>
-            <div class="book-cover bkc3" 
-            data-pdf="../assets/books/book3.pdf"></div>
-            <div class="book-cover bkc4" 
-            data-pdf="../assets/books/book4.pdf"></div>
-            <div class="book-cover bkc5" 
-            data-pdf="../assets/books/book5.pdf"></div>
-            <div class="book-cover bkc6" 
-            data-pdf="../assets/books/book6.pdf"></div>
-          </div>
-        </div>
-        <button class="carousel-button next"></button>
+<main>
+   <!-- PAGES CONTENT -->
+   <div class="content fade-in">
+      <!-- ---------- PG2 ---------- -->
+      <!-- BANNER -->
+      <section class="banner">
+         <h1>EXPLORE</h1>
+         <p>our projects</p>
       </section>
-      <div class="reader-overlay"></div>
-      <div class="reader-container">
-        <button class="reader-close">×</button>
-        <div class="reader-controls">
-          <button class="page-nav prev-page">◄</button>
-          <span class="page-counter">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
-          <button class="page-nav next-page">►</button>
-        </div>
-        <canvas id="pdf-viewer"></canvas>
-      </div>
+      <!-- CONTENT -->
       <!-- TTP LABS SECTION -->
       <a class="ttp-labs-logo" href="/labs"></a>
       <hr class="divider">
@@ -120,7 +87,7 @@ See the GNUGeneral Public License for more details. You should have received a c
             <div class="ico ico3" alt="TikTok Icon"></div>
          </a>
       </footer>
-      </div>
-   </main>
+   </div>
+</main>
 </body>
 </html>

@@ -30,9 +30,10 @@ body {
    margin: 0;
    padding: 0;
    font-family: "Bungee", sans-serif;
-   font-weight: bolder;
+   color: #212121;
    user-select: none;
    -webkit-tap-highlight-color: transparent;
+   /* animations ------- */
    transition: all 0.3s ease;
 }
 .dark-mode body {
@@ -201,7 +202,6 @@ body {
 }
 /* ----------------------------------------------- */
 /* footer ---------------------------------------- */
-/* -------------------------- */
 .ico {
    background-repeat: no-repeat;
    background-position: center center;
