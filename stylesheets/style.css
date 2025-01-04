@@ -48,7 +48,7 @@ body {
    border: 2px solid #cbcbcb;
    border-radius: 10px;
    /* ------------------ */
-   z-index: 1000;
+   z-index: 1;
    position: fixed;
    display: flex;
    flex-direction: column;

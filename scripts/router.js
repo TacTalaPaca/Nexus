@@ -99,6 +99,11 @@ const router = {
                 content.classList.add('fade-in');
                 this.restorePageState(url);
                 this.initializeDropdowns();
+                
+                // Reinitialize PDF viewer after content change
+                if (window.PDFViewer) {
+                    new PDFViewer();
+                }
             }, 300);
             
         } catch (error) {

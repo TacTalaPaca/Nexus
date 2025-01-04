@@ -117,4 +117,117 @@ text >---------------< white
    #bmc-wbtn {
       display: none !important;
    }
+   /* PDF Viewer Mobile Styles */
+   .pdf-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      gap: 1rem;
+      width: 90vw;
+      height: calc(90vw * 1.414);
+      padding: 1rem;
+      margin-bottom: 90px;
+   }
+   .page-wrapper {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+   }
+   .nav-btn {
+      position: fixed;
+      bottom: 50%;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      background: rgba(255,255,255,0.15);
+   }
+   .prev-page {
+      left: 0.5rem;
+      border-radius: 0 1.5rem 1.5rem 0;
+   }
+   .next-page {
+      right: 0.5rem;
+      border-radius: 1.5rem 0 0 1.5rem;
+   }
+   .close-pdf {
+      top: 1rem;
+      right: 1rem;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+   }
+   .page-controls {
+      bottom: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+   }
+   .page-info {
+      top: 1rem;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+   }
+   .pdf-viewer {
+      align-items: center;
+      justify-content: center;
+   }
+   .pdf-container {
+      width: 90vw;
+      height: calc(90vw * 1.414);
+      margin: auto;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .page-wrapper {
+      width: 100%;
+      height: 100%;
+   }
+   .nav-btn {
+      position: fixed;
+      transform: none;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      bottom: calc(50% - 1.5rem);
+   }
+   .prev-page {
+      left: 0.5rem;
+      border-radius: 0 1.5rem 1.5rem 0;
+   }
+   .next-page {
+      right: 0.5rem;
+      border-radius: 1.5rem 0 0 1.5rem;
+   }
+   .close-pdf {
+      top: 1rem;
+      right: 1rem;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+   }
+   .page-info {
+      top: 1rem;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+   }
+   /* PDF Viewer Mobile Fixes */
+   .pdf-viewer {
+      margin: 0 !important;  /* Remove any margins */
+   }
+   .pdf-container {
+      width: 85vw !important;  /* Slightly smaller to ensure no overflow */
+      height: calc(85vw * 1.414) !important;  /* A4 ratio */
+      padding: 0 !important;
+      margin: auto !important;
+      transform-origin: center center;
+      position: fixed !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+   }
+   .page-wrapper {
+      width: 100% !important;
+      height: 100% !important;
+      max-height: none !important;
+   }
 }

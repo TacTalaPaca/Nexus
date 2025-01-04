@@ -33,6 +33,10 @@ See the GNUGeneral Public License for more details. You should have received a c
    <script src="/scripts/theme.js"></script>
    <script src="/scripts/elm_expand.js" defer></script>
    <script src="/scripts/router.js"></script>
+   <!-- PDF.js -------------- -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+   <script src="/scripts/pdf-viewer.js" defer></script>
+   <!-- Buy Me Coffee ------- -->
    <script defer data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="tactalapaca" data-description="Support us on Buy me a coffee!" data-message="" data-color="#00e385" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
    <script>navigator.serviceWorker.register("/scripts/service-worker.js")</script>
    <script>
@@ -77,6 +81,42 @@ See the GNUGeneral Public License for more details. You should have received a c
       <!-- TTP LABS SECTION -->
       <a class="ttp-labs-logo" href="/labs/"></a>
       <hr class="divider">
+      
+      <!-- E-Book Gallery -->
+      <div class="ebook-gallery">
+        <!-- Demo books - Replace src with actual cover images -->
+        <div class="book-cover" data-pdf="/assets/test/test.pdf">
+          <div class="cover-placeholder">Book 1</div>
+        </div>
+        <div class="book-cover" data-pdf="/assets/pdfs/sample2.pdf">
+          <div class="cover-placeholder">Book 2</div>
+        </div>
+        <div class="book-cover" data-pdf="/assets/test/test.pdf">
+          <div class="cover-placeholder">Book 3</div>
+        </div>
+        <div class="book-cover" data-pdf="/assets/test/test.pdf">
+         <div class="cover-placeholder">Book 4</div>
+       </div>
+       <div class="book-cover" data-pdf="/assets/test/test.pdf">
+         <div class="cover-placeholder">Book 5</div>
+       </div>
+      </div>
+
+      <!-- PDF Viewer -->
+      <div class="pdf-viewer">
+        <button class="close-pdf">×</button>
+        <div class="pdf-container">
+          <button class="nav-btn prev-page">‹</button>
+          <div class="page-wrapper">
+            <canvas class="pdf-page"></canvas>
+          </div>
+          <button class="nav-btn next-page">›</button>
+        </div>
+        <div class="page-controls">
+          <span class="page-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+        </div>
+      </div>
+
       <footer class="footer">
          <a href="https://www.instagram.com/tactalapaca" target="_blank" class="footer-btn">
             <div class="ico ico1" alt="Instagram Icon"></div>
