@@ -79,6 +79,7 @@ class PDFViewer {
             document.querySelector('.total-pages').textContent = this.pdfDoc.numPages;
             
             this.viewer.classList.add('active');
+            document.body.classList.add('no-scroll');  // Add no-scroll class
             this.renderPage(this.currentPage);
         } catch (error) {
             console.error('Error loading PDF:', error);
@@ -87,6 +88,7 @@ class PDFViewer {
 
     closePDF() {
         this.viewer.classList.remove('active');
+        document.body.classList.remove('no-scroll');  // Remove no-scroll class
         setTimeout(() => {
             this.pdfDoc = null;
             this.currentPage = 1;

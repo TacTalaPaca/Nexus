@@ -559,3 +559,8 @@ body {
    0% { background-position-x: 0; }
    100% { background-position-x: 1000px; }
 }
+
+/* Add this near the other utility classes */
+.no-scroll {
+   overflow: hidden;
+}

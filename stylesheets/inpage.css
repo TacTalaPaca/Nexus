@@ -461,15 +461,14 @@ text >---------------< white
   align-items: center;
   justify-content: center;
   background: rgba(0,0,0,0);
-  backdrop-filter: blur(0);
+  backdrop-filter: none;
   transition: visibility 0s linear 0.3s, background 0.3s, backdrop-filter 0.3s;
   z-index: 9999;
 }
 
 .pdf-viewer.active {
   visibility: visible;
-  background: rgba(0,0,0,0.3);
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(3px);
   transition-delay: 0s;
 }
 
@@ -492,9 +491,11 @@ text >---------------< white
   position: absolute;
   inset: 0;
   background: white;
-  border-radius: 1rem;
-  box-shadow: 0 0 4rem rgba(0,0,0,0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.3);
   overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 2000px;
 }
 
 .pdf-page {
@@ -510,27 +511,27 @@ text >---------------< white
 .nav-btn {
   position: absolute;
   top: 50%;
-  width: 4rem;
-  height: 4rem;
+  width: 60px;
+  height: 60px;
   border: none;
   border-radius: 50%;
   background: rgba(0,0,0,0.4);
   border: 2px solid rgba(255,255,255,0.2);
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   color: white;
-  font-size: 2rem;
+  font-size: 30px;
   cursor: pointer;
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(5px);
   transition: all 0.3s;
   z-index: 10001;
 }
 
 .prev-page {
-  left: -5rem;
+  left: -70px;
 }
 
 .next-page {
-  right: -5rem;
+  right: -70px;
 }
 
 .nav-btn:hover {
@@ -550,18 +551,17 @@ text >---------------< white
 
 .close-pdf {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
-  width: 4rem;
-  height: 4rem;
-  border: none;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: rgba(0,0,0,0.4);
   border: 2px solid rgba(255,255,255,0.2);
   color: white;
-  font-size: 2rem;
+  font-size: 30px;
   cursor: pointer;
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(5px);
   transition: all 0.3s;
   z-index: 10001;
 }
@@ -575,15 +575,16 @@ text >---------------< white
 .page-info {
   position: fixed;
   left: 50%;
-  top: 2rem;
+  top: 20px;
   transform: translateX(-50%);
-  padding: 0.75rem 1.5rem;
+  padding: 10px 20px;
   background: rgba(0,0,0,0.4);
   border: 2px solid rgba(255,255,255,0.2);
   color: white;
-  border-radius: 2rem;
-  backdrop-filter: blur(0.5rem);
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
   font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
   z-index: 10001;
 }
 
@@ -594,7 +595,7 @@ text >---------------< white
     opacity: 1;
   }
   100% {
-    transform: rotateY(30deg) translateZ(-50rem) translateX(-100%);
+    transform: rotateY(30deg) translateZ(-500px) translateX(-100%);
     opacity: 0;
   }
 }
@@ -605,7 +606,7 @@ text >---------------< white
     opacity: 1;
   }
   100% {
-    transform: rotateY(-30deg) translateZ(-50rem) translateX(100%);
+    transform: rotateY(-30deg) translateZ(-500px) translateX(100%);
     opacity: 0;
   }
 }
@@ -617,7 +618,7 @@ text >---------------< white
 
 @keyframes slideUp {
   from {
-    transform: translate(-50%, 2rem);
+    transform: translate(-50%, 20px);
     opacity: 0;
   }
   to {
