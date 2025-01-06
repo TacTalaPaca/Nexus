@@ -34,7 +34,7 @@ body {
    user-select: none;
    -webkit-tap-highlight-color: transparent;
    /* animations ------- */
-   transition: all 0.3s ease;
+   transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 .dark-mode body {
    background-color: #121212;
@@ -126,7 +126,6 @@ body {
    background-position: center center;
    background-size: 50%;
    margin: 5px;
-   text-decoration: none;
    color: #212121;
 }
 .logo {
@@ -179,16 +178,17 @@ body {
    display: none;
 }
 .btn:hover .pop-up {
-   display: flex;
    background-color: white;
    border: 2px solid #cbcbcb;
    border-radius: 10px;
+   /* ------------------ */
+   display: flex;
    width: fit-content;
    height: fit-content;
    padding: 10px;
    margin-top: 5px;
+   /* animations ------- */
    animation: right_fade 0.2s forwards;
-   transition: all 0.3s ease;
 }
 /* -------------------------- */
 /* dark-mode ---------------- */
@@ -202,12 +202,14 @@ body {
    background-color: white;
    border: 2px solid #00e385;
    border-radius: 10px;
+   /* ------------------ */
    margin-right: 60px;
    margin-left: 140px;
    margin-top: 50px;
    margin-bottom: 50px;
    height: 5px;
-   transition: all 0.3s ease;
+   /* animations ------- */
+   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 /* -------------------------- */
 /* dark-mode ---------------- */
@@ -221,9 +223,11 @@ body {
    background-position: center center;
    background-size: 100%;
    border-radius: 50%;
+   /* ------------------ */
    width: 40px;
    height: 40px;
    margin: 5px;
+   /* animations ------- */
    transition: all 0.3s ease;
 }
 .ico1 {
@@ -248,38 +252,44 @@ body {
 .footer {
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid #cbcbcb;
+  border-radius: 10px;
+  /* ------------------ */
   display: flex;
   flex-direction: column;
   justify-content: start;
-  border-radius: 10px;
   height: fit-content;
   padding: 10px;
   gap: 10px;
   font-weight: bolder;
-  transition: all 0.3s ease;
+  /* animations ------- */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 .footer-btn{
    background-color: white;
    border: 2px solid #cbcbcb;
+   border-radius: 50%;
+   /* ------------------ */
    text-decoration: none;
    display: flex;
    align-items: center;
    justify-content: start;
-   border-radius: 50px;
    width: 50px;
    height: 50px;
-   transition: all 0.3s ease;
+   /* animations ------- */
+   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 .buap-btn {
    background-color: #00e385;
+   border-radius: 50px;
+   /* animations ------- */
    text-decoration: none;
    font-size: clamp(10px, 6.5vw, 25px);
    color: white;
+   /* ------------------ */
    align-items: center;
    justify-content: center;
    padding: 0 15px 0 10px;
    display: flex;
-   border-radius: 50px;
    height: 50px;
    margin: auto;
 }
@@ -297,19 +307,23 @@ body {
 .footer-btn:hover{
    background-color: #e6e6e6;
    transform: scale(1.15);
-   transition: all 0.2s ease;
+   /* animations ------- */
+   transition: transform 0.2s ease;
 }
 .buap-btn:hover{
+   /* animations ------- */
    animation: glow 1s ease-in-out infinite;
 }
 .footer-btn:active{
    background-color: white;
    border-color: #00e385;
-   transition: all 0.2s ease;
+   /* animations ------- */
+   transition: border-color 0.2s ease;
 }
 .footer-btn:hover .ico{
    transform: scale(1.1);
-   transition: all 0.2s ease;
+   /* animations ------- */
+   transition: transform 0.2s ease;
 }
 /* -------------------------- */
 /* dark-mode ---------------- */
@@ -331,6 +345,10 @@ body {
   color: #101010;
   -webkit-text-fill-color: #101010;
 }
+/* Add this near the other utility classes */
+.no-scroll {
+   overflow: hidden;
+}
 /* -------------------------- */
 /* Page transition animations */
 .content.fade-in {
@@ -340,227 +358,3 @@ body {
    animation: fadeOut 0.2s ease-in-out forwards;
 }
 /* ----------------------------------------------- */
-/* ketframes  ------------------------------------ */
-
-/* Gentle Pulse */
-@keyframes pulse {
-   0% {
-       transform: scale(1);
-   }
-   50% {
-       transform: scale(1.15);
-   }
-   100% {
-       transform: scale(1);
-   }
-}
-/*
-{
-   animation: pulse 0.75s ease-in-out infinite;
-}
-*/
-/* -------------------------- */
-/* Spin Effect */
-@keyframes spin {
-   from {
-       transform: rotate(0deg);
-   }
-   to {
-       transform: rotate(360deg);
-   }
-}
-/*
-{
-   animation: spin 2s linear infinite;
-}
-*/
-/* -------------------------- */
-/* Glow Effect */
-@keyframes glow {
-    0% {
-        box-shadow: 
-            0 0 5px 2px rgba(0, 227, 133, 0.4),
-            0 0 10px 4px rgba(0, 227, 133, 0.3),
-            0 0 15px 6px rgba(0, 227, 133, 0.2);
-        transform: scale(1);
-    }
-    50% {
-        box-shadow: 
-            0 0 20px 8px rgba(0, 227, 133, 0.6),
-            0 0 30px 12px rgba(0, 227, 133, 0.4),
-            0 0 40px 16px rgba(0, 227, 133, 0.3);
-        transform: scale(1.02);
-    }
-    100% {
-        box-shadow: 
-            0 0 5px 2px rgba(0, 227, 133, 0.4),
-            0 0 10px 4px rgba(0, 227, 133, 0.3),
-            0 0 15px 6px rgba(0, 227, 133, 0.2);
-        transform: scale(1);
-    }
-}
-/*
-{
-   animation: glow 1s ease-in-out infinite;
-}
-*/
-/* -------------------------- */
-/* Bounce */
-@keyframes bounce {
-   0%, 100% {
-       transform: translateY(0);
-   }
-   50% {
-       transform: translateY(-10px);
-   }
-}
-/*
-{
-   animation: bounce 0.8s ease-in-out infinite;
-}
-*/
-/* -------------------------- */
-/* Pop Effect */
-@keyframes pop {
-   0% {
-       transform: scale(1);
-   }
-   40% {
-       transform: scale(1.05);
-   }
-   60% {
-       transform: scale(0.95);
-   }
-   100% {
-       transform: scale(1);
-   }
-}
-/*
-{
-   animation: pop 0.6s ease-out infinite;
-}
-*/
-/* -------------------------- */
-/* Pop2 Effect */
-@keyframes pop2 {
-   0% {
-       transform: scale(1);
-   }
-   40% {
-       transform: scale(1.01);
-   }
-   60% {
-       transform: scale(0.99);
-   }
-   100% {
-       transform: scale(1);
-   }
-}
-/*
-{
-   animation: pop2 0.6s ease-out infinite;
-}
-*/
-/* -------------------------- */
-/* Shake Effect */
-@keyframes shake {
-   0%, 100% {
-       transform: translateX(0);
-   }
-   25% {
-       transform: translateX(-5px);
-   }
-   75% {
-       transform: translateX(5px);
-   }
-}
-/*
-{
-   animation: shake 0.4s ease-in-out infinite;
-}
-*/
-/* -------------------------- */
-/* Fade Pulse */
-@keyframes fade-pulse {
-   0% {
-       opacity: 1;
-   }
-   50% {
-       opacity: 0.6;
-   }
-   100% {
-       opacity: 1;
-   }
-}
-/*
-{
-   animation: fade-pulse 1s ease-in-out infinite;
-}
-*/
-/* -------------------------- */
-/* Fade Out */
-@keyframes fade-out {
-    0% {
-        opacity: 1;
-        scale: 1;
-    }
-    100% {
-        opacity: 0;
-        scale: 0.8;
-    }
-}
-/*
-  animation: fade-out ease-in-out;
-  animation-timeline: view();
-  animation-range: exit 0% exit 100%;
-*/
-@keyframes right_fade {
-   0% {
-     opacity: 0;
-     transform: translateX(-10px) scale(0); /* Start small and off-screen */
-   }
-   50% {
-       opacity: 0.5;
-   }
-   100% {
-     opacity: 1;
-     transform: translateX(70px) scale(1); /* End fully visible and larger */
-   }
- }
- /*
-  animation: right_fade 0.2s forwards;
-*/
-/* -------------------------- */
-/* Page Fade */
-@keyframes fadeIn {
-   from {
-      transform: translateY(20px);
-      opacity: 0;
-   }
-   to {
-      transform: translateY(0);
-      opacity: 1;
-   }
-}
-
-@keyframes fadeOut {
-   from {
-      transform: translateY(0);
-      opacity: 1;
-   }
-   to {
-      transform: translateY(-20px);
-      opacity: 0;
-   }
-}
-/* -------------------------- */
-/* Labs Wave */
-@keyframes wave {
-   0% { background-position-x: 0; }
-   100% { background-position-x: 1000px; }
-}
-
-/* Add this near the other utility classes */
-.no-scroll {
-   overflow: hidden;
-}

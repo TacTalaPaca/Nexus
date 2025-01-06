@@ -54,14 +54,14 @@ text >---------------< white
   animation: fade-out ease-in-out;
   animation-timeline: view();
   animation-range: exit 0% exit 100%;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, background-image 0.3s ease, border-color 0.3s ease;
 }
 .banner h1 {
   font-size: clamp(10px, 8vw, 80px);
   margin-bottom: 0;
   margin-top: auto;
   /* animations ------- */
-  transition: all 0.1s ease;
+  transition: color 0.3s ease;
   animation: pop2 0.6s ease-out;
 }
 .banner p {
@@ -69,7 +69,7 @@ text >---------------< white
   margin-bottom: auto;
   margin-top: 0;
   /* animations ------- */
-  transition: all 0.1s ease;
+  transition: color 0.3s ease;
   animation: pop2 0.6s ease-out;
 }
 /* -------------------------- */
@@ -81,6 +81,7 @@ text >---------------< white
   background-color: #171717;
   border: 2px solid #1f1f1f;
   background-image: url(/assets/banner_d.webp);
+  /* ------------------ */
   color: white;
 }
 /* ----------------------------------------------- */
@@ -112,7 +113,7 @@ text >---------------< white
   transition: all 0.2s ease;
 }
 .elm:active {
-  background-color: #00e385;
+  border: 2px solid #00e385;
   transform: scale(0.98);
   transition: all 0.1s ease;
 }
@@ -127,7 +128,7 @@ text >---------------< white
   background-color: #1f1f1f;
 }
 .dark-mode .elm:active {
-  background-color: #00e385;
+  border: 2px solid #00e385;
 }
 /* ----------------------------------------------- */
 /* dropdowns ------------------------------------- */
@@ -181,8 +182,6 @@ text >---------------< white
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
-  /* animations ------- */
-  transition: max-height 0.3s ease;
 }
 .dropdown.active .dropdown-content {
   max-height: 1000px;
@@ -196,22 +195,23 @@ text >---------------< white
   font-weight: bolder;
   color: #212121;
   /* animations ------- */
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 .dark-mode .dropdown-inner {
   background-color: #171717;
   color: white;
 }
-/* Hover and active states */
 .dropdown-header:hover {
   background-color: #e6e6e6;
   transform: scale(1.01);
 }
-.dark-mode .dropdown-header:hover {
-  background-color: #1f1f1f;
-}
 .dropdown-header:active {
   background-color: white;
+}
+/* -------------------------- */
+/* dark-mode ---------------- */
+.dark-mode .dropdown-header:hover {
+  background-color: #1f1f1f;
 }
 .dark-mode .dropdown-header:active {
   background-color: #171717;
@@ -363,7 +363,7 @@ text >---------------< white
   box-shadow: 0 0 20px rgba(31, 31, 31, 0.3);
   cursor: pointer;
   /* animations ------- */
-  transition: all 0.3s ease, width 0.1s ease;
+  transition: all 0.3s ease, width 0s ease;
   animation: pop 0.6s ease-in-out;
 }
 .dark-mode .ttp-labs-logo {
@@ -408,50 +408,54 @@ text >---------------< white
   position: relative;
   padding: 20px;
 }
-
-/* E-book Gallery --------------------------------- */
-.ebook-gallery {
+/* ----------------------------------------------- */
+/* e-books --------------------------------------- */
+.ebooks {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
   margin: 0 auto;
   max-width: 1200px;
+  /* animations ------- */
+  transition: color 0.3s ease;
+  animation: bounce 0.5s ease-in-out;
 }
-
 .book-cover {
   aspect-ratio: 1/1.414; /* A4 ratio */
   background: white;
-  border-radius: 10px;
   border: 2px solid #cbcbcb;
+  border-radius: 10px;
+  /* ------------------ */
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  /* animations ------- */
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.dark-mode .book-cover {
-  background: #171717;
-  border-color: #1f1f1f;
-}
-
 .book-cover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px #00000050;
 }
-
-.cover-placeholder {
+.cover {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
   color: #212121;
+  /* animations ------- */
+  transition: color 0.3s ease;
 }
-
-.dark-mode .cover-placeholder {
+/* -------------------------- */
+/* dark-mode ---------------- */
+.dark-mode .book-cover {
+  background: #171717;
+  border-color: #1f1f1f;
+}
+.dark-mode .cover {
   color: white;
 }
-
+/* ----------------------------------------------- */
 /* PDF Viewer ------------------------------------ */
 .pdf-viewer {
   visibility: hidden;
@@ -463,15 +467,12 @@ text >---------------< white
   background: rgba(0,0,0,0);
   backdrop-filter: none;
   transition: visibility 0s linear 0.3s, background 0.3s, backdrop-filter 0.3s;
-  z-index: 9999;
 }
-
 .pdf-viewer.active {
   visibility: visible;
   backdrop-filter: blur(3px);
   transition-delay: 0s;
 }
-
 .pdf-container {
   position: relative;
   width: min(95vw, calc(95vh * 0.707)); /* A4 ratio */
@@ -481,12 +482,10 @@ text >---------------< white
   transform: scale(0.95);
   transition: opacity 0.3s, transform 0.3s;
 }
-
 .pdf-viewer.active .pdf-container {
   opacity: 1;
   transform: scale(1);
 }
-
 .page-wrapper {
   position: absolute;
   inset: 0;
@@ -497,17 +496,14 @@ text >---------------< white
   transform-style: preserve-3d;
   perspective: 2000px;
 }
-
 .pdf-page {
   width: 100%;
   height: 100%;
   transition: opacity 0.3s;
 }
-
 .page-wrapper.changing .pdf-page {
   opacity: 0;
 }
-
 .nav-btn {
   position: absolute;
   top: 50%;
@@ -525,30 +521,23 @@ text >---------------< white
   transition: all 0.3s;
   z-index: 10001;
 }
-
 .prev-page {
   left: -70px;
 }
-
 .next-page {
   right: -70px;
 }
-
 .nav-btn:hover {
   background: rgba(0,0,0,0.6);
   border-color: rgba(255,255,255,0.4);
   transform: scale(1.1);
 }
-
 .nav-btn:active {
   transform: scale(0.95);
 }
-
-/* Remove the nav-buttons wrapper since we're positioning buttons absolutely */
 .nav-buttons {
   display: none;
 }
-
 .close-pdf {
   position: fixed;
   top: 20px;
@@ -565,13 +554,11 @@ text >---------------< white
   transition: all 0.3s;
   z-index: 10001;
 }
-
 .close-pdf:hover {
   background: rgba(0,0,0,0.6);
   border-color: rgba(255,255,255,0.4);
   transform: rotate(90deg);
 }
-
 .page-info {
   position: fixed;
   left: 50%;
@@ -587,87 +574,90 @@ text >---------------< white
   font-size: 16px;
   z-index: 10001;
 }
-
-/* New animations */
-@keyframes turnPageLeft {
-  0% {
-    transform: rotateY(0) translateZ(0);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateY(30deg) translateZ(-500px) translateX(-100%);
-    opacity: 0;
-  }
+/* ----------------------------------------------- */
+/* timeline -------------------------------------- */
+/* Timeline Styles */
+.tline {
+  transform: translate(0, 0);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
-
-@keyframes turnPageRight {
-  0% {
-    transform: rotateY(0) translateZ(0);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateY(-30deg) translateZ(-500px) translateX(100%);
-    opacity: 0;
-  }
+/* Add connecting line */
+.tline::before {
+  content: '';
+  border-radius: 50px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 20px;
+  width: 5px;
+  background: #00e385;
+  transform: translateX(-50%);
+  /* animations ------- */
+  animation: growLine 0.5s ease-out forwards, pulseGlow 2s infinite;
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.tline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 2px solid #cbcbcb;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  /* animations ------- */
+  animation: slideIn 0.3s ease-out;
+  animation-fill-mode: both;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-
-@keyframes slideUp {
-  from {
-    transform: translate(-50%, 20px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(-50%, 0);
-    opacity: 1;
-  }
+.tline-content {
+  transition: color 0.3s ease;
 }
-
-/* New Animations */
-@keyframes viewerFadeIn {
-  from {
-    background: rgba(0,0,0,0);
-    backdrop-filter: blur(0);
-  }
-  to {
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(2rem);
-  }
+/* Add dots at connection points */
+.tline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #00e385;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: pulseGlow 2s infinite;
 }
-
-@keyframes containerSlideIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.tline-item:nth-child(odd) {
+  left: 0;
+  transform: translateX(0);
 }
-
-@keyframes flipLeft {
-  0% {
-    transform: rotateY(0) translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateY(-90deg) translateX(-100%);
-    opacity: 0;
-  }
+.tline-item:nth-child(odd)::before {
+  right: -50px;
 }
-
-@keyframes flipRight {
-  0% {
-    transform: rotateY(0) translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateY(90deg) translateX(100%);
-    opacity: 0;
-  }
+.tline-item:nth-child(even) {
+  left: 100%;
+  transform: translateX(-100%);
+}
+.tline-item:nth-child(even)::before {
+  left: -50px;
+}
+/* Add staggered animation delays */
+.tline-item:nth-child(1) { animation-delay: 0.1s; }
+.tline-item:nth-child(2) { animation-delay: 0.2s; }
+.tline-item:nth-child(3) { animation-delay: 0.3s; }
+.tline-item:nth-child(4) { animation-delay: 0.4s; }
+/* -------------------------- */
+/* dark-mode ---------------- */
+.dark-mode .tline-item {
+  background: #171717;
+  border: 2px solid #1f1f1f;
+}
+.dark-mode .tline-content {
+  color: white;
+}
+.dark-mode .tline::before {
+  background: #00e385;
+}
+.dark-mode .tline-item::before {
+  box-shadow: 0 0 10px #00e385;
 }
