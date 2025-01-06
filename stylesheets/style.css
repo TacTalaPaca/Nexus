@@ -126,6 +126,7 @@ body {
    background-position: center center;
    background-size: 50%;
    margin: 5px;
+   text-decoration: none;
    color: #212121;
 }
 .logo {

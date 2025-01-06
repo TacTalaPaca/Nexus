@@ -104,7 +104,7 @@ const router = {
                 if (window.PDFViewer) {
                     new PDFViewer();
                 }
-            }, 300);
+            }, 150);
             
         } catch (error) {
             console.error('Error loading page:', error);

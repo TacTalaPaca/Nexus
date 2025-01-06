@@ -129,50 +129,63 @@ text >---------------< white
       max-height: none !important;
    }
    .nav-btn {
+      background-color: rgba(255, 255, 255, 0);
+      border-color: transparent;
+      background-size: 90%;
       position: fixed;
-      width: 50px;
-      height: 50px;
-      font-size: 25px;
-      background: rgba(0,0,0,0.4);
-      border: 2px solid rgba(255,255,255,0.2);
-      bottom: calc(50% - 25px);
-      z-index: 1000;
+      width: 40px;
+      height: 40px;
+   }
+   .dark-mode .nav-btn {
+      background-color: rgba(255, 255, 255, 0);
+      border-color: transparent;
    }
    .prev-page {
       left: 0;
-      border-radius: 0 25px 25px 0;
+      border-radius: 25px;
    }
    .next-page {
       right: 0;
-      border-radius: 25px 0 0 25px;
+      border-radius: 25px;
    }
-   .close-pdf {
-      top: 10px;
-      right: 10px;
-      width: 50px;
-      height: 50px;
-      font-size: 25px;
+   .nav-btn:hover {
+      background-color: rgba(255, 255, 255, 0);
    }
-   .page-info {
-      top: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
+   .prev-page:hover {
+      transform: scale(2) translateX(5px);
    }
-   /* PDF Viewer Mobile Fixes */
-   .pdf-viewer {
-      margin: 0 !important;  /* Remove any margins */
+   .next-page:hover {
+      transform: scale(2) translateX(-5px);
    }
+   .nav-btn:active {
+      border-color: transparent;
+   }
+   /* -------------------------- */
+   /* dark-mode ---------------- */
+   .dark-mode .prev-page {
+      background-image: url("/assets/left_l.svg");
+      left: 5px;
+      border-radius: 5px 25px 25px 5px;
+   }
+   .dark-mode .next-page {
+      background-image: url("/assets/right_l.svg");
+      right: 5px;
+      border-radius: 25px 5px 5px 25px;
+   }
+   .dark-mode .nav-btn:hover {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    .dark-mode .nav-btn:active {
+      border-color: transparent;
+   }
+   /* -------------------------- */
    .pdf-container {
-      width: 95vw !important;  /* Slightly smaller to ensure no overflow */
-      height: min(calc(95vw * 1.414)) !important;  /* A4 ratio */
-      padding: 0 !important;
-      margin: auto !important;
-      transform-origin: center center;
-      position: fixed !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%) !important;
+      transform: scale(1) translateX(0);
    }
+   .pdf-viewer.active .pdf-container {
+      opacity: 1;
+      transform: scale(1) translateX(0);
+    }
    .page-wrapper {
       width: 100% !important;
       height: 100% !important;

@@ -76,7 +76,7 @@ See the GNU General Public License for more details. You should have received a 
        transform: translateY(0);
    }
    50% {
-       transform: translateY(10px);
+       transform: translateY(15px);
    }
 }
 /*
@@ -198,30 +198,30 @@ See the GNU General Public License for more details. You should have received a 
 /* -------------------------- */
 /* Page Fade */
 @keyframes fadeIn {
-   from {
-      opacity: 0;
-      filter: blur(5px);
-      transform: translate(0, -20px);
-   }
-   to {
-      opacity: 1;
-      filter: blur(0);
-      transform: translate(0, 0);
-   }
-}
-
-@keyframes fadeOut {
-   from {
-      opacity: 1;
-      filter: blur(0);
-      transform: translate(0, 0);
-   }
-   to {
-      opacity: 0;
-      filter: blur(10px);
-      transform: translate(0, -20px);
-   }
-}
+    0% {
+       opacity: 0;
+       filter: blur(5px);
+       transform: translate(0, -20px) scale(0.95, 1);
+    }
+    100% {
+       opacity: 1;
+       filter: blur(0);
+       transform: translate(0, 0) scale(1, 1);
+    }
+ }
+ 
+ @keyframes fadeOut {
+    0% {
+       opacity: 1;
+       filter: blur(0);
+       transform: translate(0, 0) scale(1, 1);
+    }
+    100% {
+       opacity: 0;
+       filter: blur(10px);
+       transform: translate(0, -20px) scale(0.95, 1);
+    }
+ }
 /* -------------------------- */
 /* Labs Wave */
 @keyframes wave {
@@ -232,11 +232,11 @@ See the GNU General Public License for more details. You should have received a 
 /* Timeline */
 @keyframes slideIn {
    from {
-     top: 20px;
+    transform: translateY(50%) scaleY(0.5);
      opacity: 0;
    }
    to {
-     top: 0;
+    transform: translateY(0) scaleY(1);
      opacity: 1;
    }
 }

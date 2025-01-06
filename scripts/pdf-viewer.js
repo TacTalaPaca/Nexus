@@ -140,17 +140,47 @@ class PDFViewer {
             const wrapper = document.querySelector('.page-wrapper');
             const direction = offset > 0 ? 'turning-right' : 'turning-left';
             
+            // Create and prepare new canvas
+            const newCanvas = document.createElement('canvas');
+            newCanvas.classList.add('pdf-page', 'new-page');
+            wrapper.appendChild(newCanvas);
+            
+            // Start rendering new page
+            const nextPage = await this.pdfDoc.getPage(newPage);
+            const viewport = nextPage.getViewport({ scale: 1 });
+            const heightScale = (wrapper.clientHeight / viewport.height) * 0.95;
+            const scaledViewport = nextPage.getViewport({ scale: heightScale });
+            
+            newCanvas.width = scaledViewport.width;
+            newCanvas.height = scaledViewport.height;
+            
+            // Start transition before render completes
             wrapper.classList.add('changing', direction);
             
-            // Wait for animation
-            await new Promise(resolve => setTimeout(resolve, 300));
+            // Render page while transition is happening
+            await nextPage.render({
+                canvasContext: newCanvas.getContext('2d'),
+                viewport: scaledViewport
+            }).promise;
             
+            // Activate new page slightly after render
+            requestAnimationFrame(() => {
+                newCanvas.classList.add('active');
+            });
+            
+            // Wait for transition to complete
+            await new Promise(resolve => setTimeout(resolve, 250));
+            
+            // Update and cleanup
             this.currentPage = newPage;
-            await this.renderPage(this.currentPage);
+            this.canvas.remove();
+            this.canvas = newCanvas;
+            this.ctx = this.canvas.getContext('2d');
             
+            // Clean up classes in sequence
+            newCanvas.classList.remove('new-page');
             wrapper.classList.remove('changing', direction);
             
-            // Update page info
             document.querySelector('.current-page').textContent = this.currentPage;
         }
     }
