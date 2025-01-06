@@ -582,6 +582,7 @@ text >---------------< white
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 0;
+  animation: bounce 0.5s ease-in-out;
 }
 /* Add connecting line */
 .tline::before {
