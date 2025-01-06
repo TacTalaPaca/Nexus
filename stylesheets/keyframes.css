@@ -201,7 +201,7 @@ See the GNU General Public License for more details. You should have received a 
    from {
       opacity: 0;
       filter: blur(5px);
-      transform: translate(0, 20px);
+      transform: translate(0, -20px);
    }
    to {
       opacity: 1;
@@ -219,7 +219,7 @@ See the GNU General Public License for more details. You should have received a 
    to {
       opacity: 0;
       filter: blur(10px);
-      transform: translate(0, 20px);
+      transform: translate(0, -20px);
    }
 }
 /* -------------------------- */
