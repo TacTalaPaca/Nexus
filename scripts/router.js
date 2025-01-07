@@ -136,11 +136,11 @@ const router = {
                         content.style.transition = 'none';
                         content.style.maxHeight = `${content.scrollHeight}px`;
                         requestAnimationFrame(() => {
-                            content.style.transition = 'max-height 0.5s ease';
+                            content.style.transition = 'max-height 0.3s ease';
                             content.style.maxHeight = '0';
                         });
                     } else {
-                        content.style.transition = 'max-height 0.5s ease';
+                        content.style.transition = 'max-height 0.3s ease';
                         content.style.maxHeight = `${content.scrollHeight}px`;
                     }
                     dropdown.classList.toggle('active');

@@ -427,6 +427,7 @@ text >---------------< white
   animation: bounce 0.5s ease-in-out;
 }
 .book-cover {
+  position: relative;
   aspect-ratio: 1/1.414; /* A4 ratio */
   background: white;
   border: 2px solid #cbcbcb;
@@ -443,6 +444,64 @@ text >---------------< white
   border-color: #00e385;
 }
 /* -------------------------- */
+.book-cover .info {
+  background-color: rgba(0, 0, 0, 0.7);
+  /* ------------------ */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  color: white;
+  text-align: left;
+  font-family: "Space Grotesk", sans-serif;
+  opacity: 0;
+  border-radius: 10px 10px 0 0 ;
+  transform: translateY(100%);
+  /* animations ------- */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.book-cover:hover .info {
+  opacity: 1;
+  transform: translateY(0);
+}
+.book-cover .info .title {
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+.book-cover .info .tags {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+.book-cover .info .pages {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+.book-cover .read-btn {
+  background-color: #00e385;
+  display: none;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+.book-cover:hover .read-btn {
+  display: block;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.book-cover .read-btn:hover {
+  background-color: #00c374;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+/* -------------------------- */
 /* dark-mode ---------------- */
 .dark-mode .book-cover {
   background: #171717;
@@ -453,6 +512,15 @@ text >---------------< white
 }
 .dark-mode .cover {
   color: white;
+}
+.dark-mode .book-cover .info {
+  background: rgba(23, 23, 23, 0.7);
+}
+.dark-mode .book-cover .read-btn {
+  background-color: #00e385;
+}
+.dark-mode .book-cover .read-btn:hover {
+  background-color: #00c374;
 }
 /* ----------------------------------------------- */
 /* PDF Viewer ------------------------------------ */
@@ -468,8 +536,8 @@ text >---------------< white
   transition: visibility 0s linear 0.3s, background 0.3s, backdrop-filter 0.3s;
 }
 .pdf-viewer.active {
+  background-color: rgba(0, 0, 0, 0.7);
   visibility: visible;
-  backdrop-filter: blur(3px);
   transition-delay: 0s;
 }
 .pdf-container {
@@ -501,28 +569,27 @@ text >---------------< white
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  transition: all 0.25s cubic-bezier(0.3, 0.1, 0.3, 1);
+  transition: all 0.15s ease;
   transform-origin: center center;
   transform: translateZ(0);
   will-change: transform, opacity;
 }
 .page-wrapper.changing .pdf-page {
-  filter: blur(1.5px);
   opacity: 0;
-  transform: translateZ(-40px) scale(0.98);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-5%);
+  transition: all 0.15s ease;
 }
 .page-wrapper.turning-right.changing .pdf-page {
-  transform: translateZ(-40px) translateX(-15%) scale(0.98) rotateY(-8deg);
+  transform: translateX(-5%);
 }
 .page-wrapper.turning-right .pdf-page.new-page {
-  transform: translateZ(-40px) translateX(15%) scale(0.98) rotateY(8deg);
+  transform: translateX(5%);
 }
 .page-wrapper.turning-left.changing .pdf-page {
-  transform: translateZ(-40px) translateX(15%) scale(0.98) rotateY(8deg);
+  transform: translateX(5%);
 }
 .page-wrapper.turning-left .pdf-page.new-page {
-  transform: translateZ(-40px) translateX(-15%) scale(0.98) rotateY(-8deg);
+  transform: translateX(-5%);
 }
 .pdf-page.new-page {
   opacity: 0;
@@ -532,8 +599,8 @@ text >---------------< white
 }
 .pdf-page.new-page.active {
   opacity: 1;
-  transform: translateZ(0) translateX(0) scale(1) rotateY(0);
-  transition: all 0.25s cubic-bezier(0.1, 0.5, 0.2, 1);
+  transform: translateX(0);
+  transition: all 0.15s ease;
 }
 .nav-btn {
   background-color: white;

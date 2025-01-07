@@ -27,11 +27,14 @@ class PDFViewer {
     }
 
     setupEventListeners() {
-        // Book cover click events
+        // Book cover hover events to fetch page count
         document.querySelectorAll('.book-cover').forEach(cover => {
-            cover.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.openPDF(cover.dataset.pdf);
+            cover.addEventListener('mouseenter', async (e) => {
+                const pdfUrl = cover.dataset.pdf;
+                const loadingTask = pdfjsLib.getDocument(pdfUrl);
+                const pdfDoc = await loadingTask.promise;
+                const pageCount = pdfDoc.numPages;
+                cover.querySelector('.pages').textContent = `${pageCount} pages`;
             });
         });
 
@@ -154,34 +157,30 @@ class PDFViewer {
             newCanvas.width = scaledViewport.width;
             newCanvas.height = scaledViewport.height;
             
-            // Start transition before render completes
+            // Update page number immediately
+            this.currentPage = newPage;
+            document.querySelector('.current-page').textContent = this.currentPage;
+            
+            // Quick transition start
             wrapper.classList.add('changing', direction);
             
-            // Render page while transition is happening
+            // Render page
             await nextPage.render({
                 canvasContext: newCanvas.getContext('2d'),
                 viewport: scaledViewport
             }).promise;
             
-            // Activate new page slightly after render
-            requestAnimationFrame(() => {
-                newCanvas.classList.add('active');
-            });
+            // Activate new page
+            newCanvas.classList.add('active');
             
-            // Wait for transition to complete
-            await new Promise(resolve => setTimeout(resolve, 250));
-            
-            // Update and cleanup
-            this.currentPage = newPage;
-            this.canvas.remove();
-            this.canvas = newCanvas;
-            this.ctx = this.canvas.getContext('2d');
-            
-            // Clean up classes in sequence
-            newCanvas.classList.remove('new-page');
-            wrapper.classList.remove('changing', direction);
-            
-            document.querySelector('.current-page').textContent = this.currentPage;
+            // Clean up old page after a short transition
+            setTimeout(() => {
+                this.canvas.remove();
+                this.canvas = newCanvas;
+                this.ctx = this.canvas.getContext('2d');
+                newCanvas.classList.remove('new-page');
+                wrapper.classList.remove('changing', direction);
+            }, 150);
         }
     }
 
@@ -206,3 +205,8 @@ document.addEventListener('DOMContentLoaded', () => {
         new PDFViewer();
     }
 });
+
+function openPDF(url) {
+    const pdfViewer = new PDFViewer();
+    pdfViewer.openPDF(url);
+}
