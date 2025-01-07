@@ -89,6 +89,7 @@ text >---------------< white
 .elms {
   /* animations ------- */
   animation: bounce 0.5s ease-in-out;
+  margin-bottom: -10px;
 }
 .elm {
   /* bg + border ------ */
@@ -97,7 +98,7 @@ text >---------------< white
   border-radius: 10px;
   /* ------------------ */
   display: inline-block;
-  margin: 10px;
+  margin: 5px;
   height: 200px;
   width: 45%;
   max-width: 400px;
@@ -238,6 +239,9 @@ text >---------------< white
   /* animations ------- */
   transition: all 0.3s ease, color 0.1s ease;
   animation: bounce 0.5s ease-in-out;
+}
+.form-gap {
+  margin-bottom: 60px;
 }
 .dark-mode .form {
   background-color: #171717;
@@ -413,7 +417,9 @@ text >---------------< white
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
   margin: 0 auto;
   max-width: 1200px;
   /* animations ------- */
@@ -432,24 +438,18 @@ text >---------------< white
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 .book-cover:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 5px 15px #00000050;
-}
-.cover {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
-  color: #212121;
-  /* animations ------- */
-  transition: color 0.3s ease;
+  border-color: #00e385;
 }
 /* -------------------------- */
 /* dark-mode ---------------- */
 .dark-mode .book-cover {
   background: #171717;
   border-color: #1f1f1f;
+}
+.dark-mode .book-cover:hover {
+  border-color: #00e385;
 }
 .dark-mode .cover {
   color: white;
