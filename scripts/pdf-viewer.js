@@ -107,8 +107,8 @@ class PDFViewer {
         const wrapper = document.querySelector('.page-wrapper');
         const viewport = page.getViewport({ scale: 1 });
         
-        // Calculate scale to fit height while maintaining aspect ratio
-        const heightScale = (wrapper.clientHeight / viewport.height) * 0.95;
+        // Increase scale factor for better quality
+        const heightScale = (wrapper.clientHeight / viewport.height) * 1.5; // Changed from 0.95 to 1.5
         const scaledViewport = page.getViewport({ scale: heightScale });
 
         this.canvas.width = scaledViewport.width;
@@ -148,7 +148,7 @@ class PDFViewer {
             // Start rendering new page
             const nextPage = await this.pdfDoc.getPage(newPage);
             const viewport = nextPage.getViewport({ scale: 1 });
-            const heightScale = (wrapper.clientHeight / viewport.height) * 0.95;
+            const heightScale = (wrapper.clientHeight / viewport.height) * 1.5;
             const scaledViewport = nextPage.getViewport({ scale: heightScale });
             
             newCanvas.width = scaledViewport.width;

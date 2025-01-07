@@ -630,7 +630,7 @@ text >---------------< white
 .dark-mode .close-pdf {
   background-color: #171717;
   border: 2px solid #1f1f1f;
-  background-image: url("/assets/X_d.svg");
+  background-image: url("/assets/x_d.svg");
 }
 .dark-mode .close-pdf:hover {
   background-color: #1f1f1f;
