@@ -571,13 +571,13 @@ text >---------------< white
   transform: scale(0.9);
 }
 .page-wrapper.turning-right .pdf-page.new-page {
-  transform: translateX(10%);
+  transform: translateX(-10%);
 }
 .page-wrapper.turning-left.changing .pdf-page {
   transform: scale(0.9);
 }
 .page-wrapper.turning-left .pdf-page.new-page {
-  transform: translateX(-10%);
+  transform: translateX(10%);
 }
 .pdf-page.new-page {
   opacity: 1;
