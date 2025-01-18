@@ -37,16 +37,8 @@ text >---------------< white
       margin: 10px;
       padding: 7px;
       min-height: auto;
-      border: 2px solid #cbcbcb;
       border-radius: 50px;
-      background-color: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(1px);
       box-sizing: border-box;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-   }
-   .dark-mode .nav {
-      background-color: rgba(23, 23, 23, 0.8);
    }
    .nav .logo {
       display: none;
@@ -57,10 +49,6 @@ text >---------------< white
       height: 55px;
       margin: 0;
       border-radius: 50px;
-      background-color: rgba(246, 246, 246, 0.7);
-   }
-   .dark-mode .nav a {
-      background-color: rgba(31, 31, 31, 0.7);
    }
    /* -------------------------- */
    .btn:hover .pop-up {
@@ -113,6 +101,42 @@ text >---------------< white
    .footer {
       margin-bottom: 90px;
     }
+   .footer {
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 2px solid #cbcbcb;
+      border-radius: 10px;
+      /* ------------------ */
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      height: fit-content;
+      padding: 10px;
+      gap: 10px;
+      margin-left: 5%;
+      margin-right: 5%;
+      /* animations ------- */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+   }
+   .footer-btns {
+      border-radius: 10px;
+      /* ------------------ */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      height: fit-content;
+      gap: 10px;
+      /* animations ------- */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+   }
+   .footer-btns:nth-child(2) {
+      flex-direction: column;
+   }
+   .buap-btn {
+      width: 90%;
+   }
+   .contact-btn {
+      width: 90%;
+   }
    /* -------------------------- */
    #bmc-wbtn {
       display: none !important;
@@ -156,12 +180,6 @@ text >---------------< white
    }
    .nav-btn:hover {
       background-color: rgba(255, 255, 255, 0);
-   }
-   .prev-page:hover {
-      transform: scale(2) translateX(5px);
-   }
-   .next-page:hover {
-      transform: scale(2) translateX(-5px);
    }
    .nav-btn:active {
       border-color: transparent;

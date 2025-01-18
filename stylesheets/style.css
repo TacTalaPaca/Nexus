@@ -134,7 +134,8 @@ body {
    background-size: 100%;
 }
 .btn1 {
-   background-image: url("/assets/dashboard_l.svg");
+   background-image: url("/assets/home_l.svg");
+   background-size: 55%;
 }
 .btn2 {
    background-image: url("/assets/explore_l.svg");
@@ -143,7 +144,8 @@ body {
    background-image: url("/assets/download_l.svg");
 }
 .btn4 {
-   background-image: url("/assets/contacts_l.svg");
+   background-image: url("/assets/games_l.svg");
+   background-size: 55%;
 }
 .theme-switch {
    background-image: url("/assets/dark_mode.svg");
@@ -159,7 +161,7 @@ body {
    color: white;
 }
 .dark-mode .btn1 {
-   background-image: url("/assets/dashboard_d.svg");
+   background-image: url("/assets/home_d.svg");
 }
 .dark-mode .btn2 {
    background-image: url("/assets/explore_d.svg");
@@ -168,7 +170,7 @@ body {
    background-image: url("/assets/download_d.svg");
 }
 .dark-mode .btn4 {
-   background-image: url("/assets/contacts_d.svg");
+   background-image: url("/assets/games_d.svg");
 }
 .dark-mode .theme-switch {
    background-image: url("/assets/light_mode.svg");
@@ -262,9 +264,21 @@ body {
   height: fit-content;
   padding: 10px;
   gap: 10px;
-  font-weight: bolder;
+  margin-left: 5%;
+  margin-right: 5%;
   /* animations ------- */
   transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.footer-btns {
+   border-radius: 10px;
+   /* ------------------ */
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   height: fit-content;
+   gap: 10px;
+   /* animations ------- */
+   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 .footer-btn{
    background-color: white;
@@ -285,14 +299,30 @@ body {
    border-radius: 50px;
    /* animations ------- */
    text-decoration: none;
-   font-size: clamp(10px, 6.5vw, 25px);
+   width: 50%;
+   font-size: clamp(10px, 5vw, 20px);
    color: white;
    /* ------------------ */
    align-items: center;
    justify-content: center;
+   margin: auto;
    padding: 7px 15px 7px 10px;
    display: flex;
+}
+.contact-btn {
+   background-color: #212121;
+   border-radius: 50px;
+   /* animations ------- */
+   text-decoration: none;
+   width: 50%;
+   font-size: clamp(10px, 5vw, 20px);
+   color: white;
+   /* ------------------ */
+   align-items: center;
+   justify-content: center;
    margin: auto;
+   padding: 7px 15px 7px 10px;
+   display: flex;
 }
 /* -------------------------- */
 /* dark-mode ---------------- */
@@ -304,16 +334,16 @@ body {
    background-color: #171717;
    border: 2px solid #1f1f1f;
 }
+.dark-mode .contact-btn {
+   background-color: white;
+   color: #212121;
+}
 /* -------------------------- */
 .footer-btn:hover{
    background-color: #e6e6e6;
    transform: scale(1.15);
    /* animations ------- */
    transition: transform 0.2s ease;
-}
-.buap-btn:hover{
-   /* animations ------- */
-   animation: glow 1s ease-in-out infinite;
 }
 .footer-btn:active{
    background-color: white;

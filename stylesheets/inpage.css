@@ -51,9 +51,6 @@ text >---------------< white
   text-align: center;
   color: #212121;
   /* animations ------- */
-  animation: fade-out ease-in-out;
-  animation-timeline: view();
-  animation-range: exit 0% exit 100%;
   transition: background-color 0.3s ease, background-image 0.3s ease, border-color 0.3s ease;
 }
 .banner h1 {
@@ -103,9 +100,6 @@ text >---------------< white
   width: 45%;
   max-width: 400px;
   /* animations ------- */
-  animation: fade-out ease-in-out;
-  animation-timeline: view();
-  animation-range: exit 0% exit 100%;
   transition: all 0.3s ease;
 }
 .elm:hover {
@@ -145,9 +139,6 @@ text >---------------< white
   margin-bottom: 10px;
   overflow: hidden;
   /* animations ------- */
-  animation: fade-out ease-in-out;
-  animation-timeline: view();
-  animation-range: exit 0% exit 100%;
   transition: all 0.3s ease;
 }
 .dark-mode .dropdown {
@@ -546,12 +537,12 @@ text >---------------< white
   height: calc(min(95vw, calc(95vh * 0.707)) * 1.414); /* A4 ratio */
   margin: auto;
   opacity: 0;
-  transform: scale(0.95) translateX(40px);
+  transform: scale(0.95);
   transition: opacity 0.3s, transform 0.3s;
 }
 .pdf-viewer.active .pdf-container {
   opacity: 1;
-  transform: scale(1) translateX(40px);
+  transform: scale(1);
 }
 /* -------------------------- */
 .page-wrapper {
@@ -561,7 +552,6 @@ text >---------------< white
   position: absolute;
   inset: 0;
   perspective: 1000px;
-  transform-style: preserve-3d;
   z-index: 97;
 }
 .pdf-page {
@@ -571,35 +561,33 @@ text >---------------< white
   border-radius: 10px;
   transition: all 0.15s ease;
   transform-origin: center center;
-  transform: translateZ(0);
   will-change: transform, opacity;
 }
 .page-wrapper.changing .pdf-page {
-  opacity: 0;
-  transform: translateX(-5%);
+  opacity: 1;
   transition: all 0.15s ease;
 }
 .page-wrapper.turning-right.changing .pdf-page {
-  transform: translateX(-5%);
+  transform: scale(0.9);
 }
 .page-wrapper.turning-right .pdf-page.new-page {
-  transform: translateX(5%);
+  transform: translateX(10%);
 }
 .page-wrapper.turning-left.changing .pdf-page {
-  transform: translateX(5%);
+  transform: scale(0.9);
 }
 .page-wrapper.turning-left .pdf-page.new-page {
-  transform: translateX(-5%);
+  transform: translateX(-10%);
 }
 .pdf-page.new-page {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 0;
   left: 0;
 }
 .pdf-page.new-page.active {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0%);
   transition: all 0.15s ease;
 }
 .nav-btn {
@@ -729,9 +717,9 @@ text >---------------< white
 }
 
 .tline-item {
-  background: rgba(255, 255, 255, 0.7);
+  background:white;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(203, 203, 203, 0.3);
+  border: 2px solid #cbcbcb;
   border-radius: 10px;
   /* ------------------ */
   position: relative;
@@ -739,14 +727,11 @@ text >---------------< white
   width: 50%;
   margin-bottom: 40px;
   /* animations ------- */
-  animation: slideIn 0.3s ease-out;
-  animation-fill-mode: both;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .tline-item:hover {
   border-color: #00e385;
-  background: rgba(255, 255, 255, 0.9);
 }
 .tline-item:nth-child(odd) {
   margin-right: auto;
@@ -787,11 +772,10 @@ text >---------------< white
 /* -------------------------- */
 /* dark-mode ---------------- */
 .dark-mode .tline-item {
-  background: rgba(23, 23, 23, 0.7);
-  border: 2px solid rgba(31, 31, 31, 0.3);
+  background: #171717;
+  border: 2px solid #1f1f1f;
 }
 .dark-mode .tline-item:hover {
-  background: rgba(23, 23, 23, 0.9);
   border-color: #00e385;
 }
 .dark-mode .tline-item::before {

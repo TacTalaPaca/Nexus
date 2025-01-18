@@ -6,7 +6,7 @@ TacTalaPaca.github.io is distributed in the hope that it will be useful, but WIT
 
 See the GNUGeneral Public License for more details. You should have received a copy of the GNU General Public License along with TacTalaPaca.github.io. If not, see <https://www.gnu.org/licenses/> -->
 <!-- --------------------------------------------- -->
-<!-- EXPLORE PAGE -->
+<!-- GAMES PAGE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +22,8 @@ See the GNUGeneral Public License for more details. You should have received a c
    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6755549542042427"
    crossorigin="anonymous"></script>
    <meta name="google-adsense-account" content="ca-pub-6755549542042427">
+   <!-- Google Verify ------- -->
+   <meta name="google-site-verification" content="DDBL0E9OotzwlfYZCyENV-iMqMHrOqIKTCHmXjsho9g" />
    <!-- Google Fonts -------- -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap">
    <!-- CSS links ----------- -->
@@ -32,9 +34,6 @@ See the GNUGeneral Public License for more details. You should have received a c
    <!-- JS links ------------ -->
    <script src="/scripts/theme.js"></script>
    <script src="/scripts/router.js"></script>
-   <!-- PDF.js -------------- -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
-   <script src="/scripts/pdf-viewer.js" defer></script>
    <!-- Buy Me Coffee ------- -->
    <script defer data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="tactalapaca" data-description="Support us on Buy me a coffee!" data-message="" data-color="#00e385" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
    <!-- script -------------- -->
@@ -60,6 +59,26 @@ See the GNUGeneral Public License for more details. You should have received a c
       <a class="btn3 btn" href="/download/">
          <div class="pop-up">DOWNLOAD</div>
       </a>
+      <a class="btn4 btn" href="/games/">
+         <div class="pop-up">GAMES</div>
+      </a>
+      <a id="theme-toggle" class="theme-switch" onclick="toggleTheme()">
+      </a>
+   </nav>
+<!-- --------------------------------------------- -->
+<body>
+   <!-- NAVIGATION TABS -->
+   <nav class="nav">
+      <div class="logo btn"></div>
+      <a class="btn1 btn" href="/">
+         <div class="pop-up">DASHBOARD</div>
+      </a>
+      <a class="btn2 btn" href="/explore/">
+         <div class="pop-up">EXPLORE</div>
+      </a>
+      <a class="btn3 btn" href="/download/">
+         <div class="pop-up">DOWNLOAD</div>
+      </a>
       <a class="btn4 btn" href="/playground/">
          <div class="pop-up">PLAYGROUND</div>
       </a>
@@ -70,76 +89,13 @@ See the GNUGeneral Public License for more details. You should have received a c
 <main>
    <!-- PAGES CONTENT -->
    <div class="content fade-in">
-      <!-- ---------- PG2 ---------- -->
+      <!-- ---------- PG1 ---------- -->
       <!-- BANNER -->
       <section class="banner">
-         <h1>EXPLORE</h1>
-         <p>our projects</p>
+         <h1>TacTalaPaca</h1>
+            <p>PLAYGROUND</p>
       </section>
       <!-- CONTENT -->
-      <!-- TTP LABS SECTION -->
-      <a class="ttp-labs-logo" href="/labs/"></a>
-      <hr class="divider">
-      <!-- ------------------------- -->
-      <!-- E-Book Gallery -->
-      <div class="ebooks">
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr1.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 1</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
-            </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
-        </div>
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr2.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 2</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
-            </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
-        </div>
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr3.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 3</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
-            </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
-        </div>
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr4.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 4</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
-            </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
-        </div>
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr5.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 5</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
-            </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
-        </div>
-      </div>
-      <!-- ------------------------- -->
       <hr class="divider">
       <footer class="footer">
          <div class="footer-btns">
@@ -159,19 +115,6 @@ See the GNUGeneral Public License for more details. You should have received a c
          </div>
       </footer>
    </div>
-   <!-- ------------------------- -->
-   <!-- PDF Viewer -->
-   <div class="pdf-viewer">
-      <button class="close-pdf"></button>
-      <div class="pdf-container">
-        <button class="nav-btn prev-page"></button>
-        <div class="page-wrapper">
-          <canvas class="pdf-page"></canvas>
-        </div>
-        <button class="nav-btn next-page"></button>
-        <span class="page-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
-      </div>
-    </div>
 </main>
 </body>
 </html>
