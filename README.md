@@ -4,9 +4,9 @@
 
 ### 🌐 Quick Links
 
-- **Website**: [TacTalaPaca.github.io](https://TacTalaPaca.github.io)
+- **Website**: [tactalapaca.com](https://tactalapaca.com)
 - **GitHub**: [TacTalaPaca GitHub Repository](https://github.com/TacTalaPaca)
 
 ---
 
-**© TacTalaPaca 2024** | All rights reserved
+**© TacTalaPaca 2025** | All rights reserved
