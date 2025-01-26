@@ -1,9 +1,9 @@
 {
   "name": "TacTalaPaca",
   "short_name": "TacTalaPaca",
-  "start_url": "https://tactalapaca.github.io",
+  "start_url": "https://tactalapaca.com",
   "display": "standalone",
-  "description": "TacTalaPaca official PWA",
+  "description": "TacTalaPaca official PWA (Progressive Web Application)",
   "lang": "en",
   "dir": "auto",
   "theme_color": "#121212",

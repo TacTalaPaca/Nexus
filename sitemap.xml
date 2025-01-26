@@ -8,28 +8,38 @@
 
 
 <url>
-  <loc>https://tactalapaca.github.io/</loc>
-  <lastmod>2025-01-04T01:02:47+00:00</lastmod>
+  <loc>https://tactalapaca.com/</loc>
+  <lastmod>2025-01-26T17:16:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://tactalapaca.github.io/explore/</loc>
-  <lastmod>2025-01-04T01:02:47+00:00</lastmod>
+  <loc>https://tactalapaca.com/explore/</loc>
+  <lastmod>2025-01-26T17:16:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://tactalapaca.github.io/download/</loc>
-  <lastmod>2025-01-04T01:02:47+00:00</lastmod>
+  <loc>https://tactalapaca.com/download/</loc>
+  <lastmod>2025-01-26T17:16:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://tactalapaca.github.io/contact/</loc>
-  <lastmod>2025-01-04T01:02:47+00:00</lastmod>
+  <loc>https://tactalapaca.com/playground/</loc>
+  <lastmod>2025-01-26T17:16:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://tactalapaca.github.io/labs/</loc>
-  <lastmod>2025-01-04T01:02:47+00:00</lastmod>
+  <loc>https://tactalapaca.com/contact/</loc>
+  <lastmod>2025-01-26T17:16:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tactalapaca.com/labs/</loc>
+  <lastmod>2025-01-26T17:16:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tactalapaca.com/games/</loc>
+  <lastmod>2025-01-26T17:16:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
