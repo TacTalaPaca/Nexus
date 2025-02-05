@@ -99,24 +99,9 @@ text >---------------< white
    }
    /* -------------------------- */
    .footer {
-      margin-bottom: 90px;
+      margin-bottom: 140px;
+      border-radius: 35px;
     }
-   .footer {
-      background-color: rgba(255, 255, 255, 0.5);
-      border: 2px solid #cbcbcb;
-      border-radius: 10px;
-      /* ------------------ */
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      height: fit-content;
-      padding: 10px;
-      gap: 10px;
-      margin-left: 5%;
-      margin-right: 5%;
-      /* animations ------- */
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-   }
    .footer-btns {
       border-radius: 10px;
       /* ------------------ */
@@ -127,6 +112,9 @@ text >---------------< white
       gap: 10px;
       /* animations ------- */
       transition: background-color 0.3s ease, border-color 0.3s ease;
+   }
+   .contact-btn {
+      margin-bottom: 20px;
    }
    .footer-btns:nth-child(2) {
       flex-direction: column;

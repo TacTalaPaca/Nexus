@@ -59,7 +59,6 @@ body {
    top: 0;
    bottom: 0;
    /* animations ------- */
-   animation: pop2 0.6s ease-out;
    transition: background-color 0.3s ease, border-radius 0.3s ease, border-color 0.3s ease;
 }
 .dark-mode .nav {
@@ -75,7 +74,6 @@ body {
    height: 55px;
    margin-bottom: 5px;
    /* animations ------- */
-   animation: pop 0.6s ease-out;
    transition: all 0.3s ease;
 }
 .nav div {
@@ -85,7 +83,6 @@ body {
    height: 55px;
    margin-bottom: 5px;
    /* animations ------- */
-   animation: pop 0.6s ease-out;
    transition: all 0.3s ease;
 }
 /* -------------------------- */
@@ -207,12 +204,11 @@ body {
    border-radius: 10px;
    /* ------------------ */
    margin-right: 60px;
-   margin-left: 140px;
+   margin-left: 60px;
    margin-top: 60px;
    margin-bottom: 60px;
    height: 5px;
    /* animations ------- */
-   animation: bounce 0.5s ease-in-out;
    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 /* -------------------------- */
@@ -264,8 +260,6 @@ body {
   height: fit-content;
   padding: 10px;
   gap: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
   /* animations ------- */
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
@@ -323,6 +317,8 @@ body {
    margin: auto;
    padding: 7px 15px 7px 10px;
    display: flex;
+   /* animations ------- */
+   transition: background-color 0.3s ease, color 0.3s ease;
 }
 /* -------------------------- */
 /* dark-mode ---------------- */
@@ -389,3 +385,94 @@ body {
    animation: fadeOut 0.2s ease-in-out forwards;
 }
 /* ----------------------------------------------- */
+/* ketframes  ------------------------------------ */
+/* Glow Effect */
+@keyframes glow {
+   0% {
+       box-shadow: 
+           0 0 0 0 rgba(0, 227, 133, 0.4),
+           0 0 0 0 rgba(0, 227, 133, 0.3),
+           0 0 0 0 rgba(0, 227, 133, 0.2);
+       transform: scale(1);
+   }
+   50% {
+       box-shadow: 
+           0 0 10px 10px rgba(0, 227, 133, 0.6),
+           0 0 20px 15px rgba(0, 227, 133, 0.4),
+           0 0 30px 20px rgba(0, 227, 133, 0.3);
+       transform: scale(1.02);
+   }
+   100% {
+       box-shadow: 
+           0 0 0 0 rgba(0, 227, 133, 0.4),
+           0 0 0 0 rgba(0, 227, 133, 0.3),
+           0 0 0 0 rgba(0, 227, 133, 0.2);
+       transform: scale(1);
+   }
+}
+/*
+{
+  animation: glow 1s ease-in-out infinite;
+}
+*/
+/* -------------------------- */
+/* Popups */
+@keyframes right_fade {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0);
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(70px) scale(1);
+  }
+}
+/*
+ animation: right_fade 0.2s forwards;
+*/
+/* -------------------------- */
+/* Page Fade */
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+      filter: blur(10px);
+      transform: translate(0, 0px) scale(0.97, 1);
+   }
+   100% {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1, 1);
+   }
+}
+
+@keyframes fadeOut {
+   0% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translate(0, 0) scale(1, 1);
+   }
+   100% {
+      opacity: 0;
+      filter: blur(10px);
+      transform: scale(0.97, 1);
+   }
+}
+/* -------------------------- */
+/* Labs Wave */
+@keyframes wave {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1000px; }
+}
+/* -------------------------- */
+/* Timeline */
+@keyframes growLine {
+  from {
+    transform: translateX(-50%) scaleY(0);
+  }
+  to {
+    transform: translateX(-50%) scaleY(1);
+  }
+}
