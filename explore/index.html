@@ -9,162 +9,282 @@ See the GNUGeneral Public License for more details. You should have received a c
 <!-- EXPLORE PAGE -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- FAVICON ------------- -->
-   <link rel="shortcut icon" href="/assets/logo.webp" type="image/x-icon">
-   <!-- TITLE --------------- -->
-   <title>TacTalaPaca</title>
-   <!-- DESCRIPTION --------- -->
-   <meta name="description" content="TacTalaPaca official website">
-   <!-- Google AdSense ------ -->
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6755549542042427"
-   crossorigin="anonymous"></script>
-   <!-- Google Fonts -------- -->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap">
-   <!-- CSS links ----------- -->
-   <link rel="stylesheet" href="/stylesheets/style.css">
-   <link rel="stylesheet" href="/stylesheets/inpage.css">
-   <link rel="stylesheet" href="/stylesheets/phone.css">
-   <link rel="stylesheet" href="/stylesheets/keyframes.css">
-   <!-- JS links ------------ -->
-   <script src="/scripts/theme.js"></script>
-   <script src="/scripts/router.js"></script>
-   <script src="/scripts/pdf-viewer.js" defer></script>
-   <!-- PDF.js -------------- -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
-   <!-- Buy Me Coffee ------- -->
-   <script defer data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="tactalapaca" data-description="Support us on Buy me a coffee!" data-message="" data-color="#00e385" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-   <!-- Manifest FIle ------- -->
-   <link rel="manifest" href="manifest.json" />
-</head>
-<!-- --------------------------------------------- -->
-<body>
-   <!-- NAVIGATION TABS -->
-   <nav class="nav">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FAVICON ------------- -->
+    <link rel="shortcut icon" href="/assets/logo.webp" type="image/x-icon" />
+    <!-- TITLE --------------- -->
+    <title>TacTalaPaca</title>
+    <!-- DESCRIPTION --------- -->
+    <meta name="description" content="TacTalaPaca official website" />
+    <!-- Google AdSense ------ -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6755549542042427"
+      crossorigin="anonymous"></script>
+    <!-- Google Fonts -------- -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" />
+    <!-- CSS links ----------- -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/inpage.css" />
+    <link rel="stylesheet" href="/stylesheets/phone.css" />
+    <link rel="stylesheet" href="/stylesheets/keyframes.css" />
+    <!-- JS links ------------ -->
+    <script src="/scripts/theme.js"></script>
+    <script src="/scripts/affiliates.js"></script>
+    <script src="/scripts/pdf-viewer.js" defer></script>
+    <!-- PDF.js -------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <!-- Buy Me Coffee ------- -->
+    <script
+      defer
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="tactalapaca"
+      data-description="Support us on Buy me a coffee!"
+      data-message=""
+      data-color="#00e385"
+      data-position="Right"
+      data-x_margin="18"
+      data-y_margin="18"></script>
+    <!-- Manifest FIle ------- -->
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <!-- --------------------------------------------- -->
+  <body>
+    <div class="beta-tag">ALPHA</div>
+    <!-- NAVIGATION TABS -->
+    <nav class="nav">
       <div class="logo btn"></div>
       <a class="btn1 btn" href="/">
-         <div class="pop-up">DASHBOARD</div>
+        <div class="pop-up">DASHBOARD</div>
       </a>
       <a class="btn2 btn" href="/explore/">
-         <div class="pop-up">EXPLORE</div>
+        <div class="pop-up">EXPLORE</div>
       </a>
       <a class="btn3 btn" href="/download/">
-         <div class="pop-up">DOWNLOAD</div>
+        <div class="pop-up">DOWNLOAD</div>
       </a>
       <a class="btn4 btn" href="/playground/">
-         <div class="pop-up">PLAYGROUND</div>
+        <div class="pop-up">PLAYGROUND</div>
       </a>
-      <a id="theme-toggle" class="theme-switch" onclick="toggleTheme()">
-      </a>
-   </nav>
-<!-- ------------------------------------------ -->
-<main>
-   <!-- PAGES CONTENT -->
-   <div class="content fade-in">
-      <!-- ---------- PG2 ---------- -->
-      <!-- BANNER -->
-      <section class="banner">
-         <h1>EXPLORE</h1>
-         <p>our projects</p>
-      </section>
-      <!-- CONTENT -->
-      <!-- TTP LABS SECTION -->
-      <a class="ttp-labs-logo" href="/labs/"></a>
-      <hr class="divider">
-      <!-- ------------------------- -->
-      <!-- E-Book Gallery -->
-      <div class="ebooks">
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr1.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 1</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
+      <a id="theme-toggle" class="theme-switch" onclick="toggleTheme()"> </a>
+    </nav>
+    <!-- Affiliate Menu -->
+    <div class="affiliate-toggle"></div>
+    <div class="affiliate-menu">
+      <div class="affiliate-section">
+        <h2>Romania</h2>
+        <div class="affiliate-links">
+          <a href="https://www.pcgarage.ro" class="affiliate-link">
+            <div class="affiliate-info">
+              <img
+                src="/assets/affiliates/PC_Garage.webp"
+                alt="PC Garage"
+                class="affiliate-logo" />
+              <span>PC Garage</span>
             </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
-        </div>
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr2.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 2</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
-            </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
-        </div>
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr3.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 3</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
-            </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
-        </div>
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr4.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 4</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
-            </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
-        </div>
-        <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
-          <div class="cover cvr4">
-            <img src="/assets/pdf/covers/cvr5.webp" width="100%" alt="This is her and I">
-            <div class="info">
-              <div class="title">Book Title 5</div>
-              <div class="tags">Tag1, Tag2</div>
-              <div class="pages">Loading...</div>
-            </div>
-            <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">Read</div>
-          </div>
+            <button class="copy-code-btn" data-code="7CZ7YERZ">
+              Copy Code
+            </button>
+          </a>
         </div>
       </div>
-      <!-- ------------------------- -->
-      <hr class="divider">
-      <footer class="footer">
-         <div class="footer-btns">
-         <a href="https://www.instagram.com/tactalapaca" target="_blank" class="footer-btn">
-            <div class="ico ico1" alt="Instagram Icon"></div>
-         </a>
-         <a href="https://youtube.com/@tactalapaca" target="_blank" class="footer-btn">
-            <div class="ico ico2" alt="YouTube Icon"></div>
-         </a>
-         <a href="https://www.tiktok.com/@tactalapaca" target="_blank" class="footer-btn">
-            <div class="ico ico3" alt="TikTok Icon"></div>
-         </a>
-         </div>
-         <div class="footer-btns">
-         <a href="https://www.buymeacoffee.com/tactalapaca" target="_blank" class="buap-btn">🍕 Buy us a pizza</a>
-         <a href="/contact/" class="contact-btn">Contact US</a>
-         </div>
-      </footer>
-   </div>
-   <!-- ------------------------- -->
-   <!-- PDF Viewer -->
-   <div class="pdf-viewer">
-      <button class="close-pdf"></button>
-      <div class="pdf-container">
-        <button class="nav-btn prev-page"></button>
-        <div class="page-wrapper">
-          <canvas class="pdf-page"></canvas>
+      <div class="affiliate-section">
+        <h2>Worldwide</h2>
+        <div class="affiliate-links">
+          <a href="#" class="affiliate-link">
+            <div class="affiliate-info">
+              <img src="/assets/Logo.svg" alt="Amazon" class="affiliate-logo" />
+              <span>Coming Soon</span>
+            </div>
+          </a>
         </div>
-        <button class="nav-btn next-page"></button>
-        <span class="page-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
       </div>
     </div>
-</main>
-</body>
+    <!-- ------------------------------------------ -->
+    <main>
+      <!-- PAGES CONTENT -->
+      <div class="content fade-in">
+        <!-- ---------- PG2 ---------- -->
+        <!-- BANNER -->
+        <section class="banner">
+          <h1>EXPLORE</h1>
+          <p>our projects</p>
+        </section>
+        <!-- CONTENT -->
+        <!-- TTP LABS SECTION -->
+        <a class="ttp-labs-logo" href="/labs/"></a>
+        <hr class="divider" />
+        <!-- ------------------------- -->
+        <!-- E-Book Gallery -->
+        <div class="ebooks">
+          <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
+            <div class="cover cvr4">
+              <img
+                src="/assets/pdf/covers/cvr1.webp"
+                width="100%"
+                alt="This is her and I" />
+              <div class="info">
+                <div class="title">Book Title 1</div>
+                <div class="tags">Tag1, Tag2</div>
+                <div class="pages">Loading...</div>
+              </div>
+              <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">
+                Read
+              </div>
+            </div>
+          </div>
+          <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
+            <div class="cover cvr4">
+              <img
+                src="/assets/pdf/covers/cvr2.webp"
+                width="100%"
+                alt="This is her and I" />
+              <div class="info">
+                <div class="title">Book Title 2</div>
+                <div class="tags">Tag1, Tag2</div>
+                <div class="pages">Loading...</div>
+              </div>
+              <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">
+                Read
+              </div>
+            </div>
+          </div>
+          <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
+            <div class="cover cvr4">
+              <img
+                src="/assets/pdf/covers/cvr3.webp"
+                width="100%"
+                alt="This is her and I" />
+              <div class="info">
+                <div class="title">Book Title 3</div>
+                <div class="tags">Tag1, Tag2</div>
+                <div class="pages">Loading...</div>
+              </div>
+              <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">
+                Read
+              </div>
+            </div>
+          </div>
+          <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
+            <div class="cover cvr4">
+              <img
+                src="/assets/pdf/covers/cvr4.webp"
+                width="100%"
+                alt="This is her and I" />
+              <div class="info">
+                <div class="title">Book Title 4</div>
+                <div class="tags">Tag1, Tag2</div>
+                <div class="pages">Loading...</div>
+              </div>
+              <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">
+                Read
+              </div>
+            </div>
+          </div>
+          <div class="book-cover" data-pdf="/assets/pdf/test.pdf">
+            <div class="cover cvr4">
+              <img
+                src="/assets/pdf/covers/cvr5.webp"
+                width="100%"
+                alt="This is her and I" />
+              <div class="info">
+                <div class="title">Book Title 5</div>
+                <div class="tags">Tag1, Tag2</div>
+                <div class="pages">Loading...</div>
+              </div>
+              <div class="read-btn" onclick="openPDF('/assets/pdf/test.pdf')">
+                Read
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ------------------------- -->
+        <hr class="divider" />
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3>Connect With Us</h3>
+              <div class="footer-links">
+                <a
+                  href="https://www.instagram.com/tactalapaca"
+                  target="_blank"
+                  class="footer-link">
+                  <span>📸</span> Instagram
+                </a>
+                <a
+                  href="https://youtube.com/@tactalapaca"
+                  target="_blank"
+                  class="footer-link">
+                  <span>🎥</span> YouTube
+                </a>
+                <a
+                  href="https://www.tiktok.com/@tactalapaca"
+                  target="_blank"
+                  class="footer-link">
+                  <span>📱</span> TikTok
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <div class="footer-links">
+                <a href="/explore/" class="footer-link">
+                  <span>🔍</span> Explore
+                </a>
+                <a href="/download/" class="footer-link">
+                  <span>⬇️</span> Download
+                </a>
+                <a href="/playground/" class="footer-link">
+                  <span>🎮</span> Playground
+                </a>
+                <a href="/contact/" class="footer-link">
+                  <span>📧</span> Contact
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-section">
+              <h3>Support Us</h3>
+              <div class="footer-links">
+                <a
+                  href="https://www.buymeacoffee.com/tactalapaca"
+                  target="_blank"
+                  class="footer-link">
+                  <span>🍕</span> Buy us a pizza
+                </a>
+                <a href="/affiliates/" class="footer-link">
+                  <span>🔗</span> Our Affiliates
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-section">
+              <h3>Legal</h3>
+              <div class="footer-links">
+                <a href="/privacy/" class="footer-link">
+                  <span>📜</span> Privacy Policy
+                </a>
+                <a href="/terms/" class="footer-link">
+                  <span>📋</span> Terms of Use
+                </a>
+                <a href="/licenses/" class="footer-link">
+                  <span>📑</span> Licenses
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-credits">
+            Made with <span>♥</span> by TacTalaPaca
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
 </html>
