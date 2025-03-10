@@ -1,0 +1,114 @@
+<!-- PLAYGROUND PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FAVICON ------------- -->
+    <link rel="shortcut icon" href="/assets/ttp_logo.webp" type="image/x-icon" />
+    <!-- TITLE --------------- -->
+    <title>TacTalaPaca</title>
+    <!-- DESCRIPTION --------- -->
+    <meta name="description" content="TacTalaPaca official website" />
+    <!-- FONTS --------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- CSS links ----------- -->
+    <link rel="stylesheet" href="/styles/style_c.css" />
+    <link rel="stylesheet" href="/styles/style_i.css" />
+    <link rel="stylesheet" href="/styles/style_p.css" />
+    <!-- JS links ------------ -->
+    <script src="/scripts/include.js"></script>
+    <script src="/scripts/theme.js"></script>
+    <script src="/scripts/affiliates.js"></script>
+    <!-- -->
+    <script defer data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="tactalapaca" data-description="Support us on Buy me a coffee!" data-message="" data-color="#00e385" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <!-- Service Worker ------ -->
+    <script>
+      if (typeof navigator.serviceWorker !== "undefined") {
+        navigator.serviceWorker.register("service-worker.js");
+      }
+    </script>
+  </head>
+
+  <!-- --------------------------------------------- -->
+
+  <body>
+    <!-- BETA TAG -->
+    <div class="beta-tag">A L P H A</div>
+    <!-- NAVIGATION -->
+    <div data-include="/components/navbar.html"></div>
+    <!-- AFFILIATES -->
+    <div data-include="/components/affiliates.html"></div>
+    <!-- MAIN CONTENT -->
+    <main class="content page-fade-in">
+      <section class="banner"></section>
+
+      <!-- Playground Modules -->
+      <section class="modules-container">
+        <h2 class="modules-heading">TTP Playground</h2>
+        <p class="modules-subheading">Our collection of tools and games</p>
+
+        <div class="modules-grid">
+          <!-- Module 1 -->
+          <div class="module-card">
+            <div class="module-image" style="background-image: url('/assets/ttp_logo.webp')">
+              <div class="module-overlay"></div>
+            </div>
+            <div class="module-info">
+              <h3>Pulse of Time</h3>
+              <p>See your life in perspective</p>
+              <a href="/playground/color-picker/" class="action-btn">Launch</a>
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="module-card">
+            <div class="module-image coming-soon" style="background-image: url('/assets/modules/placeholder5.webp')">
+              <div class="module-overlay">
+                <div class="coming-soon-badge">Coming Soon</div>
+              </div>
+            </div>
+            <div class="module-info">
+              <h3>Coming Soon</h3>
+              <p>We're working on something exciting</p>
+              <span class="action-btn disabled">Coming Soon</span>
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="module-card">
+            <div class="module-image coming-soon" style="background-image: url('/assets/modules/placeholder5.webp')">
+              <div class="module-overlay">
+                <div class="coming-soon-badge">Coming Soon</div>
+              </div>
+            </div>
+            <div class="module-info">
+              <h3>Coming Soon</h3>
+              <p>We're working on something exciting</p>
+              <span class="action-btn disabled">Coming Soon</span>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="module-card">
+            <div class="module-image coming-soon" style="background-image: url('/assets/modules/placeholder6.webp')">
+              <div class="module-overlay">
+                <div class="coming-soon-badge">Coming Soon</div>
+              </div>
+            </div>
+            <div class="module-info">
+              <h3>Coming Soon</h3>
+              <p>We're working on something exciting</p>
+              <span class="action-btn disabled">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+      <div data-include="/components/footer.html"></div>
+    </main>
+  </body>
+</html>
