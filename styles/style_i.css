@@ -1065,7 +1065,9 @@
 /* Books Gallery Section */
 .books-backdrop {
   background: radial-gradient(circle at top right, rgba(0, 227, 133, 0.03) 0%, transparent 60%), radial-gradient(circle at bottom left, rgba(0, 227, 133, 0.03) 0%, transparent 60%);
+  background-color: var(--color1-l);
   border: 2px solid var(--color4-l);
+  /* ------------------ */
   max-width: 1000px;
   margin: auto;
   border-radius: 20px;
