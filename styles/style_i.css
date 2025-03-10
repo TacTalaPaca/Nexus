@@ -976,6 +976,7 @@
   font-size: 2.5rem;
   position: relative;
   padding-bottom: 10px;
+  font-weight: 900;
 }
 .form h1::after {
   content: "";
