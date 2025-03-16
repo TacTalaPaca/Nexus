@@ -28,11 +28,13 @@
 .footer {
   background-color: var(--c2-l);
   border: 1px solid var(--c4-l);
+  box-shadow: var(--sh-l);
 }
 
 .dark .footer {
   background-color: var(--c2-d);
   border-color: var(--c4-d);
+  box-shadow: var(--sh-d);
   color: var(--c1-l);
 }
 
@@ -363,22 +365,4 @@
 
 .divider {
   opacity: 0.8;
-}
-
-/* ==================================================== */
-/* FOOTER ADS */
-
-.footer-ads {
-  background-color: var(--c2-l);
-  padding: 10px;
-  text-align: center;
-  border: 1px solid var(--c4-l);
-  border-bottom: none;
-  margin-top: 100px;
-}
-
-.dark .footer-ads {
-  background-color: var(--c2-d);
-  border-color: var(--c4-d);
-  color: var(--c1-l);
 }

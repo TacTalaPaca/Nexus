@@ -1,1 +1,0 @@
-importScripts("https://hurymac.com/sw.js?sid=19533&utm_source=kd&utm_campaign=368916");

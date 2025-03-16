@@ -1,0 +1,56 @@
+/* ==================================================== */
+/* FOOTER ADS */
+
+.footer-ads {
+  background-color: var(--c2-l);
+  text-align: center;
+  padding: 5;
+  margin-bottom: 15px;
+  border: 1px solid var(--c4-l);
+  margin-top: 100px;
+  box-shadow: var(--sh-l);
+}
+
+.dark .footer-ads {
+  background-color: var(--c2-d);
+  border-color: var(--c4-d);
+  color: var(--c1-l);
+  box-shadow: var(--sh-d);
+}
+
+/* ==================================================== */
+/* LINE ADS */
+
+.line-ads {
+  background-color: var(--c2-l);
+  max-width: 800px;
+  text-align: center;
+  border: 1px solid var(--c4-l);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--sh-l);
+}
+
+.dark .line-ads {
+  background-color: var(--c2-d);
+  border-color: var(--c4-d);
+  color: var(--c1-l);
+  box-shadow: var(--sh-d);
+}
+
+/* Line ads headline styling */
+.ads-txt {
+  color: var(--c3-d);
+  font-size: 1.2em;
+  margin: 0;
+  padding: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--c4-l);
+}
+
+.dark .ads-txt {
+  color: var(--c3-l);
+  border-bottom-color: var(--c4-d);
+}
