@@ -28,7 +28,6 @@
 .footer {
   background-color: var(--c2-l);
   border: 1px solid var(--c4-l);
-  margin-top: 100px;
 }
 
 .dark .footer {
@@ -226,7 +225,7 @@
   color: var(--c1-l);
 }
 
-.dark .social-icon:hover {
+.social-icon:hover {
   background-color: var(--c0);
   color: var(--c1-d);
   transform: scale(1.15);
@@ -364,4 +363,22 @@
 
 .divider {
   opacity: 0.8;
+}
+
+/* ==================================================== */
+/* FOOTER ADS */
+
+.footer-ads {
+  background-color: var(--c2-l);
+  padding: 10px;
+  text-align: center;
+  border: 1px solid var(--c4-l);
+  border-bottom: none;
+  margin-top: 100px;
+}
+
+.dark .footer-ads {
+  background-color: var(--c2-d);
+  border-color: var(--c4-d);
+  color: var(--c1-l);
 }
