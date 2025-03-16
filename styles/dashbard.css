@@ -1051,3 +1051,107 @@
 .tag:hover:nth-child(12) {
   background-color: #ff8c00;
 }
+
+/* ==================================================== */
+/* ENROLLMENT SECTION */
+
+.enroll-section {
+  /* Box Model */
+  max-width: 800px;
+  margin: 60px auto 30px;
+  padding: 30px;
+  text-align: center;
+
+  /* Visual */
+  background-color: var(--c2-l);
+  border: 1px solid var(--c4-l);
+  box-shadow: var(--sh-l);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .enroll-section {
+  background-color: var(--c2-d);
+  border-color: var(--c4-d);
+  box-shadow: var(--sh-d);
+}
+
+.enroll-section:hover {
+  border-color: var(--c0);
+}
+
+.enroll-section h2 {
+  /* Typography */
+  font-size: 2rem;
+  color: var(--c1-d);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.dark .enroll-section h2 {
+  color: var(--c1-l);
+}
+
+.enroll-section h2::after {
+  /* Visual */
+  content: "";
+  background-color: var(--c0);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Box Model */
+  width: 100px;
+  height: 3px;
+
+  /* Animation */
+  transition: width var(--ts) ease;
+}
+
+.enroll-section h2:hover::after {
+  width: 150px;
+}
+
+.enroll-section p {
+  /* Typography */
+  color: var(--c1-d);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark .enroll-section p {
+  color: var(--c1-l);
+}
+
+.enroll-button {
+  /* Visual */
+  background-color: var(--c0);
+  color: var(--c1-d);
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* Box Model */
+  display: inline-block;
+  padding: 15px 40px;
+
+  /* Animation */
+  transition: transform var(--ts0) ease;
+}
+
+.enroll-button:hover {
+  transform: scale(1.15);
+  background-color: var(--c1);
+}
+
+.enroll-button:active {
+  transform: scale(1);
+}
