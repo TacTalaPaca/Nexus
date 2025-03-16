@@ -144,6 +144,10 @@
 }
 
 .nav-item:nth-child(5) .main-item::before {
+  background-image: url(/assets/icons/language1.svg);
+}
+
+.nav-item:nth-child(6) .main-item::before {
   background-image: url(/assets/icons/theme1.svg);
 }
 
@@ -167,6 +171,10 @@
 }
 
 .dark .nav-item:nth-child(5) .main-item::before {
+  background-image: url(/assets/icons/language2.svg);
+}
+
+.dark .nav-item:nth-child(6) .main-item::before {
   background-image: url(/assets/icons/theme2.svg);
 }
 
@@ -273,8 +281,22 @@
 
 /* ============================ */
 
-.nav-item:last-child {
+.nav-item:nth-last-child(2) {
   margin-top: auto;
+}
+
+.language {
+  border-top: 1px solid var(--c4-l);
+  border-bottom: 0;
+}
+
+.dark .language {
+  /* Visual */
+  border-top: 1px solid var(--c4-d);
+  border-bottom: 0;
+
+  /* Typography */
+  color: var(--c1-l);
 }
 
 .theme {

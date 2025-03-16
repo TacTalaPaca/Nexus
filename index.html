@@ -25,6 +25,7 @@
     <!-- JS LINKS ============= -->
     <script defer src="/scripts/include.js"></script>
     <script src="/scripts/theme.js"></script>
+    <script src="/scripts/language.js"></script>
     <script defer src="/scripts/affiliates.js"></script>
     <script defer src="/scripts/search.js"></script>
 
@@ -112,6 +113,15 @@
       </div>
 
       <div class="nav-item">
+        <a class="main-item language" id="language"
+          ><span
+            >Languages <br />
+            (Eng/Rom)
+          </span></a
+        >
+      </div>
+
+      <div class="nav-item">
         <a class="main-item theme" id="theme"><span>Light/Dark</span></a>
       </div>
     </nav>
@@ -130,7 +140,8 @@
           <h1>TacTalaPaca</h1>
           <div class="search-container">
             <div class="search-bar">
-              <input type="text" id="search-input" placeholder="Search for projects, tools, or resources..." />
+              <input type="text" id="search-input" placeholder="Search for projects, tools, or resources..." class="eng" />
+              <input type="text" id="search-input-ro" placeholder="Caută proiecte, instrumente sau resurse..." class="rom" style="display: none" />
             </div>
             <div class="search-results" id="search-results">
               <!-- Search results will appear here -->
@@ -141,7 +152,8 @@
 
       <!-- Timeline Section -->
       <section class="timeline-section">
-        <h2>Our Journey</h2>
+        <h2 class="eng">Our Journey</h2>
+        <h2 class="rom" style="display: none">Călătoria noastră</h2>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-marker">
@@ -149,7 +161,8 @@
             </div>
             <div class="timeline-content">
               <h3>2023</h3>
-              <p>TacTalaPaca was born from a shared vision to create innovative tools for developers and creators. Our small but passionate team laid the foundation despite technical hurdles and limited resources. This year marked the beginning of what would become our growing ecosystem of solutions.</p>
+              <p class="eng">TacTalaPaca was born from a shared vision to create innovative tools for developers and creators. Our small but passionate team laid the foundation despite technical hurdles and limited resources. This year marked the beginning of what would become our growing ecosystem of solutions.</p>
+              <p class="rom" style="display: none">TacTalaPaca s-a născut dintr-o viziune comună de a crea instrumente inovatoare pentru dezvoltatori și creatori. Echipa noastră mică, dar pasionată, a pus bazele în ciuda obstacolelor tehnice și a resurselor limitate. Acest an a marcat începutul a ceea ce avea să devină ecosistemul nostru în creștere de soluții.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -158,7 +171,8 @@
             </div>
             <div class="timeline-content">
               <h3>2024</h3>
-              <p>A significant growth phase as we expanded our offerings and reach. Our team doubled in size, bringing fresh perspectives and diverse talents. We established key partnerships and refined our core tools. This dashboard represents one of our proudest achievements of the year.</p>
+              <p class="eng">A significant growth phase as we expanded our offerings and reach. Our team doubled in size, bringing fresh perspectives and diverse talents. We established key partnerships and refined our core tools. This dashboard represents one of our proudest achievements of the year.</p>
+              <p class="rom" style="display: none">O fază de creștere semnificativă în care ne-am extins ofertele și aria de acoperire. Echipa noastră s-a dublat ca dimensiune, aducând perspective proaspete și talente diverse. Am stabilit parteneriate cheie și am rafinat instrumentele noastre de bază. Acest dashboard reprezintă una dintre cele mai mândre realizări ale noastre din acest an.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -167,7 +181,8 @@
             </div>
             <div class="timeline-content">
               <h3>2025</h3>
-              <p>Our roadmap includes launching integrated tools, expanding educational resources, and hosting our first community conference. R&D will focus on emerging technologies with ambitious plans to revolutionize how creators interact with technology and establish ourselves as industry leaders.</p>
+              <p class="eng">Our roadmap includes launching integrated tools, expanding educational resources, and hosting our first community conference. R&D will focus on emerging technologies with ambitious plans to revolutionize how creators interact with technology and establish ourselves as industry leaders.</p>
+              <p class="rom" style="display: none">Planul nostru include lansarea de instrumente integrate, extinderea resurselor educaționale și găzduirea primei noastre conferințe comunitare. Cercetarea și dezvoltarea se va concentra pe tehnologii emergente cu planuri ambițioase de a revoluționa modul în care creatorii interacționează cu tehnologia și de a ne stabili ca lideri în industrie.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -175,8 +190,10 @@
               <div class="timeline-marker-circle"></div>
             </div>
             <div class="timeline-content">
-              <h3>FUTURE</h3>
-              <p>We envision ourselves at the forefront of innovation, creating solutions not yet imagined. Our mission is to democratize powerful tools and knowledge, making them accessible to everyone. Through sustainable growth and commitment to our values, we'll evolve to meet the community's changing needs.</p>
+              <h3 class="eng">FUTURE</h3>
+              <h3 class="rom" style="display: none">VIITOR</h3>
+              <p class="eng">We envision ourselves at the forefront of innovation, creating solutions not yet imagined. Our mission is to democratize powerful tools and knowledge, making them accessible to everyone. Through sustainable growth and commitment to our values, we'll evolve to meet the community's changing needs.</p>
+              <p class="rom" style="display: none">Ne vedem în fruntea inovației, creând soluții încă neimaginate. Misiunea noastră este de a democratiza instrumente și cunoștințe puternice, făcându-le accesibile tuturor. Prin creștere durabilă și angajament față de valorile noastre, vom evolua pentru a satisface nevoile în schimbare ale comunității.</p>
             </div>
           </div>
         </div>
@@ -206,77 +223,95 @@
 
       <!-- Map Section -->
       <section class="map-section">
-        <h2>Where We Are</h2>
+        <h2 class="eng">Where We Are</h2>
+        <h2 class="rom" style="display: none">Unde Suntem</h2>
         <div class="map-container">
           <div class="world-map">
             <img src="/assets/world.svg" alt="World Map" class="world-svg" />
           </div>
-          <p class="location-text">TacTalaPaca is located in <span class="highlight">Romania</span></p>
+          <p class="location-text eng">TacTalaPaca is located in <span class="highlight">Romania</span></p>
+          <p class="location-text rom" style="display: none">TacTalaPaca este localizat în <span class="highlight">România</span></p>
         </div>
       </section>
 
       <!-- Team Rankings -->
       <section class="ranking-section">
-        <h2>Team Rankings</h2>
+        <h2 class="eng">Team Rankings</h2>
+        <h2 class="rom" style="display: none">Clasificări Echipă</h2>
         <div class="ranking-container">
           <div class="ranking-row rank-1">
             <div class="rank-badge">R1</div>
             <div class="rank-info">
-              <h3>Grandmaster</h3>
-              <p>The pinnacle of expertise and innovation</p>
+              <h3 class="eng">Grandmaster</h3>
+              <h3 class="rom" style="display: none">Mare Maestru</h3>
+              <p class="eng">The pinnacle of expertise and innovation</p>
+              <p class="rom" style="display: none">Vârful expertizei și inovației</p>
             </div>
           </div>
 
           <div class="ranking-row rank-2">
             <div class="rank-badge">R2</div>
             <div class="rank-info">
-              <h3>Master</h3>
-              <p>Exceptional skill with proven expertise</p>
+              <h3 class="eng">Master</h3>
+              <h3 class="rom" style="display: none">Maestru</h3>
+              <p class="eng">Exceptional skill with proven expertise</p>
+              <p class="rom" style="display: none">Abilități excepționale cu expertiză dovedită</p>
             </div>
           </div>
 
           <div class="ranking-row rank-3">
             <div class="rank-badge">R3</div>
             <div class="rank-info">
-              <h3>Expert</h3>
-              <p>High-level proficiency and specialized knowledge</p>
+              <h3 class="eng">Expert</h3>
+              <h3 class="rom" style="display: none">Expert</h3>
+              <p class="eng">High-level proficiency and specialized knowledge</p>
+              <p class="rom" style="display: none">Competență de nivel înalt și cunoștințe specializate</p>
             </div>
           </div>
 
           <div class="ranking-row rank-4">
             <div class="rank-badge">R4</div>
             <div class="rank-info">
-              <h3>Professional</h3>
-              <p>Solid professional skills with consistent results</p>
+              <h3 class="eng">Professional</h3>
+              <h3 class="rom" style="display: none">Profesionist</h3>
+              <p class="eng">Solid professional skills with consistent results</p>
+              <p class="rom" style="display: none">Competențe profesionale solide cu rezultate constante</p>
             </div>
           </div>
 
           <div class="ranking-row rank-5">
             <div class="rank-badge">R5</div>
             <div class="rank-info">
-              <h3>Intermediate</h3>
-              <p>Growing competency with good practical skills</p>
+              <h3 class="eng">Intermediate</h3>
+              <h3 class="rom" style="display: none">Intermediar</h3>
+              <p class="eng">Growing competency with good practical skills</p>
+              <p class="rom" style="display: none">Competență în creștere cu abilități practice bune</p>
             </div>
           </div>
 
           <div class="ranking-row rank-6">
             <div class="rank-badge">R6</div>
             <div class="rank-info">
-              <h3>Associate</h3>
-              <p>Developing foundational skills and building experience</p>
+              <h3 class="eng">Associate</h3>
+              <h3 class="rom" style="display: none">Asociat</h3>
+              <p class="eng">Developing foundational skills and building experience</p>
+              <p class="rom" style="display: none">Dezvoltarea abilităților de bază și acumularea experienței</p>
             </div>
           </div>
 
           <div class="ranking-row rank-7">
             <div class="rank-badge">R7</div>
             <div class="rank-info">
-              <h3>Trainee</h3>
-              <p>Starting the journey of learning and growth</p>
+              <h3 class="eng">Trainee</h3>
+              <h3 class="rom" style="display: none">Începător</h3>
+              <p class="eng">Starting the journey of learning and growth</p>
+              <p class="rom" style="display: none">Începutul călătoriei de învățare și creștere</p>
             </div>
           </div>
         </div>
 
-        <h3 class="tags-heading">Skill Tags</h3>
+        <h3 class="tags-heading eng">Skill Tags</h3>
+        <h3 class="tags-heading rom" style="display: none">Etichete de Competențe</h3>
         <div class="tags-container">
           <span class="tag">A</span>
           <span class="tag">B</span>
@@ -295,7 +330,8 @@
 
       <!-- KADAM BANNER -->
       <div class="footer-ads">
-        <h4 class="ads-txt">ADVERTISEMENTS</h4>
+        <h4 class="ads-txt eng">ADVERTISEMENTS</h4>
+        <h4 class="ads-txt rom" style="display: none">PUBLICITATE</h4>
         <div class="DbYnaf368907"></div>
         <script>
           window.k_init = window.k_init || [];
