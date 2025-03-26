@@ -8,14 +8,14 @@
   --c2-l: #f2f2f2; /* bg2 */
   --c3-l: #e6e6e6; /* bg3 */
   --c4-l: #d9d9d9; /* border */
-  --sh-l: 0 0 10px rgba(0, 0, 0, 0.1);
+  --sh-l: 0 0 15px rgba(0, 0, 0, 0.1);
 
   /* Colors - Dark Theme */
   --c1-d: #121212; /* bg1 + font */
   --c2-d: #171717; /* bg2 */
   --c3-d: #1f1f1f; /* bg3 */
   --c4-d: #2b2b2b; /* border */
-  --sh-d: 0 0 10px rgba(0, 0, 0, 1);
+  --sh-d: 0 0 15px rgba(0, 0, 0, 0.5);
 
   /* Timing */
   --ts: 0.35s;

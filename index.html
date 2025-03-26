@@ -28,6 +28,7 @@
     <script src="/scripts/language.js"></script>
     <script defer src="/scripts/affiliates.js"></script>
     <script defer src="/scripts/search.js"></script>
+    <script defer src="/scripts/mobile-nav.js"></script>
 
     <!-- BMAC WIDGET -->
     <script defer data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="tactalapaca" data-description="Support us on Buy me a coffee!" data-message="" data-color="#00e385" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
@@ -42,9 +43,6 @@
       gtag("js", new Date());
       gtag("config", "G-9G8FFWE9W1");
     </script>
-
-    <!-- KADAM VERIFICATION -->
-    <meta name="kadam-verification" content="kadam07221e980983e561dde1d5291d0f7c7a" />
   </head>
 
   <!-- ===================================== -->
@@ -53,11 +51,22 @@
     <!-- BETA TAG -->
     <div class="beta-tag">A L P H A</div>
 
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+
     <!-- NAVIGATION BAR -->
     <nav class="nav">
       <div class="nav-item">
         <a href="/" class="main-item nav-active"><span>Dashboard</span></a>
-        <div class="sub-menu">
+        <button class="submenu-toggle" aria-label="Toggle Dashboard submenu" data-target="dashboard-submenu"></button>
+        <div class="sub-menu" id="dashboard-submenu">
           <a href="/projects/" class="sub-item">Projects</a>
           <a href="/contact/" class="sub-item">Contact</a>
         </div>
@@ -67,40 +76,24 @@
         <a href="/" class="main-item"
           ><span>Library<br />(comming)</span></a
         >
-        <div class="sub-menu">
+        <button class="submenu-toggle" aria-label="Toggle Library submenu" data-target="library-submenu"></button>
+        <div class="sub-menu" id="library-submenu">
           <a href="/books/" class="sub-item">Books</a>
         </div>
       </div>
 
       <div class="nav-item">
         <a href="/" class="main-item"><span>Playground</span></a>
-        <div class="sub-menu">
+        <button class="submenu-toggle" aria-label="Toggle Playground submenu" data-target="playground-submenu"></button>
+        <div class="sub-menu" id="playground-submenu">
           <a href="/pulse-of-time" class="sub-item">Pulse of Time</a>
         </div>
       </div>
 
       <div class="nav-item">
         <a href="/" class="main-item"><span>Toolbox</span></a>
-        <div class="sub-menu">
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
-          <a href="/lenght" class="sub-item">Lenght</a>
+        <button class="submenu-toggle" aria-label="Toggle Toolbox submenu" data-target="toolbox-submenu"></button>
+        <div class="sub-menu" id="toolbox-submenu">
           <a href="/lenght" class="sub-item">Lenght</a>
           <a href="/lenght" class="sub-item">Lenght</a>
           <a href="/lenght" class="sub-item">Lenght</a>
@@ -114,10 +107,7 @@
 
       <div class="nav-item">
         <a class="main-item language" id="language"
-          ><span
-            >Languages <br />
-            (Eng/Rom)
-          </span></a
+          ><span>Languages <br />(Eng/Rom)</span></a
         >
       </div>
 
@@ -140,8 +130,7 @@
           <h1>TacTalaPaca</h1>
           <div class="search-container">
             <div class="search-bar">
-              <input type="text" id="search-input" placeholder="Search for projects, tools, or resources..." class="eng" />
-              <input type="text" id="search-input-ro" placeholder="Caută proiecte, instrumente sau resurse..." class="rom" style="display: none" />
+              <input type="text" id="search-input" placeholder="Search..." />
             </div>
             <div class="search-results" id="search-results">
               <!-- Search results will appear here -->
@@ -198,28 +187,6 @@
           </div>
         </div>
       </section>
-
-      <div class="line-ads">
-        <h4 class="ads-txt">ADVERTISMENT</h4>
-        <div class="tFKNbs368918"></div>
-        <script>
-          window.k_init = window.k_init || [];
-          k_init.push({
-            id: "tFKNbs368918",
-            type: "bn",
-            domain: "hdbkome.com",
-            refresh: false,
-            next: 0,
-          });
-
-          var s = document.createElement("script");
-          s.setAttribute("async", true);
-          s.setAttribute("charset", "utf-8");
-          s.setAttribute("data-cfasync", false);
-          s.src = "https://hdbkome.com/s15092e6.js";
-          document.head && document.head.appendChild(s);
-        </script>
-      </div>
 
       <!-- Map Section -->
       <section class="map-section">
@@ -332,37 +299,59 @@
       <section class="enroll-section">
         <h2 class="eng">Wanna' be part of The Team?</h2>
         <h2 class="rom" style="display: none">Vrei să faci parte din Echipă?</h2>
-        <p class="eng">Join our growing team of innovators and creators. Apply now to start your journey with TacTalaPaca.</p>
-        <p class="rom" style="display: none">Alătură-te echipei noastre în creștere de inovatori și creatori. Aplică acum pentru a-ți începe călătoria cu TacTalaPaca.</p>
+        <p class="eng">Join our diverse team of thinkers, creators, and innovators. Participation is completely free - all you need is willingness and dedication!</p>
+        <p class="rom" style="display: none">Alătură-te echipei noastre diverse de gânditori, creatori și inovatori. Participarea este complet gratuită - tot ce ai nevoie este dorință și dedicare!</p>
+
+        <div class="mensa-card">
+          <div class="mensa-header">
+            <div class="mensa-icon">IQ</div>
+            <div class="mensa-title">
+              <h3 class="eng">MENSA Online IQ Test</h3>
+              <h3 class="rom" style="display: none">Test IQ MENSA Online</h3>
+            </div>
+          </div>
+
+          <div class="mensa-content">
+            <p class="eng">Before applying, please take a quick assessment:</p>
+            <p class="rom" style="display: none">Înainte de a aplica, te rugăm să faci o evaluare rapidă:</p>
+
+            <div class="mensa-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-text eng">Take the free MENSA online IQ test</div>
+                <div class="step-text rom" style="display: none">Fă testul gratuit MENSA de IQ online</div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text eng">Take a screenshot of your result</div>
+                <div class="step-text rom" style="display: none">Fă un screenshot cu rezultatul tău</div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text eng">Attach the screenshot in the application form</div>
+                <div class="step-text rom" style="display: none">Atașează screenshot-ul în formularul de aplicare</div>
+              </div>
+            </div>
+
+            <div class="mensa-note">
+              <p class="eng"><em>This score helps us understand your thinking patterns - there's no minimum requirement.</em></p>
+              <p class="rom" style="display: none"><em>Acest scor ne ajută să înțelegem tiparul tău de gândire - nu există o cerință minimă.</em></p>
+            </div>
+
+            <a href="https://www.mensa.org/mensa-iq-challenge/#test" target="_blank" class="mensa-button">
+              <span class="eng">Take the Test</span>
+              <span class="rom" style="display: none">Fă Testul</span>
+            </a>
+          </div>
+        </div>
+
         <a href="https://forms.gle/84QThvunYvn1VcxU8" target="_blank" class="enroll-button">
           <span class="eng">Apply Now</span>
           <span class="rom" style="display: none">Aplică Acum</span>
         </a>
       </section>
-
-      <!-- KADAM BANNER -->
-      <div class="footer-ads">
-        <h4 class="ads-txt eng">ADVERTISEMENT</h4>
-        <h4 class="ads-txt rom" style="display: none">PUBLICITATE</h4>
-        <div class="DbYnaf368907"></div>
-        <script>
-          window.k_init = window.k_init || [];
-          k_init.push({
-            id: "DbYnaf368907",
-            type: "bn",
-            domain: "hdbkome.com",
-            refresh: false,
-            next: 0,
-          });
-
-          var s = document.createElement("script");
-          s.setAttribute("async", true);
-          s.setAttribute("charset", "utf-8");
-          s.setAttribute("data-cfasync", false);
-          s.src = "https://hdbkome.com/s6h1g4tq.js";
-          document.head && document.head.appendChild(s);
-        </script>
-      </div>
 
       <div data-include="/blocks/footer.html"></div>
     </main>

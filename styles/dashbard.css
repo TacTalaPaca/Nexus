@@ -15,7 +15,7 @@
   --c2-d: #171717; /* bg2 */
   --c3-d: #1f1f1f; /* bg3 */
   --c4-d: #2b2b2b; /* border */
-  --sh-d: 0 0 15px rgba(0, 0, 0, 0.7);
+  --sh-d: 0 0 15px rgba(0, 0, 0, 0.5);
 
   /* Timing */
   --ts: 0.35s;
@@ -251,7 +251,6 @@
 .search-result-item:hover {
   /* Visual */
   background-color: var(--c3-l);
-  transform: translateX(5px);
 }
 
 .dark .search-result-item:hover {
@@ -320,6 +319,7 @@
 
 .timeline-section {
   margin-top: 50px;
+  user-select: text;
 }
 
 .timeline-section h2 {
@@ -1154,4 +1154,202 @@
 
 .enroll-button:active {
   transform: scale(1);
+}
+
+/* MENSA Card */
+.mensa-card {
+  /* Box Model */
+  margin: 30px auto;
+  max-width: 700px;
+  overflow: hidden;
+
+  /* Visual */
+  background-color: var(--c3-l);
+  border: 1px solid var(--c4-l);
+
+  /* Animation */
+  transition: transform var(--ts0) ease;
+}
+
+.dark .mensa-card {
+  background-color: var(--c3-d);
+  border-color: var(--c4-d);
+}
+
+/* MENSA Header */
+.mensa-header {
+  /* Box Model */
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+
+  /* Visual */
+  background-color: var(--c2-l);
+  border-bottom: 1px solid var(--c4-l);
+}
+
+.dark .mensa-header {
+  background-color: var(--c2-d);
+  border-color: var(--c4-d);
+}
+
+.mensa-icon {
+  /* Box Model */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  /* Visual */
+  background-color: var(--c0);
+  color: var(--c1-d);
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.3rem;
+
+  /* Animation */
+  transition: transform var(--ts0) ease;
+}
+
+.mensa-title h3 {
+  /* Typography */
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--c1-d);
+}
+
+.dark .mensa-title h3 {
+  color: var(--c1-l);
+}
+
+/* MENSA Content */
+.mensa-content {
+  /* Box Model */
+  padding: 20px 25px;
+  text-align: left;
+}
+
+.mensa-content p {
+  /* Typography */
+  color: var(--c1-d);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.dark .mensa-content p {
+  color: var(--c1-l);
+}
+
+/* MENSA Steps */
+.mensa-steps {
+  /* Box Model */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.step {
+  /* Box Model */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.step-number {
+  /* Box Model */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  /* Visual */
+  background-color: var(--c1-d);
+  color: var(--c1-l);
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  /* Animation */
+  transition: transform var(--ts0) ease;
+}
+
+.dark .step-number {
+  background-color: var(--c1-l);
+  color: var(--c1-d);
+}
+
+.step:hover .step-number {
+  background-color: var(--c0);
+  transform: scale(1.1);
+}
+
+.step-text {
+  /* Typography */
+  color: var(--c1-d);
+  font-size: 1rem;
+}
+
+.dark .step-text {
+  color: var(--c1-l);
+}
+
+/* MENSA Note */
+.mensa-note {
+  /* Visual */
+  background-color: var(--c2-l);
+  border-left: 3px solid var(--c0);
+
+  /* Box Model */
+  padding: 12px 15px;
+  margin: 20px 0;
+}
+
+.dark .mensa-note {
+  background-color: var(--c2-d);
+}
+
+.mensa-note p {
+  /* Typography */
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* MENSA Button */
+.mensa-button {
+  /* Visual */
+  background-color: var(--c0);
+  color: var(--c1-d);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+
+  /* Box Model */
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px 0;
+
+  /* Animation */
+  transition: transform var(--ts0) ease;
+}
+
+.mensa-button:hover {
+  background-color: var(--c1);
+  transform: scale(1.05);
+}
+
+.mensa-button:active {
+  transform: scale(0.98);
+}
+
+/* Adjust spacing for main enroll button */
+.enroll-button {
+  margin-top: 20px;
 }

@@ -15,7 +15,7 @@
   --c2-d: #171717; /* bg2 */
   --c3-d: #1f1f1f; /* bg3 */
   --c4-d: #2b2b2b; /* border */
-  --sh-d: 0 0 15px rgba(0, 0, 0, 0.7);
+  --sh-d: 0 0 15px rgba(0, 0, 0, 0.5);
 
   /* Timing */
   --ts: 0.35s;
@@ -44,27 +44,27 @@
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 10px;
-  padding: 10px;
+  padding: 20px 10px;
   border-bottom: 1px solid var(--c4-l);
+  gap: 20px;
 }
 
 .dark .footer-container {
   border-bottom: 1px solid var(--c4-d);
 }
+
 .footer-section {
-  min-width: 180px;
+  min-width: 200px;
   background-color: var(--c1-l);
   border: 1px solid var(--c4-l);
-  padding: 0 0 5px 20px;
-  flex: 200px;
+  padding: 15px 20px;
+  flex: 1 1 200px;
+  max-width: 260px;
 }
-.footer-section:last-child {
-  padding: 0 20px 20px 20px;
-}
+
 .dark .footer-section {
   background-color: var(--c1-d);
   border-color: var(--c4-d);
@@ -150,7 +150,7 @@
 /* SUPPORT SECTION */
 
 .support-section {
-  flex: 250px;
+  flex: fit-content;
 }
 
 .support-section p {
@@ -183,6 +183,97 @@
 .bmc-button img {
   width: 24px;
   height: 24px;
+}
+
+/* ==================================================== */
+/* SUPPORT WRAPPER */
+
+.support-wrapper {
+  background-color: var(--c3-l);
+  padding: 25px 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--c4-l);
+}
+
+.dark .support-wrapper {
+  background-color: var(--c3-d);
+  border-color: var(--c4-d);
+}
+
+.support-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.support-content h3 {
+  color: var(--c1-d);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.dark .support-content h3 {
+  color: var(--c1-l);
+}
+
+.support-content h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  height: 2px;
+  width: 100px;
+  background-color: var(--c0);
+  transform: translateX(-50%);
+  transition: width var(--ts0) ease;
+}
+
+.support-content:hover h3::after {
+  width: 100%;
+}
+
+.support-content p {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.5;
+
+  margin-bottom: 15px;
+}
+
+.dark .support-content p {
+  color: var (--c1-l);
+}
+
+/* Buy Me a Coffee Button */
+.bmc-button {
+  background-color: var(--c2-l);
+  padding: 10px 15px;
+  display: inline-flex;
+  align-items: center;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid var(--c4-l);
+}
+
+.dark .bmc-button {
+  border-color: var(--c4-d);
+}
+
+.bmc-button:hover {
+  background-color: #ffdd00;
+}
+
+.dark .bmc-button:hover {
+  color: #000000;
+}
+
+.bmc-button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 /* ==================================================== */
