@@ -342,3 +342,26 @@
   /* Typography */
   color: var(--c1-d);
 }
+
+/* ==================================================== */
+/* MOBILE RESPONSIVE STYLES */
+
+@media screen and (max-width: 768px) {
+  .affiliate-menu {
+    max-width: 400px;
+    width: 90%;
+  }
+
+  .affiliate-link {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copy-code-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
